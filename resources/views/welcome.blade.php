@@ -72,8 +72,8 @@
         <div class="absolute animate__animated animate__fadeInUp top-72 w-3/5 h-12 ml-12 lg:ml-20 text-white">
             <h2 class="text-4xl font-bold">Penangkal Petir - Anti Petir</h2>
         </div>
-        <div class="absolute wow animate__fadeInLeft top-[360px] lg:top-80 w-[420px] h-12 ml-12 lg:ml-20 text-white">
-            <h6 class="text-lg mt-6">Dewata Technoindo© menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
+        <div class="absolute wow animate__fadeInLeft top-[360px] lg:top-72 md:top-[300px] w-[450px] h-12 ml-12 lg:ml-20 text-white">
+            <h6 class="text-sm lg:text-lg lg:mt-6 w-64 mt-12 top-56">Dewata Technoindo© menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
         </div>
     </div>
 
@@ -92,16 +92,13 @@
                 <div class="absolute top-40 inset-x-[15%] bottom-5 hidden py-5 text-white md:block wow slideInRight">
                 <a href="" class="text-gray-100 text-sm font-bold px-1 border-md rounded-sm bg-red-900">KABEL PENYALUR PETIR</a>
                 <h4 class="text-white absolute top-5 ml-44">Oktober 18, 2014 - by <strong>abah petir</strong></h4>
-                <h1 class="text-gray-200 text-3xl wow animate__fadeInBottomRight animate__slow">
+                <h1 class="text-gray-200 lg:text-3xl sm:text-sm wow animate__fadeInBottomRight animate__slow">
                     NYY Sebagai Kabel Penyalur Petir
                 </h2>
             </div>
             </div>
             <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item>
-            <img
-                src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-                class="block w-full"
-                alt="Camera" />
+            <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="block w-full" alt="Camera"/>
             </div>
         </div>
         <button
@@ -152,8 +149,5 @@
             >Next</span
             >
         </button>
-        {{-- <div class=" absolute h-96 max-w-full 2xl:w-full lg:w-full md:w-full sm:max-w-full bg-no-repeat overflow-hidden mx-auto bg-green-200">
-            <h2 class="absolute text-center mt-24 wow fadeInRight">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui id sunt eligendi praesentium perspiciatis beatae nesciunt deserunt eum! Reiciendis quae voluptatum aliquam pariatur atque. Libero non doloremque voluptate eum, sapiente labore animi optio suscipit error provident atque voluptatem dolores officia, illo aperiam, ad dolorum eaque consequuntur eos et dignissimos neque.</h2>
-        </div> --}}
         
     </div>
