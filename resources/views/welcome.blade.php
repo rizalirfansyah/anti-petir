@@ -73,7 +73,7 @@
             <h6 class="text-md text-center">Selamat datang di</h6>
             <h2 class="text-4xl font-bold text-center mt-2">Penangkal Petir - Anti Petir</h2>
         </div>
-        <div class="absolute wow animate__fadeInLeft top-[380px] lg:top-[315px] md:top-[300px] lg:w-[450px] lg:px-96 lg:mt-8 h-12 w-full items-center text-white">
+        <div class="absolute wow animate__backInUp top-[380px] lg:top-[315px] md:top-[300px] lg:w-[450px] lg:px-96 lg:mt-8 h-12 w-full items-center text-white">
             <h6 class="text-lg text-center lg:text-lg mt-8 top-56 px-12">Dewata Technoindo© menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
         </div>
     </div>
@@ -164,7 +164,7 @@
             <h2 class="text-center bg-orange-700 text-white w-24 font-semibold">Produk</h2>
             <hr class="h-px bg-orange-700 border-0 pt-0.5">
         </div>
-            <div class="container absolute top-32 px-32 font-inter sm:flex sm:flex-wrap sm:gap-6 sm:justify-between w-2xl">
+            <div class="container absolute top-32 lg:px-32 px-8 font-inter sm:flex sm:flex-wrap sm:gap-6 sm:justify-between w-xl">
 
                 <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
                   <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
@@ -217,7 +217,19 @@
     </div>
 
     {{-- product end --}}
-    <div class="relative mt-[500px] h-96 w-full bg-gray-900">
+    <div class="relative mt-[500px] h-screen w-full bg-gray-900">
+        <div class="h-12 w-2xl absolute inset-x-[10%] inset-10 py-5 wow animate__slideInLeft">
+            <h2 class="text-center bg-orange-700 text-white w-24 font-semibold">Artikel</h2>
+            <hr class="h-px bg-orange-700 border-0 pt-0.5">
+        </div>
+        <div class="container absolute top-32 lg:px-28 px-8 wow animate__fadeInUp">
+            <ol class="">
+                <li class="text-white mt-2">> <a href="" class="hover:text-gray-400">Testing article Coy 1</a></li>
+                <li class="text-white mt-2">> <a href="" class="hover:text-gray-400">Testing article Coy 2</a></li>
+                <li class="text-white mt-2">> <a href="" class="hover:text-gray-400">Testing article Coy 3</a></li>
+                <li class="text-white mt-2">> <a href="" class="hover:text-gray-400">Testing article Coy 4</a></li>
+              </ol>
+        </div>
     </div>
-    <div class="relative h-96 w-full bg-gray-400">
+    <div class="relative h-96 w-full bg-gray-400 sm:flex sm:flex-wrap sm:gap-6 sm:justify-between w-xl">
     </div>
