@@ -3,7 +3,7 @@
 <title>Penangkal Petir</title>
 
     {{-- navbar --}}
-   <div class="max-w-4xl mx-auto">
+   <div class="lg:max-w-4xl sm:w-full mx-auto">
     
     <nav class="border-gray-200">
     <div class="container relative mx-auto flex flex-wrap items-center justify-between h-20">
@@ -72,8 +72,8 @@
         <div class="absolute animate__animated animate__fadeInUp top-72 w-3/5 h-12 ml-12 lg:ml-20 text-white">
             <h2 class="text-4xl font-bold">Penangkal Petir - Anti Petir</h2>
         </div>
-        <div class="absolute wow animate__fadeInLeft top-[360px] lg:top-72 md:top-[300px] w-[450px] h-12 ml-12 lg:ml-20 text-white">
-            <h6 class="text-sm lg:text-lg lg:mt-6 w-64 mt-12 top-56">Dewata Technoindo© menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
+        <div class="absolute wow animate__fadeInLeft top-[380px] lg:top-[315px] md:top-[300px] lg:w-[450px] h-12 ml-12 lg:ml-20 text-white">
+            <h6 class="text-sm lg:text-lg lg:w-80 w-72 mt-8 top-56">Dewata Technoindo© menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
         </div>
     </div>
 
@@ -86,19 +86,24 @@
         <div class="relative w-full h-[500px] overflow-hidden after:clear-both after:block after:content-['']">
             <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item data-te-carousel-active>
             <img
-                src="img/bg/cable.jpg"
-                class="block w-full"
-                alt="Wild Landscape" />
+                src="img/bg/cable.jpg" class="block w-full h-screen object-cover brightness-75" alt="Wild Landscape" />
                 <div class="absolute top-40 inset-x-[15%] bottom-5 hidden py-5 text-white md:block wow slideInRight">
                 <a href="" class="text-gray-100 text-sm font-bold px-1 border-md rounded-sm bg-red-900">KABEL PENYALUR PETIR</a>
-                <h4 class="text-white absolute top-5 ml-44">Oktober 18, 2014 - by <strong>abah petir</strong></h4>
-                <h1 class="text-gray-200 lg:text-3xl sm:text-sm wow animate__fadeInBottomRight animate__slow">
+                <h4 class="text-white absolute top-5 ml-44">Januari 28, 2014 - by <strong>abah petir</strong></h4>
+                <h1 class="text-gray-200 lg:text-4xl font-semibold sm:text-sm wow animate__fadeInBottomRight animate__slow">
                     NYY Sebagai Kabel Penyalur Petir
                 </h2>
-            </div>
+                </div>
             </div>
             <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item>
-            <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="block w-full" alt="Camera"/>
+            <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="block w-full h-screen object-cover brightness-50" alt="Camera"/>
+            <div class="absolute top-40 inset-x-[15%] bottom-5 hidden py-5 text-white md:block wow slideInRight">
+                <a href="" class="text-gray-100 text-sm font-bold px-1 border-md rounded-sm bg-red-900">PENANGKAL PETIR ELEKTROSTATIK</a>
+                <h4 class="text-white absolute top-5 ml-64">Oktober 18, 2011 - by <strong>abah petir</strong></h4>
+                <h1 class="text-white lg:text-4xl font-semibold sm:text-sm wow animate__fadeInBottomRight animate__slow">
+                    Penangkal Petir Elektrostatis NeoFLASH
+                </h2>
+                </div>
             </div>
         </div>
         <button
@@ -151,3 +156,64 @@
         </button>
         
     </div>
+
+    {{-- Product --}}
+    <div class="relative w-full">
+        <div class="h-12 w-2xl absolute inset-x-[15%] inset-10 py-5">
+            <h2 class="relative text-center bg-orange-700 text-white w-24 font-semibold">Produk</h2>
+            <hr class="h-px bg-orange-700 border-0 pt-0.5">
+            <div class="container mx-auto px-6 font-inter sm:flex sm:flex-wrap sm:gap-6 sm:justify-between mt-12">
+
+                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+                  <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
+                  <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2 text-slate-700">Image Tittle</div>
+                    <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi.</p>
+                        <div class="w-full flex items-center mt-3">
+                            <i class="fa-solid fa-clock"></i>
+                            <p class="text-sm ml-2">Januari 27, 2011</p>
+                        </div>
+                  </div>
+                </div>
+          
+                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+                  <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
+                  <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2 text-slate-700">Image Tittle</div>
+                    <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi.</p>
+                        <div class="w-full flex items-center mt-3">
+                            <i class="fa-solid fa-clock"></i>
+                            <p class="text-sm ml-2">Januari 27, 2011</p>
+                        </div>
+                  </div>
+                </div>
+
+                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+                  <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
+                  <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2 text-slate-700">Image Tittle</div>
+                    <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi.</p>
+                        <div class="w-full flex items-center mt-3">
+                            <i class="fa-solid fa-clock"></i>
+                            <p class="text-sm ml-2">Januari 27, 2011</p>
+                        </div>
+                  </div>
+                </div>
+
+                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+                  <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
+                  <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2 text-slate-700">Image Tittle</div>
+                    <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi.</p>
+                        <div class="w-full flex items-center mt-3">
+                            <i class="fa-solid fa-clock"></i>
+                            <p class="text-sm ml-2">Januari 27, 2011</p>
+                        </div>
+                  </div>
+                </div>
+
+        </div>
+    </div>
+
+    {{-- Artikel --}}
+    <div class=""></div>
