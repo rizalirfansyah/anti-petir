@@ -158,13 +158,14 @@
     </div>
 
     {{-- Product --}}
-    <div class="relative w-full">
-        <div class="h-12 w-2xl absolute inset-x-[15%] inset-10 py-5">
-            <h2 class="relative text-center bg-orange-700 text-white w-24 font-semibold">Produk</h2>
+    <div class="relative max-h-screen w-full">
+        <div class="h-12 w-2xl absolute inset-x-[10%] inset-10 py-5 wow animate__fadeInLeft">
+            <h2 class="text-center bg-orange-700 text-white w-24 font-semibold">Produk</h2>
             <hr class="h-px bg-orange-700 border-0 pt-0.5">
-            <div class="container mx-auto px-6 font-inter sm:flex sm:flex-wrap sm:gap-6 sm:justify-between mt-12">
+        </div>
+            <div class="container absolute top-32 px-32 font-inter sm:flex sm:flex-wrap sm:gap-6 sm:justify-between w-2xl">
 
-                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
                   <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                   <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2 text-slate-700">Image Tittle</div>
@@ -176,7 +177,7 @@
                   </div>
                 </div>
           
-                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
                   <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                   <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2 text-slate-700">Image Tittle</div>
@@ -188,7 +189,7 @@
                   </div>
                 </div>
 
-                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInRight">
                   <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                   <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2 text-slate-700">Image Tittle</div>
@@ -200,7 +201,7 @@
                   </div>
                 </div>
 
-                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72">
+                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInRight">
                   <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                   <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2 text-slate-700">Image Tittle</div>
@@ -211,9 +212,14 @@
                         </div>
                   </div>
                 </div>
-
-        </div>
+            </div>
     </div>
 
-    {{-- Artikel --}}
-    <div class=""></div>
+    {{-- product end --}}
+    <div class="relative mt-[500px] h-96 w-full bg-gray-900">
+    </div>
+    <div class="relative h-96 w-full bg-gray-400">
+    </div>
+
+    
+    
