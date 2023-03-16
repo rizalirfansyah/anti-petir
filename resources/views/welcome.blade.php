@@ -68,12 +68,13 @@
 
     {{-- Content --}}
     <div class="container max-h-screen max-w-full 2xl:w-full lg:w-full md:w-full sm:max-w-full bg-no-repeat overflow-hidden mx-auto">
-        <img src="{{ URL::asset('img/bg/bg-petir.jpg') }}" class="h-screen w-full object-cover">
-        <div class="absolute animate__animated animate__fadeInUp top-72 w-3/5 h-12 ml-12 lg:ml-20 text-white">
-            <h2 class="text-4xl font-bold">Penangkal Petir - Anti Petir</h2>
+        <img src="{{ URL::asset('img/bg/bg-petir.jpg') }}" class="h-screen w-full object-cover brightness-50">
+        <div class="absolute animate__animated animate__fadeInUp top-72 h-12 w-full text-white px-8">
+            <h6 class="text-md text-center">Selamat datang di</h6>
+            <h2 class="text-4xl font-bold text-center mt-2">Penangkal Petir - Anti Petir</h2>
         </div>
-        <div class="absolute wow animate__fadeInLeft top-[380px] lg:top-[315px] md:top-[300px] lg:w-[450px] h-12 ml-12 lg:ml-20 text-white">
-            <h6 class="text-sm lg:text-lg lg:w-80 w-72 mt-8 top-56">Dewata Technoindo© menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
+        <div class="absolute wow animate__fadeInLeft top-[380px] lg:top-[315px] md:top-[300px] lg:w-[450px] lg:px-96 lg:mt-8 h-12 w-full items-center text-white">
+            <h6 class="text-lg text-center lg:text-lg mt-8 top-56 px-12">Dewata Technoindo© menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
         </div>
     </div>
 
@@ -220,6 +221,3 @@
     </div>
     <div class="relative h-96 w-full bg-gray-400">
     </div>
-
-    
-    
