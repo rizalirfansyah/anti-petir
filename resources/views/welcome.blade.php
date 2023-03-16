@@ -3,60 +3,60 @@
 <title>Penangkal Petir</title>
 
     {{-- navbar --}}
-   <div class="lg:max-w-4xl sm:w-full mx-auto">
+   <div class="fixed top-0 z-50 w-full mx-auto bg-white">
     
     <nav class="border-gray-200">
-    <div class="container relative mx-auto flex flex-wrap items-center justify-between h-20">
+    <div class="container relative flex flex-wrap items-center justify-between h-20 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <a href="#" class="flex">
         
             <span class="self-center ml-3 text-lg font-semibold whitespace-nowrap">Anti Petir</span>
         </a>
-        <button data-collapse-toggle="mobile-menu" type="button" class="md:hidden mr-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
+        <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center justify-center mr-3 text-gray-400 rounded-lg md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300" aria-controls="mobile-menu-2" aria-expanded="false">
         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
         <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </button>
-        <div class="hidden md:block w-full md:w-auto bg-white" id="mobile-menu">
-        <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
+        <div class="hidden w-full bg-white md:block md:w-auto" id="mobile-menu">
+        <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
-            <a href="#" class="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded focus:outline-none" aria-current="page">Home</a>
+            <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 focus:outline-none" aria-current="page">Home</a>
             </li>
             <li>
-                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">Product <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">Product <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
                 <!-- Dropdown menu -->
-                <div id="dropdownNavbar" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
+                <div id="dropdownNavbar" class="z-10 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow w-44">
                     <ul class="py-1" aria-labelledby="dropdownLargeButton">
                     <li>
-                        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Penangkal Petir Elektrostatik</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Penangkal Petir Elektrostatik</a>
                     </li>
                     <li>
-                        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Penangkal Petir Rumah / Konvensional</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Penangkal Petir Rumah / Konvensional</a>
                     </li>
                     <li>
-                        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Alat Penghitung Sambaran Petir</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Alat Penghitung Sambaran Petir</a>
                     </li>
                     <li>
-                        <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Kabel Penyalur Petir</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kabel Penyalur Petir</a>
                     </li>
                     </ul>
                     {{-- <div class="py-1">
-                    <a href="#" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Sign out</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
                     </div> --}}
                 </div>
             </li>
             <li>
-            <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Penawaran</a>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Penawaran</a>
             </li>
             <li>
-            <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Refrensi</a>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Refrensi</a>
             </li>
             <li>
-            <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Registrasi</a>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Registrasi</a>
             </li>
             <li>
-            <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Perencanaan</a>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Perencanaan</a>
             </li>
             <li>
-            <a href="#" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">Contact</a>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Contact</a>
             </li>
         </ul>
         </div>
@@ -67,14 +67,14 @@
     {{-- navbar end --}}
 
     {{-- Content --}}
-    <div class="container max-h-screen max-w-full 2xl:w-full lg:w-full md:w-full sm:max-w-full bg-no-repeat overflow-hidden mx-auto">
-        <img src="{{ URL::asset('img/bg/bg-petir.jpg') }}" class="h-screen w-full object-cover brightness-50">
-        <div class="absolute animate__animated animate__fadeInUp top-72 h-12 w-full text-white px-8">
-            <h6 class="text-md text-center">Selamat datang di</h6>
-            <h2 class="text-4xl font-bold text-center mt-2">Penangkal Petir - Anti Petir</h2>
+    <div class="container max-w-full max-h-screen mx-auto overflow-hidden bg-no-repeat 2xl:w-full lg:w-full md:w-full sm:max-w-full">
+        <img src="{{ URL::asset('img/bg/bg-petir.jpg') }}" class="object-cover w-full h-screen brightness-50">
+        <div class="absolute w-full h-12 px-8 text-white animate__animated animate__fadeInUp top-72">
+            <h6 class="text-center text-md">Selamat datang di</h6>
+            <h2 class="mt-2 text-4xl font-bold text-center">Penangkal Petir - Anti Petir</h2>
         </div>
         <div class="absolute wow animate__backInUp top-[380px] lg:top-[315px] md:top-[300px] lg:w-[450px] lg:px-96 lg:mt-8 h-12 w-full items-center text-white">
-            <h6 class="text-lg text-center lg:text-lg mt-8 top-56 px-12">Dewata Technoindo© menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
+            <h6 class="px-12 mt-8 text-lg text-center lg:text-lg top-56">Dewata Technoindo© menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
         </div>
     </div>
 
@@ -87,21 +87,21 @@
         <div class="relative w-full h-[500px] overflow-hidden after:clear-both after:block after:content-['']">
             <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item data-te-carousel-active>
             <img
-                src="img/bg/cable.jpg" class="block w-full h-screen object-cover brightness-75" alt="Wild Landscape" />
+                src="img/bg/cable.jpg" class="block object-cover w-full h-screen brightness-75" alt="Wild Landscape" />
                 <div class="absolute top-40 inset-x-[15%] bottom-5 hidden py-5 text-white md:block wow slideInRight">
-                <a href="" class="text-gray-100 text-sm font-bold px-1 border-md rounded-sm bg-red-900">KABEL PENYALUR PETIR</a>
-                <h4 class="text-white absolute top-5 ml-44">Januari 28, 2014 - by <strong>abah petir</strong></h4>
-                <h1 class="text-gray-200 lg:text-4xl font-semibold sm:text-sm wow animate__fadeInBottomRight animate__slow">
+                <a href="" class="px-1 text-sm font-bold text-gray-100 bg-red-900 rounded-sm border-md">KABEL PENYALUR PETIR</a>
+                <h4 class="absolute text-white top-5 ml-44">Januari 28, 2014 - by <strong>abah petir</strong></h4>
+                <h1 class="font-semibold text-gray-200 lg:text-4xl sm:text-sm wow animate__fadeInBottomRight animate__slow">
                     NYY Sebagai Kabel Penyalur Petir
                 </h2>
                 </div>
             </div>
             <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item>
-            <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="block w-full h-screen object-cover brightness-50" alt="Camera"/>
+            <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="block object-cover w-full h-screen brightness-50" alt="Camera"/>
             <div class="absolute top-40 inset-x-[15%] bottom-5 hidden py-5 text-white md:block wow slideInRight">
-                <a href="" class="text-gray-100 text-sm font-bold px-1 border-md rounded-sm bg-red-900">PENANGKAL PETIR ELEKTROSTATIK</a>
-                <h4 class="text-white absolute top-5 ml-64">Oktober 18, 2011 - by <strong>abah petir</strong></h4>
-                <h1 class="text-white lg:text-4xl font-semibold sm:text-sm wow animate__fadeInBottomRight animate__slow">
+                <a href="" class="px-1 text-sm font-bold text-gray-100 bg-red-900 rounded-sm border-md">PENANGKAL PETIR ELEKTROSTATIK</a>
+                <h4 class="absolute ml-64 text-white top-5">Oktober 18, 2011 - by <strong>abah petir</strong></h4>
+                <h1 class="font-semibold text-white lg:text-4xl sm:text-sm wow animate__fadeInBottomRight animate__slow">
                     Penangkal Petir Elektrostatis NeoFLASH
                 </h2>
                 </div>
@@ -112,14 +112,14 @@
             type="button"
             data-te-target="#carouselExampleCrossfade"
             data-te-slide="prev">
-            <span class="inline-block h-8 w-8">
+            <span class="inline-block w-8 h-8">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="h-6 w-6">
+                class="w-6 h-6">
                 <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -136,14 +136,14 @@
             type="button"
             data-te-target="#carouselExampleCrossfade"
             data-te-slide="next">
-            <span class="inline-block h-8 w-8">
+            <span class="inline-block w-8 h-8">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="h-6 w-6">
+                class="w-6 h-6">
                 <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -159,57 +159,57 @@
     </div>
 
     {{-- Product --}}
-    <div class="relative max-h-screen w-full">
+    <div class="relative w-full max-h-screen">
         <div class="h-12 w-2xl absolute inset-x-[10%] inset-10 py-5 wow animate__fadeInLeft">
-            <h2 class="text-center bg-orange-700 text-white w-24 font-semibold">Produk</h2>
+            <h2 class="w-24 font-semibold text-center text-white bg-orange-700">Produk</h2>
             <hr class="h-px bg-orange-700 border-0 pt-0.5">
         </div>
-            <div class="container absolute top-32 lg:px-32 px-8 font-inter sm:flex sm:flex-wrap sm:gap-6 sm:justify-between w-xl">
+            <div class="container absolute px-8 top-32 lg:px-32 font-inter sm:flex sm:flex-wrap sm:gap-6 sm:justify-between w-xl">
 
-                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
+                <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
                   <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                   <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-slate-700">Image Tittle</div>
+                    <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
                     <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi.</p>
-                        <div class="w-full flex items-center mt-3">
+                        <div class="flex items-center w-full mt-3">
                             <i class="fa-solid fa-clock"></i>
-                            <p class="text-sm ml-2">Januari 27, 2011</p>
+                            <p class="ml-2 text-sm">Januari 27, 2011</p>
                         </div>
                   </div>
                 </div>
           
-                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
+                <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
                   <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                   <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-slate-700">Image Tittle</div>
+                    <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
                     <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi.</p>
-                        <div class="w-full flex items-center mt-3">
+                        <div class="flex items-center w-full mt-3">
                             <i class="fa-solid fa-clock"></i>
-                            <p class="text-sm ml-2">Januari 27, 2011</p>
+                            <p class="ml-2 text-sm">Januari 27, 2011</p>
                         </div>
                   </div>
                 </div>
 
-                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInRight">
+                <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInRight">
                   <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                   <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-slate-700">Image Tittle</div>
+                    <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
                     <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi.</p>
-                        <div class="w-full flex items-center mt-3">
+                        <div class="flex items-center w-full mt-3">
                             <i class="fa-solid fa-clock"></i>
-                            <p class="text-sm ml-2">Januari 27, 2011</p>
+                            <p class="ml-2 text-sm">Januari 27, 2011</p>
                         </div>
                   </div>
                 </div>
 
-                <div class="rounded-md shadow-lg overflow-hidden mb-10 bg-white sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInRight">
+                <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInRight">
                   <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                   <div class="px-6 py-4">
-                    <div class="font-bold text-xl mb-2 text-slate-700">Image Tittle</div>
+                    <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
                     <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi.</p>
-                        <div class="w-full flex items-center mt-3">
+                        <div class="flex items-center w-full mt-3">
                             <i class="fa-solid fa-clock"></i>
-                            <p class="text-sm ml-2">Januari 27, 2011</p>
+                            <p class="ml-2 text-sm">Januari 27, 2011</p>
                         </div>
                   </div>
                 </div>
@@ -219,17 +219,17 @@
     {{-- product end --}}
     <div class="relative mt-[500px] h-screen w-full bg-gray-900">
         <div class="h-12 w-2xl absolute inset-x-[10%] inset-10 py-5 wow animate__slideInLeft">
-            <h2 class="text-center bg-orange-700 text-white w-24 font-semibold">Artikel</h2>
+            <h2 class="w-24 font-semibold text-center text-white bg-orange-700">Artikel</h2>
             <hr class="h-px bg-orange-700 border-0 pt-0.5">
         </div>
-        <div class="container absolute top-32 lg:px-28 px-8 wow animate__fadeInUp">
+        <div class="container absolute px-8 top-32 lg:px-28 wow animate__fadeInUp">
             <ol class="">
-                <li class="text-white mt-2">> <a href="" class="hover:text-gray-400">Testing article Coy 1</a></li>
-                <li class="text-white mt-2">> <a href="" class="hover:text-gray-400">Testing article Coy 2</a></li>
-                <li class="text-white mt-2">> <a href="" class="hover:text-gray-400">Testing article Coy 3</a></li>
-                <li class="text-white mt-2">> <a href="" class="hover:text-gray-400">Testing article Coy 4</a></li>
+                <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 1</a></li>
+                <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 2</a></li>
+                <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 3</a></li>
+                <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 4</a></li>
               </ol>
         </div>
     </div>
-    <div class="relative h-96 w-full bg-gray-400 sm:flex sm:flex-wrap sm:gap-6 sm:justify-between w-xl">
+    <div class="relative w-full bg-gray-400 h-96 sm:flex sm:flex-wrap sm:gap-6 sm:justify-between w-xl">
     </div>
