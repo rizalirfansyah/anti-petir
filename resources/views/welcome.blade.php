@@ -84,10 +84,10 @@
             <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item data-te-carousel-active>
             <img
                 src="img/bg/cable.jpg" class="block object-cover w-full h-screen brightness-75" alt="Wild Landscape" />
-                <div class="absolute top-44 lg:inset-x-[15%] inset-[5%] bottom-5 py-5 text-white md:block wow slideInRight">
+                <div class="absolute top-44 lg:inset-x-[15%] md:inset-x-32 inset-[5%] bottom-5 py-5 text-white md:block wow slideInRight">
                 <a href="" class="px-1 lg:text-sm text-xs font-bold text-gray-100 bg-red-900 rounded-sm border-md">KABEL PENYALUR PETIR</a>
                 <h4 class="absolute text-white lg:top-5 top-6 text-xs lg:text-sm ml-[150px] lg:ml-44">Januari 28, 2014 - by <strong>abah petir</strong></h4>
-                <h1 class="font-semibold text-gray-200 lg:text-4xl sm:text-xl wow animate__fadeInBottomRight animate_slow">
+                <h1 class="font-semibold text-gray-200 lg:text-4xl xl:text-4xl md:text-3xl wow animate__fadeInBottomRight animate_slow">
                     NYY Sebagai Kabel Penyalur Petir
                 </h1>
                 </div>
@@ -155,7 +155,7 @@
     </div>
 
     {{-- Produk --}}
-    <div class="relative w-full h-[1500px] xl:h-[600px]">
+    <div class="relative w-full lg:h-[1000px] xl:h-[600px] md:h-[900px] h-[1700px]">
         <div class="h-12 w-4/5 relative inset-x-[10%] inset-10 py-5 wow animate__fadeInLeft">
             <h2 class="w-24 font-semibold text-center text-white bg-orange-700">Produk</h2>
             <hr class="h-px bg-orange-700 border-0 pt-0.5">
@@ -214,8 +214,18 @@
     {{-- product end --}}
 
     {{-- artikel --}}
-    <div class="relative h-screen w-full bg-gray-900 px-6 mx-auto sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0">
-        <div class="lg:p-12 lg:flex-1">
+    <div class="relative max-h-screen w-full bg-gray-900 px-6 mx-auto sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0">
+        <div class="lg:p-12 lg:flex-1 p-8 w-lg inset-x-[10%] wow animate__slideInLeft">
+            <h2 class="w-24 font-semibold text-center text-white bg-orange-700">Artikel</h2>
+            <hr class="h-px bg-orange-700 border-0 pt-0.5 mb-5">
+            <div class="container wow animate__fadeInUp mb-8">
+                <ol class="">
+                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 1</a></li>
+                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 2</a></li>
+                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 3</a></li>
+                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 4</a></li>
+                  </ol>
+            </div>
             <h3 class="text-4xl font-bold text-slate-600 sm:text-5xl md:text-6xl"><span class="text-sky-500">Rizal</span> Irfansyah</h3>
             <img src="https://source.unsplash.com/600x400?animal" alt="Laptop" class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden" />
             <h2 class="mt-6 text-2xl font-semibold text-slate-600 sm:mt-8 sm:text-4xl">Mari belajar tailwindCSS bersama PZR</h2>
@@ -225,8 +235,8 @@
               <a href="#" class="inline-block px-5 py-3 bg-red-600 text-white rounded-lg shadow-lg uppercase font-semibold tracking-wider text-sm sm:text-base">Subscribe YT Aku!</a>
             </div>
           </div>
-          <div class="hidden lg:flex lg:w-1/2">
-            <img src="https://source.unsplash.com/600x400?laptop" alt="Laptop" class="object-cover rounded-md">
+          <div class="hidden lg:flex lg:w-1/2 h-2/3">
+            <img src="https://source.unsplash.com/600x400?laptop" alt="Laptop" class="object-cover rounded-md wow animate__fadeInRight mt-8">
           </div>
           
         {{-- <div class="h-12 w-2xl absolute inset-x-[10%] inset-10 py-5 wow animate__slideInLeft">
