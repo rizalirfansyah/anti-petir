@@ -3,12 +3,11 @@
 <title>Penangkal Petir</title>
 
     {{-- navbar --}}
-   <div class="fixed top-0 z-50 w-full mx-auto bg-white">
+   <div class="fixed top-0 z-50 w-full mx-auto bg-white wow animate__fadeInDown">
     
     <nav class="border-gray-200">
     <div class="container relative flex flex-wrap items-center justify-between h-20 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <a href="#" class="flex">
-        
             <span class="self-center ml-3 text-lg font-semibold whitespace-nowrap">Anti Petir</span>
         </a>
         <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center justify-center mr-3 text-gray-400 rounded-lg md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300" aria-controls="mobile-menu-2" aria-expanded="false">
@@ -38,9 +37,6 @@
                         <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kabel Penyalur Petir</a>
                     </li>
                     </ul>
-                    {{-- <div class="py-1">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
-                    </div> --}}
                 </div>
             </li>
             <li>
@@ -70,10 +66,10 @@
     <div class="container max-w-full max-h-screen mx-auto overflow-hidden bg-no-repeat 2xl:w-full lg:w-full md:w-full sm:max-w-full">
         <img src="{{ URL::asset('img/bg/bg-petir.jpg') }}" class="object-cover w-full h-screen brightness-50">
         <div class="absolute w-full h-12 px-8 text-white animate__animated animate__fadeInUp top-72">
-            <h6 class="text-center text-md">Selamat datang di</h6>
+            <h6 class="text-center text-sm">Selamat datang di</h6>
             <h2 class="mt-2 text-4xl font-bold text-center">Penangkal Petir - Anti Petir</h2>
         </div>
-        <div class="absolute wow animate__backInUp top-[380px] lg:top-[315px] md:top-[300px] lg:w-[450px] lg:px-96 lg:mt-8 h-12 w-full items-center text-white">
+        <div class="absolute wow animate__backInUp top-[380px] lg:top-[315px] md:top-[340px] lg:w-[450px] lg:px-96 lg:mt-8 h-12 w-full items-center text-white">
             <h6 class="px-12 mt-8 text-lg text-center lg:text-lg top-56">Dewata Technoindo© menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
         </div>
     </div>
@@ -88,20 +84,20 @@
             <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item data-te-carousel-active>
             <img
                 src="img/bg/cable.jpg" class="block object-cover w-full h-screen brightness-75" alt="Wild Landscape" />
-                <div class="absolute top-40 inset-x-[15%] bottom-5 hidden py-5 text-white md:block wow slideInRight">
-                <a href="" class="px-1 text-sm font-bold text-gray-100 bg-red-900 rounded-sm border-md">KABEL PENYALUR PETIR</a>
-                <h4 class="absolute text-white top-5 ml-44">Januari 28, 2014 - by <strong>abah petir</strong></h4>
-                <h1 class="font-semibold text-gray-200 lg:text-4xl sm:text-sm wow animate__fadeInBottomRight animate__slow">
+                <div class="absolute top-44 lg:inset-x-[15%] inset-[5%] bottom-5 py-5 text-white md:block wow slideInRight">
+                <a href="" class="px-1 lg:text-sm text-xs font-bold text-gray-100 bg-red-900 rounded-sm border-md">KABEL PENYALUR PETIR</a>
+                <h4 class="absolute text-white lg:top-5 top-6 text-xs lg:text-sm ml-[150px] lg:ml-44">Januari 28, 2014 - by <strong>abah petir</strong></h4>
+                <h1 class="font-semibold text-gray-200 lg:text-4xl sm:text-xl wow animate__fadeInBottomRight animate_slow">
                     NYY Sebagai Kabel Penyalur Petir
-                </h2>
+                </h1>
                 </div>
             </div>
-            <div class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item>
+            <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item>
             <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="block object-cover w-full h-screen brightness-50" alt="Camera"/>
-            <div class="absolute top-40 inset-x-[15%] bottom-5 hidden py-5 text-white md:block wow slideInRight">
+            <div class="absolute top-44 lg:inset-x-[15%] inset-x-[5%] bottom-5 py-5 text-white md:block wow slideInRight">
                 <a href="" class="px-1 text-sm font-bold text-gray-100 bg-red-900 rounded-sm border-md">PENANGKAL PETIR ELEKTROSTATIK</a>
                 <h4 class="absolute ml-64 text-white top-5">Oktober 18, 2011 - by <strong>abah petir</strong></h4>
-                <h1 class="font-semibold text-white lg:text-4xl sm:text-sm wow animate__fadeInBottomRight animate__slow">
+                <h1 class="font-semibold text-white lg:text-4xl sm:text-sm wow animate__fadeInRight animate_slow">
                     Penangkal Petir Elektrostatis NeoFLASH
                 </h2>
                 </div>
@@ -158,13 +154,13 @@
         
     </div>
 
-    {{-- Product --}}
-    <div class="relative w-full max-h-screen">
-        <div class="h-12 w-2xl absolute inset-x-[10%] inset-10 py-5 wow animate__fadeInLeft">
+    {{-- Produk --}}
+    <div class="relative w-full h-[1500px] xl:h-[600px]">
+        <div class="h-12 w-4/5 relative inset-x-[10%] inset-10 py-5 wow animate__fadeInLeft">
             <h2 class="w-24 font-semibold text-center text-white bg-orange-700">Produk</h2>
             <hr class="h-px bg-orange-700 border-0 pt-0.5">
         </div>
-            <div class="container absolute px-8 top-32 lg:px-32 font-inter sm:flex sm:flex-wrap sm:gap-6 sm:justify-between w-xl">
+            <div class="relative px-8 top-20 lg:px-32 font-inter sm:flex sm:flex-wrap sm:gap-6 sm:justify-between w-xl">
 
                 <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
                   <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
@@ -215,10 +211,25 @@
                 </div>
             </div>
     </div>
-
     {{-- product end --}}
-    <div class="relative mt-[500px] h-screen w-full bg-gray-900">
-        <div class="h-12 w-2xl absolute inset-x-[10%] inset-10 py-5 wow animate__slideInLeft">
+
+    {{-- artikel --}}
+    <div class="relative h-screen w-full bg-gray-900 px-6 mx-auto sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0">
+        <div class="lg:p-12 lg:flex-1">
+            <h3 class="text-4xl font-bold text-slate-600 sm:text-5xl md:text-6xl"><span class="text-sky-500">Rizal</span> Irfansyah</h3>
+            <img src="https://source.unsplash.com/600x400?animal" alt="Laptop" class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden" />
+            <h2 class="mt-6 text-2xl font-semibold text-slate-600 sm:mt-8 sm:text-4xl">Mari belajar tailwindCSS bersama PZR</h2>
+            <p class="mt-2 text-slate-500 sm:mt-4 sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere a nobis nam tempora libero! Sunt alias voluptates velit minus.
+            </p>
+            <div class="mt-4 sm:mt-6">
+              <a href="#" class="inline-block px-5 py-3 bg-red-600 text-white rounded-lg shadow-lg uppercase font-semibold tracking-wider text-sm sm:text-base">Subscribe YT Aku!</a>
+            </div>
+          </div>
+          <div class="hidden lg:flex lg:w-1/2">
+            <img src="https://source.unsplash.com/600x400?laptop" alt="Laptop" class="object-cover rounded-md">
+          </div>
+          
+        {{-- <div class="h-12 w-2xl absolute inset-x-[10%] inset-10 py-5 wow animate__slideInLeft">
             <h2 class="w-24 font-semibold text-center text-white bg-orange-700">Artikel</h2>
             <hr class="h-px bg-orange-700 border-0 pt-0.5">
         </div>
@@ -231,5 +242,7 @@
               </ol>
         </div>
     </div>
-    <div class="relative w-full bg-gray-400 h-96 sm:flex sm:flex-wrap sm:gap-6 sm:justify-between w-xl">
+    <div class="relative w-full bg-gray-400 h-96 sm:flex sm:flex-wrap sm:gap-6 sm:justify-between w-xl"> --}}
+
+    
     </div>
