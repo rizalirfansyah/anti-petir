@@ -65,11 +65,11 @@
     {{-- Content --}}
     <div class="container max-w-full max-h-screen mx-auto overflow-hidden bg-no-repeat 2xl:w-full lg:w-full md:w-full sm:max-w-full">
         <img src="{{ URL::asset('img/bg/bg-petir.jpg') }}" class="object-cover w-full h-screen brightness-50">
-        <div class="absolute w-full h-12 px-8 text-white animate__animated animate__fadeInUp top-72">
+        <div class="absolute w-full h-12 px-8 text-white animate__animated animate__fadeInUp animate__slower top-72">
             <h6 class="text-center text-sm">Selamat datang di</h6>
             <h2 class="mt-2 text-4xl font-bold text-center">Penangkal Petir - Anti Petir</h2>
         </div>
-        <div class="absolute wow animate__backInUp top-[380px] lg:top-[315px] md:top-[340px] lg:w-[450px] lg:px-96 lg:mt-8 h-12 w-full items-center text-white">
+        <div class="absolute wow animate__fadeInUpBig top-[380px] lg:top-[315px] md:top-[340px] lg:w-[450px] lg:px-96 lg:mt-8 h-12 w-full items-center text-white">
             <h6 class="px-12 mt-8 text-lg text-center lg:text-lg top-56">Dewata Technoindo© menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
         </div>
     </div>
@@ -155,7 +155,7 @@
     </div>
 
     {{-- Produk --}}
-    <div class="relative w-full lg:h-[1000px] xl:h-[600px] md:h-[900px] h-[1700px]">
+    <div class="relative w-full lg:h-[1000px] xl:h-[600px] md:h-[900px] sm:h-[900px] max-h-max">
         <div class="h-12 w-4/5 relative inset-x-[10%] inset-10 py-5 wow animate__fadeInLeft">
             <h2 class="w-24 font-semibold text-center text-white bg-orange-700">Produk</h2>
             <hr class="h-px bg-orange-700 border-0 pt-0.5">
@@ -214,45 +214,42 @@
     {{-- product end --}}
 
     {{-- artikel --}}
-    <div class="relative max-h-screen w-full bg-gray-900 px-6 mx-auto sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0">
-        <div class="lg:p-12 lg:flex-1 p-8 w-lg inset-x-[10%] wow animate__slideInLeft">
+    <div class="relative max-h-max xl:mt-2 lg:mt-1 md:mt-4 mt-40 w-full bg-gray-900 px-6 mx-auto sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0">
+        <div class="lg:p-12 lg:flex-1 p-8 w-lg wow animate__slideInLeft">
             <h2 class="w-24 font-semibold text-center text-white bg-orange-700">Artikel</h2>
-            <hr class="h-px bg-orange-700 border-0 pt-0.5 mb-5">
-            <div class="container wow animate__fadeInUp mb-8">
+            <hr class="h-px bg-orange-700 border-0 pt-0.5 mb-4">
+
+            <div class="container wow animate__fadeInLeftBig animate_slower mb-6">
                 <ol class="">
-                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 1</a></li>
-                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 2</a></li>
-                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 3</a></li>
-                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 4</a></li>
+                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis amet expedita ut pariatur eligendi quibusdam, nostrum porro neque asperiores. Repellat corporis quam doloribus tempore quas.</a></li>
+                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, suscipit.</a></li>
+                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum repellendus vitae quibusdam nisi delectus odit animi suscipit dolorem fugit numquam.</a></li>
+                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, inventore.</a></li>
                   </ol>
             </div>
-            <h3 class="text-4xl font-bold text-slate-600 sm:text-5xl md:text-6xl"><span class="text-sky-500">Rizal</span> Irfansyah</h3>
-            <img src="https://source.unsplash.com/600x400?animal" alt="Laptop" class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden" />
-            <h2 class="mt-6 text-2xl font-semibold text-slate-600 sm:mt-8 sm:text-4xl">Mari belajar tailwindCSS bersama PZR</h2>
-            <p class="mt-2 text-slate-500 sm:mt-4 sm:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere a nobis nam tempora libero! Sunt alias voluptates velit minus.
-            </p>
-            <div class="mt-4 sm:mt-6">
-              <a href="#" class="inline-block px-5 py-3 bg-red-600 text-white rounded-lg shadow-lg uppercase font-semibold tracking-wider text-sm sm:text-base">Subscribe YT Aku!</a>
+            <h2 class="w-24 font-semibold text-center text-white bg-orange-700">Tag</h2>
+            <hr class="h-px bg-orange-700 border-0 pt-0.5 mb-4">
+            <img src="https://source.unsplash.com/600x400?animal" alt="Laptop" class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden"/>
+
+            <div class="mt-4 mb-8 sm:mt-6 wow animate__fadeInLeftBig animate_slower">
+            <a href="#" class="inline-block px-5 py-2 mb-1 bg-gray-500 hover:bg-gray-600 text-white rounded-lg shadow-lg font-semibold tracking-wider text-sm sm:text-base">Subscribe YT juga cuy!</a>              
+            <a href="#" class="inline-block px-5 py-2 mb-1 bg-gray-500 hover:bg-gray-600 text-white rounded-lg shadow-lg font-semibold tracking-wider text-sm sm:text-base">Arrester</a>              
+            <a href="#" class="inline-block px-5 py-2 mb-1 bg-gray-500 hover:bg-gray-600 text-white rounded-lg shadow-lg font-semibold tracking-wider text-sm sm:text-base">Cara kerja penangkal petir</a>              
+            <a href="#" class="inline-block px-5 py-2 mb-1 bg-gray-500 hover:bg-gray-600 text-white rounded-lg shadow-lg font-semibold tracking-wider text-sm sm:text-base">Sertifikasi K3</a>                     
+            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Read more</a>
+            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Penangkal petir</a>
+            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Penangkal petir</a>
             </div>
+
           </div>
           <div class="hidden lg:flex lg:w-1/2 h-2/3">
-            <img src="https://source.unsplash.com/600x400?laptop" alt="Laptop" class="object-cover rounded-md wow animate__fadeInRight mt-8">
+            <img src="https://source.unsplash.com/800x400?laptop" alt="Laptop" class="object-cover rounded-md wow animate__fadeInRight mt-8">
           </div>
-          
-        {{-- <div class="h-12 w-2xl absolute inset-x-[10%] inset-10 py-5 wow animate__slideInLeft">
-            <h2 class="w-24 font-semibold text-center text-white bg-orange-700">Artikel</h2>
-            <hr class="h-px bg-orange-700 border-0 pt-0.5">
-        </div>
-        <div class="container absolute px-8 top-32 lg:px-28 wow animate__fadeInUp">
-            <ol class="">
-                <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 1</a></li>
-                <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 2</a></li>
-                <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 3</a></li>
-                <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Testing article Coy 4</a></li>
-              </ol>
-        </div>
     </div>
-    <div class="relative w-full bg-gray-400 h-96 sm:flex sm:flex-wrap sm:gap-6 sm:justify-between w-xl"> --}}
+    {{-- artikel end --}}
+    
+    {{-- footer --}}
+    <div class="h-96 bg-gray-400"></div>
+    
 
     
-    </div>
