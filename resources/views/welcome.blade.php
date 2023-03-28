@@ -52,7 +52,7 @@
             <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Perencanaan</a>
             </li>
             <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Contact</a>
+            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Contact Us</a>
             </li>
         </ul>
         </div>
@@ -69,8 +69,11 @@
             <h6 class="text-sm text-center">Selamat datang di</h6>
             <h2 class="mt-2 text-4xl font-bold text-center">Penangkal Petir - Anti Petir</h2>
         </div>
-        <div class="absolute wow animate__fadeInUpBig top-[380px] lg:top-[315px] md:top-[340px] lg:w-[450px] lg:px-96 lg:mt-8 h-12 w-full items-center text-white">
-            <h6 class="px-12 mt-8 text-lg text-center lg:text-lg top-56">Dewata Technoindo© menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
+        <div class="absolute wow animate__fadeInUp animate_slow top-[380px] xl:top-[310px] lg:top-[315px] md:top-[340px] lg:px-96 lg:mt-8 h-12 w-full text-white items-center">
+            <h6 class="px-12 items-center mt-8 mb-3 text-lg text-center xl:w-[750px] mx-auto lg:text-lg top-56">Dewata Technoindo menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
+            <div class="flex wow animate__slideInUp animate_slow">
+                <a href="#" class="mx-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none dark:focus:ring-blue-800">Hubungi Kami</a>
+            </div>
         </div>
     </div>
 
@@ -85,24 +88,21 @@
             <img
                 src="img/bg/cable.jpg" class="block object-cover w-full h-screen brightness-75" alt="Wild Landscape" />
                 <div class="absolute top-44 lg:inset-x-[15%] md:inset-x-32 inset-[5%] bottom-5 py-5 text-white md:block wow slideInRight">
-                <a href="" class="px-1 text-xs font-bold text-gray-100 bg-red-900 rounded-sm lg:text-sm border-md">KABEL PENYALUR PETIR</a>
-                <h4 class="absolute text-white lg:top-5 top-6 text-xs lg:text-sm ml-[150px] lg:ml-44">Januari 28, 2014 - by <strong>abah petir</strong></h4>
-                <h1 class="font-semibold text-gray-200 lg:text-4xl xl:text-4xl md:text-3xl wow animate__fadeInBottomRight animate_slow">
+                    <a href="" class="px-1 text-xs font-bold text-gray-100 bg-red-900 rounded-sm lg:text-sm border-md">KABEL PENYALUR PETIR</a>
+                    <h4 class="absolute text-white top-5 ml-[150px] lg:ml-44">Januari 28, 2014 - by <strong>abah petir</strong></h4>
+                    <h1 class="font-semibold text-gray-200 lg:text-4xl xl:text-4xl md:text-3xl wow animate__fadeInBottomRight animate_slow">
                     NYY Sebagai Kabel Penyalur Petir
-                </h1>
+                    </h1>
                 </div>
             </div>
             <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item>
             <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="block object-cover w-full h-screen brightness-50" alt="Camera"/>
             <div class="absolute top-44 lg:inset-x-[15%] inset-x-[5%] bottom-5 py-5 text-white md:block wow slideInRight">
-                <div>
-                    
-                </div>
                 <a href="" class="px-1 text-sm font-bold text-gray-100 bg-red-900 rounded-sm border-md">PENANGKAL PETIR ELEKTROSTATIK</a>
                 <h4 class="absolute ml-64 text-white top-5">Oktober 18, 2011 - by <strong>abah petir</strong></h4>
                 <h1 class="font-semibold text-white lg:text-4xl sm:text-sm wow animate__fadeInRight animate_slow">
                     Penangkal Petir Elektrostatis NeoFLASH
-                </h2>
+                </h1>
                 </div>
             </div>
         </div>
@@ -165,7 +165,7 @@
         </div>
             <div class="flex flex-wrap justify-center px-8 -mx-3 sm:gap-4 top-20">
                 <div class="px-6">
-                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
+                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-80 wow animate__fadeInLeft">
                         <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                         <div class="px-6 py-4">
                           <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
@@ -180,7 +180,7 @@
                 
           
                 <div class="px-6">
-                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
+                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-80 wow animate__fadeInLeft">
                         <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                         <div class="px-6 py-4">
                           <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
@@ -194,7 +194,7 @@
                 </div>
 
                 <div class="px-6">
-                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
+                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-80 wow animate__fadeInRight">
                         <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                         <div class="px-6 py-4">
                           <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
@@ -208,7 +208,7 @@
                 </div>
 
                 <div class="px-6">
-                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
+                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-80 wow animate__fadeInRight">
                         <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                         <div class="px-6 py-4">
                           <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
@@ -245,12 +245,13 @@
 
             <div class="mt-4 mb-8 sm:mt-6 wow animate__fadeInLeftBig animate_slower">
             <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Subscribe YT juga cuy!</a>              
+            <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Testing article section</a>              
             <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Arrester</a>              
             <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Cara kerja penangkal petir</a>              
             <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Sertifikasi K3</a>                     
-            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Read more</a>
-            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Penangkal petir</a>
-            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Penangkal petir</a>
+            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-sm font-semibold tracking-wider px-5 py-2.5 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Read more</a>
+            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-sm font-semibold tracking-wider px-5 py-2.5 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Penangkal petir</a>
+            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-sm font-semibold tracking-wider px-5 py-2.5 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Penangkal petir NeoFLASH</a>
             </div>
 
           </div>
@@ -259,9 +260,8 @@
           </div>
     </div>
     {{-- artikel end --}}
-    
+   
     {{-- footer --}}
-    <div class="bg-gray-400 h-96"></div>
-    
-
-    
+    <div class="bg-gray-700 h-12">
+        <div class="text-start text-gray-200 font-semibold text-xs py-4 xl:ml-56 lg:ml-52 md:ml-40 sm:ml-32 ml-20">© 2023 Antipetir.com / All rights reserved</div>
+    </div>
