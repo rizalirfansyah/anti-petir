@@ -165,7 +165,7 @@
         </div>
             <div class="flex flex-wrap justify-center px-8 -mx-3 sm:gap-4 top-20">
                 <div class="px-6">
-                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-80 wow animate__fadeInLeft">
+                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
                         <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                         <div class="px-6 py-4">
                           <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
@@ -180,7 +180,7 @@
                 
           
                 <div class="px-6">
-                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-80 wow animate__fadeInLeft">
+                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
                         <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                         <div class="px-6 py-4">
                           <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
@@ -194,7 +194,7 @@
                 </div>
 
                 <div class="px-6">
-                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-80 wow animate__fadeInRight">
+                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInRight">
                         <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                         <div class="px-6 py-4">
                           <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
@@ -208,7 +208,7 @@
                 </div>
 
                 <div class="px-6">
-                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-80 wow animate__fadeInRight">
+                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInRight">
                         <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
                         <div class="px-6 py-4">
                           <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
