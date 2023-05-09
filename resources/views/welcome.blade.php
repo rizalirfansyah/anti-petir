@@ -17,7 +17,7 @@
         <div class="hidden w-full bg-white md:block md:w-auto" id="mobile-menu">
         <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 focus:outline-none" aria-current="page">Home</a>
+            <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 focus:outline-none" aria-current="page">Dashboard</a>
             </li>
             <li>
                 <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">Product <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
@@ -248,9 +248,9 @@
             <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Arrester</a>              
             <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Cara kerja penangkal petir</a>              
             <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Sertifikasi K3</a>                     
-            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Read more</a>
-            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Penangkal petir</a>
-            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Penangkal petir</a>
+            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 focus:outline-none">Read more</a>
+            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 focus:outline-none">Penangkal petir</a>
+            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 focus:outline-none">Penangkal petir</a>
             </div>
 
           </div>
@@ -261,11 +261,11 @@
     {{-- artikel end --}}
     
     {{-- footer --}}    
-    <footer class="bg-slate-100 rounded-lg shadow m-4 dark:bg-gray-800">
+    <footer class="bg-slate-100 rounded-lg shadow m-4">
         <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between  wow animate__fadeInUp">
-        <span class="text-sm text-gray-300 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Anti-Petir</a>. All Rights Reserved.
+        <span class="text-sm text-gray-300 sm:text-center">© 2023 <a href="https://flowbite.com/" class="hover:underline">Anti-Petir</a>. All Rights Reserved.
         </span>
-        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-300 dark:text-gray-100 sm:mt-0">
+        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-300 sm:mt-0">
             <li>
                 <a href="#" class="mr-4 hover:underline md:mr-6">Testimoni</a>
             </li>
