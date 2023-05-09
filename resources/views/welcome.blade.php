@@ -196,10 +196,10 @@
             <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-sm font-semibold tracking-wider px-5 py-2.5 mb-1 focus:outline-none">Penangkal petir NeoFLASH</a>
             </div>
 
-          </div>
-          <div class="hidden lg:flex lg:w-1/2 h-2/3">
+        </div>
+        <div class="hidden lg:flex lg:w-1/2 h-2/3">
             <img src="https://source.unsplash.com/800x400?laptop" alt="Laptop" class="object-cover mt-8 rounded-md wow animate__fadeInRight">
-          </div>
+        </div>
     </div>
     {{-- artikel end --}}
    

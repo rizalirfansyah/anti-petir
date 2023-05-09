@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/penawaran', function () {
-    return view('penawaran');
+Route::get('/refrensi', function () {
+    return view('refrensi');
 });
 
 Route::get('contact', function () {
