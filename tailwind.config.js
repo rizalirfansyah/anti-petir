@@ -10,6 +10,8 @@ module.exports = {
         './resources/views/**/*.blade.php',
         "./resources/**/*.vue",
         "./node_modules/flowbite/**/*.js",
+        "./src/**/*.{html,js}",
+        "./node_modules/tw-elements/dist/js/**/*.js"
     ],
 
     theme: {
@@ -23,5 +25,7 @@ module.exports = {
     plugins: [require('@tailwindcss/forms'),
         require('@tailwindcss/typography'),
         require('flowbite/plugin'),
+        require("tw-elements/dist/plugin.cjs"),
     ],
+    darkMode: "class"
 };
