@@ -1,4 +1,5 @@
 @include('component.app')
+@include('component.navbar')
 
 <title>Penangkal Petir</title>
 
@@ -78,36 +79,32 @@
     </div>
 
     {{-- Carousel --}}
-        <div id="carouselExampleCrossfade" class="relative" data-te-carousel-init data-te-carousel-slide>
+    <div id="carouselExampleCrossfade" class="relative" data-te-carousel-init data-te-carousel-slide>
         <div class="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0" data-te-carousel-indicators>
             <button type="button" data-te-target="#carouselExampleCrossfade" data-te-slide-to="0" data-te-carousel-active class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-te-target="#carouselExampleCrossfade" data-te-slide-to="1" class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none" aria-label="Slide 2"></button>
         </div>
         <div class="relative w-full h-[500px] overflow-hidden after:clear-both after:block after:content-['']">
-            <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item data-te-carousel-active>
-            <img
-                src="img/bg/cable.jpg" class="block object-cover w-full h-screen brightness-75" alt="Wild Landscape" />
+            <div class="relative float-left -mr-[100%] w-full !transform-none transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item data-te-carousel-active>
+            <img src="img/bg/cable.jpg" class="block object-cover w-full h-screen brightness-75" alt="Wild Landscape" />
                 <div class="absolute top-44 lg:inset-x-[15%] md:inset-x-32 inset-[5%] bottom-5 py-5 text-white md:block wow slideInRight">
-                <a href="" class="px-1 text-xs font-bold text-gray-100 bg-red-900 rounded-sm lg:text-sm border-md">KABEL PENYALUR PETIR</a>
-                <h4 class="absolute text-white lg:top-5 top-6 text-xs lg:text-sm ml-[150px] lg:ml-44">Januari 28, 2014 - by <strong>abah petir</strong></h4>
-                <h1 class="font-semibold text-gray-200 lg:text-4xl xl:text-4xl md:text-3xl wow animate__fadeInBottomRight animate_slow">
+                    <a href="" class="px-1 text-xs font-bold text-gray-100 bg-red-900 rounded-sm lg:text-sm border-md">KABEL PENYALUR PETIR</a>
+                    <h4 class="absolute text-white top-5 ml-[150px] lg:ml-44">Januari 28, 2014 - by <strong>abah petir</strong></h4>
+                    <h1 class="font-semibold text-gray-200 lg:text-4xl xl:text-4xl md:text-3xl wow animate__fadeInBottomRight animate_slow">
                     NYY Sebagai Kabel Penyalur Petir
-                </h1>
+                    </h1>
                 </div>
             </div>
-            <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item>
+            <div class="relative float-left -mr-[100%] w-full !transform-none transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item>
             <img src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="block object-cover w-full h-screen brightness-50" alt="Camera"/>
-            <div class="absolute top-44 lg:inset-x-[15%] inset-x-[5%] bottom-5 py-5 text-white md:block wow slideInRight">
-                <div>
-                    
+                <div class="absolute top-44 lg:inset-x-[15%] inset-x-[5%] bottom-5 py-5 text-white md:block wow slideInRight">
+                    <a href="" class="px-1 text-sm font-bold text-gray-100 bg-red-900 rounded-sm border-md">PENANGKAL PETIR ELEKTROSTATIK</a>
+                    <h4 class="absolute ml-64 text-white top-5">Oktober 18, 2011 - by <strong>abah petir</strong></h4>
+                    <h1 class="font-semibold text-white lg:text-4xl sm:text-sm wow animate__fadeInRight animate_slow">
+                        Penangkal Petir Elektrostatis NeoFLASH
+                    </h1>
+                    </div>
                 </div>
-                <a href="" class="px-1 text-sm font-bold text-gray-100 bg-red-900 rounded-sm border-md">PENANGKAL PETIR ELEKTROSTATIK</a>
-                <h4 class="absolute ml-64 text-white top-5">Oktober 18, 2011 - by <strong>abah petir</strong></h4>
-                <h1 class="font-semibold text-white lg:text-4xl sm:text-sm wow animate__fadeInRight animate_slow">
-                    Penangkal Petir Elektrostatis NeoFLASH
-                </h2>
-                </div>
-            </div>
         </div>
         <button
             class="absolute top-0 bottom-0 left-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
@@ -248,37 +245,24 @@
 
             <div class="mt-4 mb-8 sm:mt-6 wow animate__fadeInLeftBig animate_slower">
             <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Subscribe YT juga cuy!</a>              
+            <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Testing article section</a>              
             <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Arrester</a>              
             <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Cara kerja penangkal petir</a>              
             <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Sertifikasi K3</a>                     
-            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 focus:outline-none">Read more</a>
-            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 focus:outline-none">Penangkal petir</a>
-            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 focus:outline-none">Penangkal petir</a>
+            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Read more</a>
+            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Penangkal petir</a>
+            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Penangkal petir</a>
             </div>
 
-          </div>
-          <div class="hidden lg:flex lg:w-1/2 h-2/3">
+        </div>
+        <div class="hidden lg:flex lg:w-1/2 h-2/3">
             <img src="https://source.unsplash.com/800x400?laptop" alt="Laptop" class="object-cover mt-8 rounded-md wow animate__fadeInRight">
-          </div>
+        </div>
     </div>
     {{-- artikel end --}}
     
-    {{-- footer --}}    
     {{-- footer --}}
-    <footer class="bg-gray-50 rounded-lg shadow m-4">
-        <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between  wow animate__fadeInUp">
-        <span class="text-sm text-gray-500 sm:text-center">© 2023 <a href="https://flowbite.com/" class="hover:underline">Anti-Petir</a>. All Rights Reserved.
-        </span>
-        <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
-            <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">Testimoni</a>
-            </li>
-            <li>
-                <a href="#" class="mr-4 hover:underline md:mr-6">Lisensi</a>
-            </li>
-            <li>
-                <a href="#" class="hover:underline">Tentang Kami</a>
-            </li>
-        </ul>
-        </div>
-    </footer>
+    <div class="bg-gray-400 h-96"></div>
+    
+
+    
