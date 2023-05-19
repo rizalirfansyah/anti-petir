@@ -29,7 +29,25 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
+    Route::get('/register', function () {
+        return view('auth.register');
+    })->name('register');
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    Route::get('/product', function () {
+        return view('product');
+    })->name('product');
+    Route::get('/artikel', function () {
+        return view('artikel');
+    })->name('artikel');
+    Route::get('/brosur', function () {
+        return view('brosur');
+    })->name('brosur');
+    Route::get('/inbox', function () {
+        return view('inbox');
+    })->name('inbox');
+    Route::get('/user', function () {
+        return view('user');
+    })->name('user');
 });
