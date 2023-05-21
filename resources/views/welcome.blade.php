@@ -62,17 +62,23 @@
     </div>
     {{-- navbar end --}}
 
+    {{-- floating whatsapp --}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://api.whatsapp.com/send?phone=082336646156&text=Hola%21%20Test%20m%C3%A1s%20Rizal." class="float" target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+    </a>
+
     {{-- Content --}}
     <div class="container max-w-full max-h-screen mx-auto overflow-hidden bg-no-repeat 2xl:w-full lg:w-full md:w-full sm:max-w-full">
         <img src="{{ URL::asset('img/bg/bg-petir.jpg') }}" class="object-cover w-full h-screen brightness-50">
-        <div class="absolute w-full h-12 px-8 text-white animate__animated animate__fadeInUp animate__slower top-72">
-            <h6 class="text-sm text-center">Selamat datang di</h6>
+        <div class="absolute w-full h-12 px-8 text-white animate__animated animate__fadeInDown top-72">
+            <h6 class="text-md text-center">Selamat datang di</h6>
             <h2 class="mt-2 text-4xl font-bold text-center">Penangkal Petir - Anti Petir</h2>
         </div>
         <div class="absolute wow animate__fadeInUp animate_slow top-[380px] xl:top-[310px] lg:top-[315px] md:top-[340px] lg:px-96 lg:mt-8 h-12 w-full text-white items-center">
             <h6 class="px-12 items-center mt-8 mb-3 text-lg text-center xl:w-[750px] mx-auto lg:text-lg top-56">Dewata Technoindo menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
-            <div class="flex wow animate__slideInUp animate_slow">
-                <a href="#" class="mx-auto text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">Hubungi Kami</a>
+            <div class="flex wow animate__fadeInUp animate_slower">
+                <a href="#" class="mx-auto text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">Konsultasi sekarang</a>
             </div>
         </div>
     </div>
@@ -227,6 +233,65 @@
             </div>
     </div>
     {{-- product end --}}
+
+    {{-- Testimoni --}}
+    <div class="w-full px-6 py-6 mx-auto">
+        <div class="relative inset-x-[10%] w-4/5 py-5 wow animate__fadeInUp">
+            <h2 class="font-semibold text-center text-slate-800 text-4xl">Proyek Kami</h2>
+        </div>
+        <div class="w-36 mx-auto mb-5 wow animate__fadeInUp animate_slower">
+            <hr class="bg-orange-700 border-0 pt-0.5 wow animate__fadeInRight">
+        </div>
+    </div>
+<div class="max-h-none">
+    <div id="indicators-carousel" class="relative w-full" data-carousel="static">
+        <!-- Carousel wrapper -->
+        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+             <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                <img src="https://source.unsplash.com/600x400" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://source.unsplash.com/600x400" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://source.unsplash.com/600x400" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://source.unsplash.com/600x400" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://source.unsplash.com/600x400" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+</div>
+    {{-- testimoni end --}}
 
     {{-- artikel --}}
     <div class="relative w-full px-6 mx-auto mt-40 bg-gray-900 max-h-max xl:mt-2 lg:mt-1 md:mt-4 sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0">
