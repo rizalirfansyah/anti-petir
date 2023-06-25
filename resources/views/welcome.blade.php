@@ -71,8 +71,8 @@
     {{-- Content --}}
     <div class="container max-w-full max-h-screen mx-auto overflow-hidden bg-no-repeat 2xl:w-full lg:w-full md:w-full sm:max-w-full">
         <img src="{{ URL::asset('img/bg/bg-petir.jpg') }}" class="object-cover w-full h-screen brightness-50">
-        <div class="absolute w-full h-12 px-8 text-white animate__animated animate__fadeInDown top-72">
-            <h6 class="text-md text-center">Selamat datang di</h6>
+        <div class="absolute w-full h-12 px-8 text-white animate__animated animate__fadeInDown top-[270px]">
+            <h6 class="text-3xl font-bold text-center">Selamat datang di</h6>
             <h2 class="mt-2 text-4xl font-bold text-center">Penangkal Petir - Anti Petir</h2>
         </div>
         <div class="absolute wow animate__fadeInUp animate_slow top-[380px] xl:top-[310px] lg:top-[315px] md:top-[340px] lg:px-96 lg:mt-8 h-12 w-full text-white items-center">
@@ -167,9 +167,11 @@
 
     {{-- Produk --}}
     <div class="w-full px-6 py-6 mx-auto">
-        <div class="relative inset-x-[10%] w-4/5 py-5 wow animate__fadeInLeft">
-            <h2 class="w-24 font-semibold text-center text-white bg-orange-700">Produk</h2>
-            <hr class="h-px bg-orange-700 border-0 pt-0.5">
+        <div class="relative inset-x-[10%] w-4/5 py-5 wow animate__fadeInUp">
+            <h2 class="font-semibold text-center text-slate-800 text-4xl">Produk Kami</h2>
+        </div>
+        <div class="w-36 mx-auto mb-5 wow animate__fadeInUp animate_slower">
+            <hr class="bg-orange-700 border-0 pt-0.5 wow animate__fadeInRight">
         </div>
             <div class="flex flex-wrap justify-center px-8 -mx-3 sm:gap-4 top-20">
                 <div class="px-6">
@@ -236,7 +238,7 @@
     {{-- Testimoni --}}
     <div class="w-full px-6 py-6 mx-auto">
         <div class="relative inset-x-[10%] w-4/5 py-5 wow animate__fadeInUp">
-            <h2 class="font-semibold text-center text-slate-800 text-4xl">Proyek Kami</h2>
+            <h2 class="font-semibold text-center text-slate-800 text-4xl">Klien Kami</h2>
         </div>
         <div class="w-36 mx-auto mb-5 wow animate__fadeInUp animate_slower">
             <hr class="bg-orange-700 border-0 pt-0.5 wow animate__fadeInRight">
@@ -244,10 +246,23 @@
     </div>
     <div id="indicators-carousel" class="relative w-full" data-carousel="static">
         <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+        <div class="relative h-64 overflow-hidden rounded-lg bg-blue-200">
              <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                <img src="https://source.unsplash.com/600x400" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <div class="absolute flex w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 justify-center">
+                    <div class="box-content h-24 w-56 p-4 border-4 bg-green-500 mr-4">
+                    PT.Gaming
+                    </div>
+                    <div class="box-content h-24 w-56 p-4 border-4 bg-green-500 mr-4">
+                    PT.PT an
+                    </div>
+                    <div class="box-content h-24 w-56 p-4 border-4 bg-green-500 mr-4">
+                    PT.Pencari cinta sejati
+                    </div>
+                    <div class="box-content h-24 w-56 p-4 border-4 bg-green-500 mr-4">
+                    PT.Tambal ban
+                    </div>
+                </div>
             </div>
             <!-- Item 2 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
