@@ -33,21 +33,24 @@ Route::middleware([
         return view('auth.register');
     })->name('register');
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('admin.dashboard');
     })->name('dashboard');
-    Route::get('/product', function () {
-        return view('product');
-    })->name('product');
+    Route::get('/homepage', function () {
+        return view('admin.homepage');
+    })->name('homepage');
     Route::get('/artikel', function () {
-        return view('artikel');
+        return view('admin.artikel');
     })->name('artikel');
     Route::get('/brosur', function () {
-        return view('brosur');
+        return view('admin.brosur');
     })->name('brosur');
+    Route::get('/portfolio', function () {
+        return view('admin.portfolio');
+    })->name('portfolio');
+    Route::get('/contactus', function () {
+        return view('admin.contactus');
+    })->name('contactus');
     Route::get('/inbox', function () {
-        return view('inbox');
+        return view('admin.inbox');
     })->name('inbox');
-    Route::get('/user', function () {
-        return view('user');
-    })->name('user');
 });
