@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/refrensi', function () {
-    return view('refrensi');
-});
+Route::get('/referensi', function () {
+    return view('referensi');
+})->name('referensi');
 
 Route::get('contact', function () {
     return view('contact');
