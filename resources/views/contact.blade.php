@@ -1,150 +1,83 @@
 @include('component.app')
+@include('component.navbar')
 
 <title>Penangkal Petir</title>
 
-    {{-- navbar --}}
-   <div class="fixed top-0 z-50 w-full mx-auto bg-white wow animate__fadeInDown">
-    
-    <nav class="border-gray-200">
-    <div class="container relative flex flex-wrap items-center justify-between h-20 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <a href="#" class="flex">
-            <span class="self-center ml-3 text-lg font-semibold whitespace-nowrap">Anti Petir</span>
-        </a>
-        <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center justify-center mr-3 text-gray-400 rounded-lg md:hidden hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300" aria-controls="mobile-menu-2" aria-expanded="false">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-        </button>
-        <div class="hidden w-full bg-white md:block md:w-auto" id="mobile-menu">
-        <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-            <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0" aria-current="page">Home</a>
-            </li>
-            <li>
-                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">Product <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
-                <!-- Dropdown menu -->
-                <div id="dropdownNavbar" class="z-10 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow w-44">
-                    <ul class="py-1" aria-labelledby="dropdownLargeButton">
-                    <li>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Penangkal Petir Elektrostatik</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Penangkal Petir Rumah / Konvensional</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Alat Penghitung Sambaran Petir</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kabel Penyalur Petir</a>
-                    </li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Penawaran</a>
-            </li>
-            <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Refrensi</a>
-            </li>
-            <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Registrasi</a>
-            </li>
-            <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0">Perencanaan</a>
-            </li>
-            <li>
-            <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 focus:outline-none">Contact</a>
-            </li>
-        </ul>
-        </div>
-    </div>
-    </nav>
-
-    </div>
-    {{-- navbar end --}}
-
     {{-- Contact Us --}}
 
-    <div class="w-full px-6 py-6 mx-auto max-w-7xl">
+    <div class="w-full px-6 mx-auto max-w-7xl">
         <h2 class="pt-32 mt-2 text-4xl font-bold text-center">Contact Us</h2>
-        <div class="overflow-hidden bg-white shadow-xl rounded-2xl">
-            <div class="p-4 pb-0 mb-0 border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
-
-              <p class="px-6 pt-4 text-sm text-left text-gray-900">Filter</p>
-
-              {{-- Search --}}
-              <form class="form" method="get" action="#">
-                <div class="flex px-5 pt-2 pb-4">
-                    <div class="relative w-full">
-                        <input type="text" name="search" id="search" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border-gray-300" placeholder="Cari Nama, No. Telepon, Alamat ...">
-                        <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-blue-700 rounded-r-lg border border-blue-700">
-                            <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                            <span class="sr-only">Search</span>
-                        </button>
-                    </div>
-                </div>
-              </form>
-
-            </div>
-            
-            <div class="flex-auto px-6 pt-0 pb-6">
-                <div class="overflow-x-auto">
-                    <table class="min-w-full text-sm divide-y divide-gray-200">
-                      <thead>
-                        <tr>
-                          <th class="p-4 text-left text-gray-900 whitespace-nowrap">
-                            No.
-                          </th>
-                          <th class="p-4 text-left text-gray-900 whitespace-nowrap">
-                            <div class="flex items-center">
-                              Nama Lengkap
-                              <span class="flex pl-4">
-                                <form class="form" method="get" action="#">
-                                <button type="submit" value="member_name" id="col" name="col" class="ri-arrow-up-s-line"></button>
-                                </form>
-                                <form class="form" method="get" action="#">
-                                <button type="submit" value="member_name" id="col" name="col" class="ri-arrow-down-s-line"></button>
-                                </form>
-                              </span>
-                            </div>
-                          </th>
-                          <th class="p-4 text-left text-gray-900 whitespace-nowrap">
-                            <div class="flex items-center">
-                              Nomor Telepon
-                            </div>
-                          </th>
-                          <th class="p-4 text-left text-gray-900 whitespace-nowrap">
-                            <div class="flex items-center">
-                              Alamat Lengkap
-                            </div>
-                          </th>
-                        </tr>
-                      </thead>
-                  
-                      <tbody class="divide-y divide-gray-100">
-                        <tr>
-                          <td class="p-4 text-left text-gray-900 whitespace-nowrap">
-                            tes
-                          </td>
-                          <td class="p-4 text-gray-900 whitespace-nowrap">
-                            tes
-                          </td>
-                          <td class="p-4 text-gray-900 whitespace-nowrap">
-                            tes
-                          </td>
-                          <td class="p-4 text-gray-900 whitespace-nowrap">
-                            Jl. Bukit Kismadani II/24, Bluru Kidul
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>          
-                </div>
-            </div>
-        </div>
+        <div class="container px-6 py-12 mx-auto">
+          <div>
+              <p class="font-medium text-blue-500 dark:text-blue-400">Contact us</p>
+  
+              <h1 class="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">Get in touch</h1>
+  
+              <p class="mt-3 text-gray-500 dark:text-gray-400">Our friendly team would love to hear from you.</p>
+          </div>
+  
+          <div class="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-3">
+              <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-1">
+                  <div>
+                      <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                          </svg>
+                      </span>
+  
+                      <h2 class="mt-4 text-base font-medium text-gray-800 dark:text-white">Email</h2>
+                      <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Our friendly team is here to help.</p>
+                      <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">hello@merakiui.com</p>
+                  </div>
+  
+                  <div>
+                      <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                          </svg>
+                      </span>
+                      
+                      <h2 class="mt-4 text-base font-medium text-gray-800 dark:text-white">Office</h2>
+                      <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Come say hello at our office HQ.</p>
+                      <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">100 Smith Street Collingwood VIC 3066 AU</p>
+                  </div>
+  
+                  <div>
+                      <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                          </svg>
+                      </span>
+                      
+                      <h2 class="mt-4 text-base font-medium text-gray-800 dark:text-white">Phone</h2>
+                      <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Mon-Fri from 8am to 5pm.</p>
+                      <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">+1 (555) 000-0000</p>
+                  </div>
+              </div>
+  
+              <div class="overflow-hidden rounded-lg lg:col-span-2 h-96 lg:h-auto">
+                  <iframe width="100%" height="100%" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"></iframe>
+              </div>
+          </div>
+      </div>
     </div>
     
-
-    
-    
-
-    
+    {{-- footer --}}
+    <footer class="bg-gray-50 rounded-lg shadow m-4">
+      <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between  wow animate__fadeInUp">
+      <span class="text-sm text-gray-500 sm:text-center">© 2023 <a href="https://flowbite.com/" class="hover:underline">Anti-Petir</a>. All Rights Reserved.
+      </span>
+      <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
+          <li>
+              <a href="#" class="mr-4 hover:underline md:mr-6">Testimoni</a>
+          </li>
+          <li>
+              <a href="#" class="mr-4 hover:underline md:mr-6">Lisensi</a>
+          </li>
+          <li>
+              <a href="#" class="hover:underline">Tentang Kami</a>
+          </li>
+      </ul>
+      </div>
+  </footer>
