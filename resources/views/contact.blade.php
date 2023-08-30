@@ -6,8 +6,7 @@
     {{-- Contact Us --}}
 
     <div class="w-full px-6 mx-auto max-w-7xl">
-        <h2 class="pt-32 mt-2 text-4xl font-bold text-center">Contact Us</h2>
-        <div class="container px-6 py-12 mx-auto">
+        <div class="container pt-32 px-6 py-12 mx-auto">
           <div>
               <p class="font-medium text-blue-500 dark:text-blue-400">Contact us</p>
   
