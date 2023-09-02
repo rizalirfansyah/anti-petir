@@ -24,6 +24,10 @@ Route::get('/refrensi', function () {
 Route::get('contact', function () {
     return view('contact');
 });
+
+Route::get('galeri', function () {
+    return view('galeri');
+});
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

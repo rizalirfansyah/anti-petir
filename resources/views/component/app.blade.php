@@ -11,6 +11,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
+    <style>
+        .accordion-content {
+        transition: max-height 0.3s ease-out, padding 0.3s ease;
+        }
+    </style>
 
     <script>
         wow = new WOW(
