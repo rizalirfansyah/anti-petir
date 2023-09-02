@@ -7,16 +7,14 @@
 
     <div class="w-full px-6 mx-auto max-w-7xl">
         <div class="container pt-32 px-6 py-12 mx-auto">
-          <div>
+          <div class="wow animate__slideInLeft">
               <p class="font-medium text-blue-500 dark:text-blue-400">Contact us</p>
-  
               <h1 class="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">Get in touch</h1>
-  
               <p class="mt-3 text-gray-500 dark:text-gray-400">Our friendly team would love to hear from you.</p>
           </div>
   
           <div class="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-3">
-              <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-1">
+              <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-1 wow animate__slideInLeft">
                   <div>
                       <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
@@ -42,7 +40,7 @@
                       <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">100 Smith Street Collingwood VIC 3066 AU</p>
                   </div>
   
-                  <div>
+                  <div class="">
                       <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
@@ -55,28 +53,11 @@
                   </div>
               </div>
   
-              <div class="overflow-hidden rounded-lg lg:col-span-2 h-96 lg:h-auto">
+              <div class="overflow-hidden rounded-lg lg:col-span-2 h-96 lg:h-auto wow animate__slideInRight">
                   <iframe width="100%" height="100%" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"></iframe>
               </div>
           </div>
       </div>
     </div>
     
-    {{-- footer --}}
-    <footer class="bg-gray-50 rounded-lg shadow m-4">
-      <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between  wow animate__fadeInUp">
-      <span class="text-sm text-gray-500 sm:text-center">© 2023 <a href="https://flowbite.com/" class="hover:underline">Anti-Petir</a>. All Rights Reserved.
-      </span>
-      <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
-          <li>
-              <a href="#" class="mr-4 hover:underline md:mr-6">Testimoni</a>
-          </li>
-          <li>
-              <a href="#" class="mr-4 hover:underline md:mr-6">Lisensi</a>
-          </li>
-          <li>
-              <a href="#" class="hover:underline">Tentang Kami</a>
-          </li>
-      </ul>
-      </div>
-  </footer>
+@include('component.footer')
