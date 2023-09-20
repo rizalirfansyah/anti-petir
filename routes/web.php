@@ -21,6 +21,10 @@ Route::get('/referensi', function () {
     return view('referensi');
 })->name('referensi');
 
+Route::get('/artikel', function () {
+    return view('artikel');
+})->name('artikel');
+
 Route::get('contact', function () {
     return view('contact');
 });
@@ -42,9 +46,9 @@ Route::middleware([
     Route::get('/homepage', function () {
         return view('admin.homepage');
     })->name('homepage');
-    Route::get('/artikel', function () {
+    Route::get('/admin-artikel', function () {
         return view('admin.artikel');
-    })->name('artikel');
+    })->name('admin-artikel');
     Route::get('/brosur', function () {
         return view('admin.brosur');
     })->name('brosur');
