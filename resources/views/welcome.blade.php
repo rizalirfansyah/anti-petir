@@ -251,17 +251,17 @@
              <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
                 <div class="absolute flex w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 justify-center">
-                    <div class="box-content h-24 w-56 p-4 border-4 bg-green-500 mr-4">
-                    PT.Gaming
+                    <div class="box-content flex max-h-24 p-4">
+                        <img src="/img/logo/logo1.png" alt="Logo 1">
                     </div>
-                    <div class="box-content h-24 w-56 p-4 border-4 bg-green-500 mr-4">
-                    PT.PT an
+                    <div class="box-content flex max-h-24 p-4">
+                        <img src="/img/logo/logo2.png" alt="Logo 2">
                     </div>
-                    <div class="box-content h-24 w-56 p-4 border-4 bg-green-500 mr-4">
-                    PT.Pencari cinta sejati
+                    <div class="box-content flex max-h-24 p-4">
+                        <img src="/img/logo/logo3.jpg" alt="Logo 3">
                     </div>
-                    <div class="box-content h-24 w-56 p-4 border-4 bg-green-500 mr-4">
-                    PT.Tambal ban
+                    <div class="box-content flex max-h-24 p-4">
+                        <img src="/img/logo/logo4.jpeg" alt="Logo 4">
                     </div>
                 </div>
             </div>
