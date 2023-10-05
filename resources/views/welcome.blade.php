@@ -307,7 +307,7 @@
     {{-- testimoni end --}}
 
     {{-- artikel --}}
-    <div class="relative w-full px-6 mx-auto mt-20 bg-gray-900 max-h-max xl:mt-2 lg:mt-1 md:mt-4 sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0">
+    <div class="relative w-full px-6 mx-auto mt-20 bg-gray-900 max-h-max xl:mt-2 lg:mt-1 md:mt-4 sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0 mb-2">
         <div class="p-8 lg:p-12 lg:flex-1 w-lg wow animate__slideInLeft">
             <h2 class="w-24 font-semibold text-center text-white bg-orange-700">Artikel</h2>
             <hr class="h-px bg-orange-700 border-0 pt-0.5 mb-4">

@@ -18,6 +18,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                'body' : ['SF Pro Display']
             },
         },
     },

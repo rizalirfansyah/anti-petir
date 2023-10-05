@@ -15,7 +15,7 @@
 
 {{-- Galeri --}}
 <div class="relative max-h-max px-6 py-6 mx-auto w-full justify-center">
-    <div class="transform md:translate-x-1/2 md:w-1/2">
+    <div class="transform md:w-4/5 mx-auto">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
             <div class="wow animate__fadeInLeft">
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
