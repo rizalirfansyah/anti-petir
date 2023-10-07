@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReferenceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,15 +54,16 @@ Route::middleware([
     Route::get('/homepage', function () {
         return view('admin.homepage');
     })->name('homepage');
-    Route::get('/admin-artikel', function () {
-        return view('admin.artikel');
-    })->name('admin-artikel');
     Route::get('/brosur', function () {
         return view('admin.brosur');
     })->name('brosur');
     Route::get('/portfolio', function () {
         return view('admin.portfolio');
     })->name('portfolio');
+
+    Route::resource('references', ReferenceController::class);
+    Route::resource('articles', ArticleController::class);
+    
     Route::get('/contactus', function () {
         return view('admin.contactus');
     })->name('contactus');
