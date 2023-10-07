@@ -32,6 +32,12 @@ Route::get('contact', function () {
 Route::get('galeri', function () {
     return view('galeri');
 });
+
+Route::get('penawaran', function () {
+    return view('penawaran');
+});
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
