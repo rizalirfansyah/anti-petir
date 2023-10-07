@@ -1,5 +1,5 @@
 {{-- Footer Logo --}}
-<div class="relative max-h-screen mx-auto w-full lg:h-64 justify-center px-4 md:px-0 bg-gray-300 md:mb-2">
+<div class="relative max-h-screen mx-auto w-full lg:min-h-64 justify-center px-4 md:px-0 bg-gray-300 md:mb-2">
     <div class="py-10 transform md:translate-x-1/2 md:w-1/2">
         <div class="grid lg:grid-cols-4 lg:gap-4">
             <div class="min-h-32 relative items-center col-span-2">
