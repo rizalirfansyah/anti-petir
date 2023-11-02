@@ -10,7 +10,7 @@
          style="background-image: url('/img/bg/bg-petir.jpg')" data-wow-duration="1.5s">
     </div>
     <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
-    <div class="relative z-10 p-10 text-white wow fadeInUp" data-wow-duration="1s">
+    <div class="relative z-10 p-10 text-white wow fadeInDown" data-wow-duration="1s">
         <h2 class="text-center text-4xl font-semibold">REFERENSI</h2>
     </div>
 </div>

@@ -183,7 +183,7 @@
             <hr class="bg-orange-700 border-0 pt-0.5 wow animate__fadeInRight">
         </div>
     </div>
-    <div id="indicators-carousel" class="relative w-full" data-carousel="static">
+    <div id="indicators-carousel" class="relative w-full" data-carousel="slide">
         <!-- Carousel wrapper -->
         <div class="relative h-64 overflow-hidden rounded-lg">
              <!-- Item 1 -->
@@ -260,7 +260,7 @@
             </div>
             <h2 class="w-24 font-semibold text-center text-white bg-orange-700">Tag</h2>
             <hr class="h-px bg-orange-700 border-0 pt-0.5 mb-4">
-            <img src="https://source.unsplash.com/600x400?animal" alt="Laptop" class="mt-4 shadow-xl rounded-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden"/>
+            <img src="https://source.unsplash.com/600x400" alt="Assets construction" class="mt-4 shadow-xl rounded-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden"/>
 
             <div class="mt-4 mb-8 sm:mt-6 wow animate__fadeInLeftBig animate_slower">
             <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Subscribe YT juga cuy!</a>              

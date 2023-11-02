@@ -7,7 +7,7 @@
 <div class="container max-w-full max-h-screen mx-auto overflow-hidden bg-no-repeat bg-cover 2xl:w-full lg:w-full md:w-full sm:max-w-full bg-gradient-to-t bg-gray-100" style="background-image: url('/img/bg/bg-petir2.jpg')">
     <div class="relative w-full h-28">
         <div class="relative mt-28">
-            <h2 class="text-center 2xl:ml-24 ml-8 pt-6 text-white text-2xl wow animate__fadeInRight">Galeri</h2>
+            <h2 class="text-center pt-6 text-white text-2xl wow animate__fadeInDown">Galeri</h2>
         </div>
     </div>
 </div>

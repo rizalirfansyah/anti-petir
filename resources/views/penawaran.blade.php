@@ -7,7 +7,7 @@
 <div class="container max-w-full max-h-screen mx-auto overflow-hidden bg-no-repeat bg-cover 2xl:w-full lg:w-full md:w-full sm:max-w-full bg-gradient-to-t bg-gray-100" style="background-image: url('/img/bg/bg-petir2.jpg')">
     <div class="relative w-full h-28">
         <div class="relative mt-28">
-            <h2 class="text-center 2xl:ml-24 ml-8 pt-6 text-white text-2xl wow animate__fadeInRight">Penawaran</h2>
+            <h2 class="text-center pt-6 text-white text-2xl wow animate__fadeInDown">Penawaran</h2>
         </div>
     </div>
 </div>
@@ -15,7 +15,7 @@
 {{-- Section --}}
 <section class="body-font relative bg-gray-900 text-gray-400">
 
-    <div class="container mx-auto px-5 py-24">
+    <div class="container mx-auto px-5 py-24 wow animate__fadeInUp">
       
       <div class="mb-12 flex w-full flex-col text-center">
         <h1 class="title-font mb-4 text-2xl font-medium text-white sm:text-3xl">Butuh Kami?</h1>
