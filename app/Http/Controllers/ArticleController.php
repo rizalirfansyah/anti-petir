@@ -55,6 +55,7 @@ class ArticleController extends Controller
     public function edit(Article $article)
     {
         //
+        return view('produk-detail', ['article' => $article]);
     }
 
     public function update(UpdateArticleRequest $request, Article $article)

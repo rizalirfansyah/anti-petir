@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReferenceController;
 
@@ -23,9 +24,11 @@ Route::get('/referensi', function () {
     return view('referensi');
 })->name('referensi');
 
-Route::get('/artikel', function () {
-    return view('artikel');
-})->name('artikel');
+Route::get('/produk', function () {
+    $articles = Article::all();
+
+        return view('produk', ['articles' => $articles]);
+})->name('produk');
 
 Route::get('contact', function () {
     return view('contact');
