@@ -39,6 +39,10 @@ Route::get('penawaran', function () {
     return view('penawaran');
 });
 
+Route::get('perencanaan', function () {
+    return view('perencanaan');
+});
+
 
 Route::middleware([
     'auth:sanctum',

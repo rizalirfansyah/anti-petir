@@ -12,9 +12,9 @@
     {{-- Content --}}
     <div class="container max-w-full max-h-screen mx-auto overflow-hidden bg-no-repeat 2xl:w-full lg:w-full md:w-full sm:max-w-full">
         <img src="{{ URL::asset('img/bg/bg-petir.jpg') }}" class="object-cover w-full h-screen brightness-50">
-        <div class="absolute w-full h-12 px-8 text-white animate__animated animate__fadeInDown top-[270px]">
+        <div class="absolute w-full text-white animate__animated animate__fadeInDown top-[270px]">
             <h6 class="text-3xl font-bold text-center">Selamat datang di</h6>
-            <h2 class="mt-2 text-4xl font-bold text-center"><span id="element"></span></h2>
+            <h2 class="text-4xl font-bold text-center mt-3"><span id="element"></span></h2>
         </div>
         <div class="absolute wow animate__fadeInUp animate_slow top-[380px] xl:top-[310px] lg:top-[315px] md:top-[340px] lg:px-96 lg:mt-8 h-12 w-full text-white items-center">
             <h6 class="px-12 items-center justify-center mt-8 mb-3 text-lg text-center xl:w-[750px] mx-auto lg:text-lg top-56">Dewata Technoindo menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
@@ -34,7 +34,7 @@
             <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item data-te-carousel-active>
             <img
                 src="img/bg/cable.jpg" class="block object-cover w-full h-screen brightness-75" alt="Wild Landscape" />
-                <div class="absolute top-44 lg:inset-x-[15%] md:inset-x-32 gap-4 inset-[5%] bottom-5 py-5 px-8 lg:px-6 text-white wow slideInRight">
+                <div class="absolute top-48 lg:inset-x-[15%] md:inset-x-32 gap-4 inset-[5%] bottom-5 py-5 px-8 lg:px-6 text-white wow slideInRight">
                 <a href="" class="px-1 font-bold text-gray-100 bg-red-900 rounded-sm lg:text-sm border-md">KABEL PENYALUR PETIR</a>
                 <h4 class="text-white lg:text-sm lg:inline-block">Januari 28, 2014 - by <strong>abah petir</strong></h4>
                 <h1 class="font-semibold text-gray-200 text-2xl lg:text-4xl xl:text-4xl md:text-3xl wow animate__fadeInBottomRight animate_slow">
@@ -45,7 +45,7 @@
             <div class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-fade data-te-carousel-item>
             <img
                 src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp" class="block object-cover w-full h-screen brightness-50" alt="Camera"/>
-                <div class="absolute top-44 lg:inset-x-[15%] md:inset-x-32 inset-[5%] bottom-5 py-5 px-8 lg:px-6 text-white md:block wow slideInRight">
+                <div class="absolute top-48 lg:inset-x-[15%] md:inset-x-32 inset-[5%] bottom-5 py-5 px-8 lg:px-6 text-white md:block wow slideInRight">
                 <a href="" class="px-1 font-bold text-gray-100 bg-red-900 rounded-sm lg:text-sm border-md">PENANGKAL PETIR ELEKTROSTATIK</a>
                 <h4 class="text-white lg:text-sm lg:inline-block">Oktober 18, 2011 - by <strong>abah petir</strong></h4>
                 <h1 class="font-semibold text-gray-200 text-2xl lg:text-4xl xl:text-4xl md:text-3xl wow animate__fadeInBottomRight animate_slow">
@@ -183,65 +183,18 @@
             <hr class="bg-orange-700 border-0 pt-0.5 wow animate__fadeInRight">
         </div>
     </div>
-    <div id="indicators-carousel" class="relative w-full" data-carousel="slide">
-        <!-- Carousel wrapper -->
-        <div class="relative h-64 overflow-hidden rounded-lg">
-             <!-- Item 1 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                <div class="absolute flex w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 justify-center">
-                    <div class="box-content flex h-24 p-4">
-                        <img src="/img/logo/logo1.png" alt="Logo 1">
-                    </div>
-                    <div class="box-content flex h-24 p-4">
-                        <img src="/img/logo/logo2.png" alt="Logo 2">
-                    </div>
-                    <div class="box-content flex h-24 p-4">
-                        <img src="/img/logo/logo3.jpg" alt="Logo 3">
-                    </div>
-                    <div class="box-content flex h-24 p-4">
-                        <img src="/img/logo/logo4.jpeg" alt="Logo 4">
-                    </div>
-                </div>
-            </div>
-            <!-- Item 2 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://source.unsplash.com/600x400" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-            <!-- Item 3 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://source.unsplash.com/600x400" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-            <!-- Item 4 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://source.unsplash.com/600x400" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-            <!-- Item 5 -->
-            <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://source.unsplash.com/600x400" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
-        </div>
-        <!-- Slider indicators -->
-        <div class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-        </div>
-        <!-- Slider controls -->
-        <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-400 dark:bg-gray-800/30 group-hover:bg-gray-500 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                <span class="sr-only">Previous</span>
-            </span>
-        </button>
-        <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-gray-400 dark:bg-gray-800/30 group-hover:bg-gray-500 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg aria-hidden="true" class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                <span class="sr-only">Next</span>
-            </span>
-        </button>
-    </div>
+    {{-- carousel klien kami --}}
+    <div class="container mb-5 mx-auto">
+         <section class="customer-logos slider">
+            <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+            <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
+            <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
+            <div class="slide"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
+            <div class="slide"><img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
+            <div class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
+            <div class="slide"><img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
+         </section>
+      </div>
     {{-- testimoni end --}}
 
     {{-- artikel --}}
@@ -258,7 +211,7 @@
                     <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, inventore.</a></li>
                   </ol>
             </div>
-            <h2 class="w-24 font-semibold text-center text-white bg-orange-700">Tag</h2>
+            <h2 class="w-28 font-semibold text-center text-white bg-orange-700">Informasi</h2>
             <hr class="h-px bg-orange-700 border-0 pt-0.5 mb-4">
             <img src="https://source.unsplash.com/600x400" alt="Assets construction" class="mt-4 shadow-xl rounded-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden"/>
 

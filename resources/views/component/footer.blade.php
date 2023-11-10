@@ -75,12 +75,11 @@
   </div>
 
   <!-- Main container div: holds the entire content of the footer, including four sections (TW elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. -->
-  <div class="mx-6 py-10 text-center md:text-left">
-    <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+  <div class="mx-6 py-10 text-center">
+    <div class="grid-1 grid gap-8 md:grid-row-2 lg:grid-cols-2">
       <!-- TW elements section -->
-      <div class="">
-        <h6
-          class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
+      <div>
+        <h6 class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -91,57 +90,8 @@
           </svg>
           Anti Petir
         </h6>
-        <p>
+        <p class="text-center mx-auto max-w-xs">
             Dewata Technoindo© menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material
-        </p>
-      </div>
-      <!-- Products section -->
-      <div class="">
-        <h6
-          class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-          Elektrostatik
-        </h6>
-        <p class="mb-4">
-          <a href="#!" class="text-neutral-600 dark:text-neutral-200"
-            >Konvensional</a
-          >
-        </p>
-        <p class="mb-4">
-          <a href="#!" class="text-neutral-600 dark:text-neutral-200"
-            >Alat Penghitung</a
-          >
-        </p>
-        <p class="mb-4">
-          <a href="#!" class="text-neutral-600 dark:text-neutral-200"
-            >Kabel Penyalur</a
-          >
-        </p>
-      </div>
-      <!-- Useful links section -->
-      <div class="">
-        <h6
-          class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-          Useful links
-        </h6>
-        <p class="mb-4">
-          <a href="#!" class="text-neutral-600 dark:text-neutral-200"
-            >Pricing</a
-          >
-        </p>
-        <p class="mb-4">
-          <a href="#!" class="text-neutral-600 dark:text-neutral-200"
-            >Settings</a
-          >
-        </p>
-        <p class="mb-4">
-          <a href="#!" class="text-neutral-600 dark:text-neutral-200"
-            >Orders</a
-          >
-        </p>
-        <p>
-          <a href="#!" class="text-neutral-600 dark:text-neutral-200"
-            >Help</a
-          >
         </p>
       </div>
       <!-- Contact section -->
