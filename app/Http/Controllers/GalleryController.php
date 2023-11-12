@@ -27,7 +27,7 @@ class GalleryController extends Controller
         $data->name = $request->name;
 
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('public/galleries');
+            $imagePath = $request->file('image')->store('public/images');
             $data->image = $imagePath;
         }
 
@@ -63,7 +63,7 @@ class GalleryController extends Controller
                 Storage::delete($gallery->image);
             }
 
-            $imagePath = $request->file('image')->store('public/galleries');
+            $imagePath = $request->file('image')->store('public/images');
             $gallery->image = $imagePath;
         }
         $gallery->save();

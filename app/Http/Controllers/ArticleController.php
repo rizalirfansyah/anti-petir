@@ -32,6 +32,8 @@ class ArticleController extends Controller
         $data->file_type = $request->file('file')->getClientMimeType();
         $data->file_data = file_get_contents($request->file('file'));
 
+        dd($data);
+
         $data->save();
         
         return redirect()->route('articles.index')
@@ -55,12 +57,12 @@ class ArticleController extends Controller
     public function edit(Article $article)
     {
         //
-        return view('produk-detail', ['article' => $article]);
     }
 
     public function update(UpdateArticleRequest $request, Article $article)
     {
         //
+
         $data = [
             'title' => $request->input('title'),
             'content' => $request->input('content'),
@@ -72,7 +74,7 @@ class ArticleController extends Controller
             $data['file_type'] = $file->getClientMimeType();
             $data['file_data'] = file_get_contents($file);
         }
-    
+
         $article->update($data);
         
         return redirect()->route('articles.index')

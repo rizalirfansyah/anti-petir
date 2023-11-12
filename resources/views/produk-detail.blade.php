@@ -19,9 +19,10 @@
     <div class="grid grid-cols-3 gap-10 py-10">
         <div class="relative items-center col-span-2 min-h-32">
             <div>
-                <h1>{{ $article->title }}</h1>
-                <span>{{ $article->category }}</span>
-                <p>{!! $article->content !!}</p>
+                @foreach ($articles as $article)
+                <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $article->title }}</h2>
+                <p class="mb-4 font-medium">{!! $article->content !!}</p>
+                @endforeach
             </div>
         </div>
         <div class="relative items-center col-span-1 min-h-32">
@@ -29,11 +30,9 @@
             <div class="py-5">
                 <h2 class="pb-3 text-lg font-bold text-red-500">Produk</h2>
                 <ul>
-                    <li><a href="#" class="hover:text-red-500">Penangkal Petir Elektrostatik</a></li>
-                    <li><a href="#" class="hover:text-red-500">Penangkal Petir Rumah</a></li>
-                    <li><a href="#" class="hover:text-red-500">Kabel Penghantar</a></li>
-                    <li><a href="#" class="hover:text-red-500">Surge Arrester</a></li>
-                    <li><a href="#" class="hover:text-red-500">Tiang Penyangga</a></li>
+                    @foreach ($articles as $article)
+                        <li><a href="{{ route('articles.edit', $article->id) }}" class="hover:text-red-500">{{ $article->title }}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <hr>

@@ -14,7 +14,7 @@
         <img src="{{ URL::asset('img/bg/bg-petir.jpg') }}" class="object-cover w-full h-screen brightness-50">
         <div class="absolute w-full text-white animate__animated animate__fadeInDown top-[270px]">
             <h6 class="text-3xl font-bold text-center">Selamat datang di</h6>
-            <h2 class="text-4xl font-bold text-center mt-3"><span id="element"></span></h2>
+            <h2 class="mt-3 text-4xl font-bold text-center"><span id="element"></span></h2>
         </div>
         <div class="absolute wow animate__fadeInUp animate_slow top-[380px] xl:top-[310px] lg:top-[315px] md:top-[340px] lg:px-96 lg:mt-8 h-12 w-full text-white items-center">
             <h6 class="px-12 items-center justify-center mt-8 mb-3 text-lg text-center xl:w-[750px] mx-auto lg:text-lg top-56">Dewata Technoindo menyediakan pemasangan Penangkal Petir NeoFLASH jenis Elektrostatik dan Arrester melayani instalasi se-Indonesia beserta kelengkapan material</h6>
@@ -37,7 +37,7 @@
                 <div class="absolute top-48 lg:inset-x-[15%] md:inset-x-32 gap-4 inset-[5%] bottom-5 py-5 px-8 lg:px-6 text-white wow slideInRight">
                 <a href="" class="px-1 font-bold text-gray-100 bg-red-900 rounded-sm lg:text-sm border-md">KABEL PENYALUR PETIR</a>
                 <h4 class="text-white lg:text-sm lg:inline-block">Januari 28, 2014 - by <strong>abah petir</strong></h4>
-                <h1 class="font-semibold text-gray-200 text-2xl lg:text-4xl xl:text-4xl md:text-3xl wow animate__fadeInBottomRight animate_slow">
+                <h1 class="text-2xl font-semibold text-gray-200 lg:text-4xl xl:text-4xl md:text-3xl wow animate__fadeInBottomRight animate_slow">
                     NYY Sebagai Kabel Penyalur Petir
                 </h1>
                 </div>
@@ -48,7 +48,7 @@
                 <div class="absolute top-48 lg:inset-x-[15%] md:inset-x-32 inset-[5%] bottom-5 py-5 px-8 lg:px-6 text-white md:block wow slideInRight">
                 <a href="" class="px-1 font-bold text-gray-100 bg-red-900 rounded-sm lg:text-sm border-md">PENANGKAL PETIR ELEKTROSTATIK</a>
                 <h4 class="text-white lg:text-sm lg:inline-block">Oktober 18, 2011 - by <strong>abah petir</strong></h4>
-                <h1 class="font-semibold text-gray-200 text-2xl lg:text-4xl xl:text-4xl md:text-3xl wow animate__fadeInBottomRight animate_slow">
+                <h1 class="text-2xl font-semibold text-gray-200 lg:text-4xl xl:text-4xl md:text-3xl wow animate__fadeInBottomRight animate_slow">
                     Penangkal Petir Elektrostatis NeoFLASH
                 </h2>
                 </div>
@@ -107,68 +107,30 @@
     {{-- Produk --}}
     <div class="w-full px-6 py-6 mx-auto">
         <div class="relative inset-x-[10%] w-4/5 py-5 wow animate__fadeInUp">
-            <h2 class="font-semibold text-center text-slate-800 text-4xl">Produk Kami</h2>
+            <h2 class="text-4xl font-semibold text-center text-slate-800">Produk Kami</h2>
         </div>
-        <div class="w-36 mx-auto mb-5 wow animate__fadeInUp animate_slower">
+        <div class="mx-auto mb-5 w-36 wow animate__fadeInUp animate_slower">
             <hr class="bg-orange-700 border-0 pt-0.5 wow animate__fadeInRight">
         </div>
             <div class="flex flex-wrap justify-center px-8 -mx-3 sm:gap-4 top-20">
-                <div class="px-6">
-                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
-                        <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
-                        <div class="px-6 py-4">
-                          <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
-                          <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi.</p>
-                              <div class="flex items-center w-full mt-3">
-                                  <i class="fa-solid fa-clock"></i>
-                                  <p class="ml-2 text-sm">Januari 27, 2011</p>
-                              </div>
-                        </div>
-                    </div>
-                </div>
                 
-          
-                <div class="px-6">
-                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInLeft">
-                        <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
-                        <div class="px-6 py-4">
-                          <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
-                          <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi.</p>
-                              <div class="flex items-center w-full mt-3">
-                                  <i class="fa-solid fa-clock"></i>
-                                  <p class="ml-2 text-sm">Januari 27, 2011</p>
-                              </div>
-                        </div>
+                @foreach ($articles->take(4) as $article)
+                    <div class="px-6">
+                        <a href="{{ route('articles.edit', $article->id) }}" class="max-w-sm overflow-hidden transition-transform duration-300 ease-in-out transform rounded shadow-lg hover:scale-105">
+                            <img class="object-cover w-full h-32" src="{{ route('articles.show', $article->id) }}" alt="{{ $article->title }}">
+                            <div class="px-6 py-4">
+                                <div class="mb-2 text-xl font-bold text-slate-700">{{ $article->title }}</div>
+                                <div class="article-content" style="max-height: 3em; overflow: hidden;">
+                                    {!! $article->content !!}
+                                </div>
+                                <div class="flex items-center w-full mt-3">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <p class="ml-2 text-sm">{{ $article->created_at->format('d F Y') }}</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </div>
-
-                <div class="px-6">
-                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInRight">
-                        <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
-                        <div class="px-6 py-4">
-                          <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
-                          <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi.</p>
-                              <div class="flex items-center w-full mt-3">
-                                  <i class="fa-solid fa-clock"></i>
-                                  <p class="ml-2 text-sm">Januari 27, 2011</p>
-                              </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="px-6">
-                    <div class="mb-10 overflow-hidden bg-white rounded-md shadow-lg sm:mb-0 sm:w-64 md:w-80 lg:w-72 wow animate__fadeInRight">
-                        <img src="https://source.unsplash.com/600x400" alt="Img Caption" class="w-full">
-                        <div class="px-6 py-4">
-                          <div class="mb-2 text-xl font-bold text-slate-700">Image Tittle</div>
-                          <p class="text-sm text-slate-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eligendi.</p>
-                              <div class="flex items-center w-full mt-3">
-                                  <i class="fa-solid fa-clock"></i>
-                                  <p class="ml-2 text-sm">Januari 27, 2011</p>
-                              </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
                 
             </div>
     </div>
@@ -177,52 +139,43 @@
     {{-- Testimoni --}}
     <div class="w-full px-6 py-6 mx-auto">
         <div class="relative inset-x-[10%] w-4/5 py-5 wow animate__fadeInUp">
-            <h2 class="font-semibold text-center text-slate-800 text-4xl">Klien Kami</h2>
+            <h2 class="text-4xl font-semibold text-center text-slate-800">Klien Kami</h2>
         </div>
-        <div class="w-36 mx-auto mb-5 wow animate__fadeInUp animate_slower">
+        <div class="mx-auto mb-5 w-36 wow animate__fadeInUp animate_slower">
             <hr class="bg-orange-700 border-0 pt-0.5 wow animate__fadeInRight">
         </div>
     </div>
     {{-- carousel klien kami --}}
-    <div class="container mb-5 mx-auto">
+    <div class="container mx-auto mb-5">
          <section class="customer-logos slider">
-            <div class="slide"><img src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
-            <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
-            <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
-            <div class="slide"><img src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
-            <div class="slide"><img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg"></div>
-            <div class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg"></div>
-            <div class="slide"><img src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
+            @foreach ($references as $reference)
+                <div class="slide"><img src="{{ route('references.show', $reference->id) }}" alt="{{ $reference->logo_name }}"></div>
+            @endforeach
          </section>
       </div>
     {{-- testimoni end --}}
 
     {{-- artikel --}}
-    <div class="relative w-full px-6 mx-auto mt-20 bg-gray-900 max-h-max xl:mt-2 lg:mt-1 md:mt-4 sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0 mb-2">
+    <div class="relative w-full px-6 mx-auto mt-20 mb-2 bg-gray-900 max-h-max xl:mt-2 lg:mt-1 md:mt-4 sm:max-w-xl md:max-w-5xl lg:flex lg:max-w-full lg:p-0">
         <div class="p-8 lg:p-12 lg:flex-1 w-lg wow animate__slideInLeft">
             <h2 class="w-24 font-semibold text-center text-white bg-orange-700">Artikel</h2>
             <hr class="h-px bg-orange-700 border-0 pt-0.5 mb-4">
 
             <div class="container mb-6 wow animate__fadeInLeftBig animate_slower">
                 <ol class="">
-                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis amet expedita ut pariatur eligendi quibusdam, nostrum porro neque asperiores. Repellat corporis quam doloribus tempore quas.</a></li>
-                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, suscipit.</a></li>
-                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum repellendus vitae quibusdam nisi delectus odit animi suscipit dolorem fugit numquam.</a></li>
-                    <li class="mt-2 text-white">> <a href="" class="hover:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, inventore.</a></li>
-                  </ol>
+                    @foreach ($articles->take(5) as $article)
+                        <li class="mt-2 text-white">> <a href="{{ route('articles.edit', $article->id) }}" class="hover:text-gray-400">{{ $article->title }}</a></li>
+                    @endforeach
+                </ol>
             </div>
-            <h2 class="w-28 font-semibold text-center text-white bg-orange-700">Informasi</h2>
+            <h2 class="font-semibold text-center text-white bg-orange-700 w-28">Informasi</h2>
             <hr class="h-px bg-orange-700 border-0 pt-0.5 mb-4">
             <img src="https://source.unsplash.com/600x400" alt="Assets construction" class="mt-4 shadow-xl rounded-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden"/>
 
             <div class="mt-4 mb-8 sm:mt-6 wow animate__fadeInLeftBig animate_slower">
-            <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Subscribe YT juga cuy!</a>              
-            <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Arrester</a>              
-            <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Cara kerja penangkal petir</a>              
-            <a href="#" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">Sertifikasi K3</a>                     
-            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 focus:outline-none">Read more</a>
-            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 focus:outline-none">Penangkal petir</a>
-            <a href="#" class="inline-block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-1 focus:outline-none">Penangkal petir</a>
+                @foreach ($articles->take(5) as $article)
+                    <a href="{{ route('articles.edit', $article->id) }}" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">{{ $article->title }}</a>
+                @endforeach            
             </div>
 
           </div>

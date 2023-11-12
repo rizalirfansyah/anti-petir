@@ -21,7 +21,7 @@
             <div class="grid grid-cols-3 gap-4 pt-0">
                 <!-- Baris 1 -->
                 @foreach ($articles as $article)
-                <a href="{{ route('articles.edit', $article->id) }}" class="max-w-sm overflow-hidden transition-transform duration-300 ease-in-out transform rounded shadow-lg hover:scale-105">
+                <a href="{{ route('produk-detail') }}" class="max-w-sm overflow-hidden transition-transform duration-300 ease-in-out transform rounded shadow-lg hover:scale-105">
                     <img class="object-cover w-full h-32" src="{{ route('articles.show', $article->id) }}" alt="{{ $article->title }}">
                     <div class="px-6 py-4">
                         <div class="mb-2 text-base font-bold">{{ $article->title }}</div>
@@ -35,17 +35,19 @@
                 </a>
                 @endforeach
             </div>
+
+            <div class="mt-4">
+                {{ $articles->links() }}
+            </div>
         </div>
         <div class="relative items-center col-span-1 min-h-32">
             <hr>
             <div class="py-5">
                 <h2 class="pb-3 text-lg font-bold text-red-500">Produk</h2>
                 <ul>
-                    <li><a href="#" class="hover:text-red-500">Penangkal Petir Elektrostatik</a></li>
-                    <li><a href="#" class="hover:text-red-500">Penangkal Petir Rumah</a></li>
-                    <li><a href="#" class="hover:text-red-500">Kabel Penghantar</a></li>
-                    <li><a href="#" class="hover:text-red-500">Surge Arrester</a></li>
-                    <li><a href="#" class="hover:text-red-500">Tiang Penyangga</a></li>
+                    @foreach ($articles as $article)
+                        <li><a href="{{ route('articles.edit', $article->id) }}" class="hover:text-red-500">{{ $article->title }}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <hr>

@@ -10,7 +10,7 @@ class OfferController extends Controller
 {
     public function index()
     {
-        $offers = Offer::all();
+        $offers = Offer::paginate(12);
         return view('admin.offers.index', compact('offers'));
     }
 
@@ -22,7 +22,7 @@ class OfferController extends Controller
     public function store(StoreOfferRequest $request)
     {
         Offer::create($request->validated());
-        return redirect()->route('offers.index')
+        return view('penawaran')
             ->with('success', 'Offer created successfully');
     }
 

@@ -6,7 +6,7 @@
     {{-- Contact Us --}}
 
     <div class="w-full px-6 mx-auto max-w-7xl">
-        <div class="container pt-32 px-6 py-12 mx-auto">
+        <div class="container px-6 py-12 pt-32 mx-auto">
           <div class="wow animate__slideInLeft">
               <p class="font-medium text-blue-500 dark:text-blue-400">Contact us</p>
               <h1 class="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">Get in touch</h1>
@@ -24,7 +24,9 @@
   
                       <h2 class="mt-4 text-base font-medium text-gray-800 dark:text-white">Email</h2>
                       <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Our friendly team is here to help.</p>
-                      <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">hello@merakiui.com</p>
+                      @foreach ( $contacts as $contact)
+                          <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">{{ $contact->email }}</p>
+                      @endforeach
                   </div>
   
                   <div>
@@ -37,7 +39,9 @@
                       
                       <h2 class="mt-4 text-base font-medium text-gray-800 dark:text-white">Office</h2>
                       <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Come say hello at our office HQ.</p>
-                      <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">100 Smith Street Collingwood VIC 3066 AU</p>
+                      @foreach ( $contacts as $contact)
+                          <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">{{ $contact->address }}</p>
+                      @endforeach
                   </div>
   
                   <div class="">
@@ -49,29 +53,31 @@
                       
                       <h2 class="mt-4 text-base font-medium text-gray-800 dark:text-white">Phone</h2>
                       <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">Mon-Fri from 8am to 5pm.</p>
-                      <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">+1 (555) 000-0000</p>
+                      @foreach ( $contacts as $contact)
+                            <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">{{ $contact->phone_number }}</p>
+                      @endforeach
                   </div>
               </div>
   
               <div class="overflow-hidden rounded-lg lg:col-span-2 h-96 lg:h-auto wow animate__slideInRight">
                 <!-- component -->
                     <div class="relative grid place-items-center">
-                        <div class="w-full h-96 mx-auto rounded border place-items-center grid">
-                        <div class="bg-white p-10 shadow-sm">
+                        <div class="grid w-full mx-auto border rounded h-96 place-items-center">
+                        <div class="p-10 bg-white shadow-sm">
                             <h3 class="text-lg font-medium text-gray-800">Mengapa harus Anti Petir?</h3>
 
-                            <div class="h-1 w-full mx-auto border-b my-5"></div>
+                            <div class="w-full h-1 mx-auto my-5 border-b"></div>
 
                             <!-- What is term -->
                             <div class="transition hover:bg-indigo-50">
                             <!-- header -->
-                            <div class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+                            <div class="flex items-center h-16 px-5 space-x-5 transition cursor-pointer accordion-header">
                                 <i class="fas fa-plus"></i>
                                 <h3>Profesional</h3>
                             </div>
                             <!-- Content -->
-                            <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
-                                <p class="leading-6 font-light pl-9 text-justify">
+                            <div class="px-5 pt-0 overflow-hidden accordion-content max-h-0">
+                                <p class="font-light leading-6 text-justify pl-9">
                                 Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put
                                 far daughter.
                                 </p>
@@ -81,17 +87,17 @@
                             <!-- When to use Accordion Components -->
                             <div class="transition hover:bg-indigo-50">
                             <!-- header -->
-                            <div class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+                            <div class="flex items-center h-16 px-5 space-x-5 transition cursor-pointer accordion-header">
                                 <i class="fas fa-plus"></i>
                                 <h3>Berpengalaman</h3>
                             </div>
                             <!-- Content -->
-                            <div class="accordion-content px-5 pt-0 overflow-hidden max-h-0">
-                                <p class="leading-6 font-light pl-9 text-justify">
+                            <div class="px-5 pt-0 overflow-hidden accordion-content max-h-0">
+                                <p class="font-light leading-6 text-justify pl-9">
                                 Our asked sex point her she seems. New plenty she horses parish design you. Stuff sight equal of my woody. Him children bringing goodness suitable she entirely put
                                 far daughter.
                                 </p>
-                                <button class="rounded-full bg-indigo-600 text-white font-medium font-lg px-6 py-2 my-5 ml-9">Learn more</button>
+                                <button class="px-6 py-2 my-5 font-medium text-white bg-indigo-600 rounded-full font-lg ml-9">Learn more</button>
                             </div>
                             </div>
 

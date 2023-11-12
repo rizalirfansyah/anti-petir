@@ -10,6 +10,10 @@ use App\Http\Controllers\PlanController;
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReferenceController;
+use App\Models\Contact;
+use App\Models\Gallery;
+use App\Models\Plan;
+use App\Models\Reference;
 use Illuminate\Support\Facades\Storage;
 
 /*
@@ -24,34 +28,52 @@ use Illuminate\Support\Facades\Storage;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $articles = Article::all();
+    $references = Reference::all();
+    
+    return view('welcome', ['articles' => $articles, 'references' => $references]);
+
 })->name('welcome');
 
 Route::get('/referensi', function () {
-    return view('referensi');
+    $references = Reference::all();
+
+    return view('referensi', ['references' => $references]);
 })->name('referensi');
 
 Route::get('/produk', function () {
-    $articles = Article::all();
+    $articles = Article::paginate(12);
 
-        return view('produk', ['articles' => $articles]);
+    return view('produk', ['articles' => $articles]);
 })->name('produk');
 
-Route::get('contact', function () {
-    return view('contact');
-});
+Route::get('/produk-detail', function () {
+    $articles = Article::all();
 
-Route::get('galeri', function () {
-    return view('galeri');
-});
+    return view('produk-detail', ['articles'=> $articles]);
+})->name('produk-detail');
 
-Route::get('penawaran', function () {
+Route::get('/kontak', function () {
+    $contacts = Contact::all();
+
+    return view('contact', ['contacts' => $contacts]);
+})->name('kontak');
+
+Route::get('/galeri', function () {
+    $galleries = Gallery::all();
+
+    return view('galeri', ['galleries' => $galleries]);
+})->name('galeri');
+
+Route::get('/penawaran', function () {
     return view('penawaran');
-});
+})->name('penawaran');
 
-Route::get('perencanaan', function () {
-    return view('perencanaan');
-});
+Route::get('/perencanaan', function () {
+    $plans = Plan::all();
+
+    return view('perencanaan', ['plans' => $plans]);
+})->name('perencanaan');
 
 
 Route::middleware([
