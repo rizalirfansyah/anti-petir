@@ -5,17 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Reference extends Model
+class Gallery extends Model
 {
     use HasFactory;
 
-    protected $table = 'references';
+    protected $table = 'galleries';
 
     protected $fillable = [
-        'id', 
-        'logo_name', 
-        'file_type', 
-        'file_data'
+        'id',
+        'name',
+        'image',
+        'created_at'
     ];
-
 }

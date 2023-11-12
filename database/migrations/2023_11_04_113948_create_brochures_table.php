@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('references', function (Blueprint $table) {
+        Schema::create('brochures', function (Blueprint $table) {
             $table->id();
-            $table->string('logo_name');
+            $table->string('name');
             $table->string('file_type');
             $table->binary('file_data');
             $table->timestamps();
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('references');
+        Schema::dropIfExists('brochures');
     }
 };

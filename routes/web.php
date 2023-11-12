@@ -1,9 +1,16 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\BrochureController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\OfferController;
+use App\Http\Controllers\PlanController;
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReferenceController;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,23 +61,14 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     })->name('dashboard');
-    Route::get('/homepage', function () {
-        return view('admin.homepage');
-    })->name('homepage');
-    Route::get('/brosur', function () {
-        return view('admin.brosur');
-    })->name('brosur');
-    Route::get('/portfolio', function () {
-        return view('admin.portfolio');
-    })->name('portfolio');
 
-    Route::resource('references', ReferenceController::class);
     Route::resource('articles', ArticleController::class);
-    
-    Route::get('/contactus', function () {
-        return view('admin.contactus');
-    })->name('contactus');
-    Route::get('/inbox', function () {
-        return view('admin.inbox');
-    })->name('inbox');
+    Route::resource('offers', OfferController::class);
+    Route::resource('references', ReferenceController::class);
+    Route::resource('galleries', GalleryController::class);
+    Route::resource('plans', PlanController::class);
+    Route::resource('contacts', ContactController::class);
+    Route::resource('images', ImageController::class);
+    Route::resource('brochures', BrochureController::class);
+
 });

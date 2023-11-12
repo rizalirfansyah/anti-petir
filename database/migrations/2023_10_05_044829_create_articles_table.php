@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('title');
             $table->text('content');
             $table->string('category');
-            $table->string('image_type');
-            $table->binary('image_data');
+            $table->string('file_type');
+            $table->binary('file_data');
             $table->timestamps();
         });
     }

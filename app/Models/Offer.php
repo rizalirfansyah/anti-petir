@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Reference extends Model
+class Offer extends Model
 {
     use HasFactory;
 
-    protected $table = 'references';
+    protected $table = 'offers';
 
     protected $fillable = [
-        'id', 
-        'logo_name', 
-        'file_type', 
-        'file_data'
+        'id',
+        'name',
+        'phone_number',
+        'message',
+        'created_at'
     ];
-
 }

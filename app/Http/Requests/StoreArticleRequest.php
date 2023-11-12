@@ -18,9 +18,9 @@ class StoreArticleRequest extends FormRequest
     {
         return [
             
-            'title' => 'required|string|max:255',
+            'title' => 'required',
             'content' => 'required',
-            'category' => 'required|string|max:255',
+            'category' => 'required',
             'file' => 'required|file|mimes:png,jpg,jpeg',
         ];
     }
