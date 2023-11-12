@@ -45,5 +45,19 @@
         @stack('modals')
 
         @livewireScripts
+        
+        <script>
+            function copyImageTag(imagePath, altText) {
+                imagePath = imagePath.replace('public', 'storage');
+                
+                const imageTag = `<img src="${imagePath}" alt="${altText}" />`;
+                const textArea = document.createElement('textarea');
+                textArea.value = imageTag;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+            }
+        </script>
     </body>
 </html>

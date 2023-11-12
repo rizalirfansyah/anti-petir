@@ -20,7 +20,7 @@ class UpdateReferenceRequest extends FormRequest
         return [
             //
             'logo_name' => 'required|string|max:255',
-            'file' => 'required|file|mimes:png,jpg,jpeg',
+            'file' => 'file|mimes:png,jpg,jpeg',
         ];
     }
 

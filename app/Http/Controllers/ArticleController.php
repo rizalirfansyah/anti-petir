@@ -12,9 +12,9 @@ class ArticleController extends Controller
     public function index()
     {
         //
-        $articles = Article::all();
+        $articles = Article::paginate(12);
 
-        return view('admin.artikel', ['articles' => $articles]);
+        return view('admin.articles.index', compact('articles'));
     }
 
     public function create()
@@ -25,14 +25,14 @@ class ArticleController extends Controller
     public function store(StoreArticleRequest $request)
     {
         //
-        $file = new Article();
-        $file->title = $request->input('title');
-        $file->content = $request->input('content');
-        $file->category = $request->input('category');
-        $file->image_type = $request->file('file')->getClientMimeType();
-        $file->image_data = file_get_contents($request->file('file'));
+        $data = new Article();
+        $data->title = $request->title;
+        $data->content = $request->content;
+        $data->category = $request->category;
+        $data->file_type = $request->file('file')->getClientMimeType();
+        $data->file_data = file_get_contents($request->file('file'));
 
-        $file->save();
+        $data->save();
         
         return redirect()->route('articles.index')
             ->with('success', 'Berhasil DiTambahkan!');
@@ -42,25 +42,38 @@ class ArticleController extends Controller
     {
         //
 
-        $file = Article::find($article->id);
+        $data = Article::find($article->id);
 
-        if (!$file) {
+        if (!$data) {
             abort(404);
         }
 
-        return response($file->image_data)
-            ->header('Content-Type', $file->image_type);
+        return response($data->file_data)
+            ->header('Content-Type', $data->file_type);
     }
 
     public function edit(Article $article)
     {
         //
+        return view('produk-detail', ['article' => $article]);
     }
 
     public function update(UpdateArticleRequest $request, Article $article)
     {
         //
-        $article->update($request->validated());
+        $data = [
+            'title' => $request->input('title'),
+            'content' => $request->input('content'),
+            'category' => $request->input('category'),
+        ];
+    
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $data['file_type'] = $file->getClientMimeType();
+            $data['file_data'] = file_get_contents($file);
+        }
+    
+        $article->update($data);
         
         return redirect()->route('articles.index')
             ->with('success', 'Berhasil DiUpdate!');

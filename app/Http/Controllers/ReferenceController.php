@@ -14,9 +14,9 @@ class ReferenceController extends Controller
     public function index()
     {
         //
-        $references = Reference::all();
+        $references = Reference::paginate(12);
 
-        return view('admin.reference', ['references' => $references]);
+        return view('admin.references.index', compact('references'));
 
     }
 
@@ -30,12 +30,12 @@ class ReferenceController extends Controller
     public function store(StoreReferenceRequest $request)
     {
         //
-        $file = new Reference();
-        $file->logo_name = $request->input('logo_name');
-        $file->logo_type = $request->file('file')->getClientMimeType();
-        $file->logo_data = file_get_contents($request->file('file'));
+        $data = new Reference();
+        $data->logo_name = $request->input('logo_name');
+        $data->file_type = $request->file('file')->getClientMimeType();
+        $data->file_data = file_get_contents($request->file('file'));
 
-        $file->save();
+        $data->save();
         
         return redirect()->route('references.index')
             ->with('success', 'Berhasil DiTambahkan!');
@@ -45,14 +45,14 @@ class ReferenceController extends Controller
     public function show(Reference $reference)
     {
         //
-        $file = Reference::find($reference->id);
+        $data = Reference::find($reference->id);
 
-        if (!$file) {
+        if (!$data) {
             abort(404);
         }
 
-        return response($file->logo_data)
-            ->header('Content-Type', $file->logo_type);
+        return response($data->file_data)
+            ->header('Content-Type', $data->file_type);
     }
 
     
@@ -65,7 +65,17 @@ class ReferenceController extends Controller
     public function update(UpdateReferenceRequest $request, Reference $reference)
     {
         //
-        $reference->update($request->validated());
+        $data = [
+            'logo_name' => $request->input('logo_name'),
+        ];
+    
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $data['file_type'] = $file->getClientMimeType();
+            $data['file_data'] = file_get_contents($file);
+        }
+
+        $reference->update($data);
         
         return redirect()->route('references.index')
             ->with('success', 'Berhasil DiUpdate!');

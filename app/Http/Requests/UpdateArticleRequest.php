@@ -18,10 +18,10 @@ class UpdateArticleRequest extends FormRequest
     {
         return [
             //
-            'title' => 'required|string|max:255',
+            'title' => 'required',
             'content' => 'required',
-            'category' => 'required|string|max:255',
-            'file' => 'required|file|mimes:png,jpg,jpeg',
+            'category' => 'required',
+            'file' => 'file|mimes:png,jpg,jpeg',
         ];
     }
 
