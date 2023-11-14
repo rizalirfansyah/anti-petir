@@ -5,22 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Article extends Model
+class Tag extends Model
 {
     use HasFactory;
 
-    protected $table = 'articles';
+    protected $table = 'tags';
 
     protected $fillable = [
         'id',
-        'title',
-        'category',
-        'content',
-        'image',
+        'article_id',
+        'name',
         'created_at'
     ];
 
-    public function tags(){
-    	return $this->hasMany(Tag::class, 'id', 'article_id');
+    public function articles(){
+    	return $this->belongsTo(Article::class,'article_id', 'id');
     }
 }

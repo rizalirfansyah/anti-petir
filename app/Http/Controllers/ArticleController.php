@@ -5,16 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Http\Requests\StoreArticleRequest;
 use App\Http\Requests\UpdateArticleRequest;
+use App\Models\Tag;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
-    
     public function index()
     {
         //
         $articles = Article::paginate(12);
-
-        return view('admin.articles.index', compact('articles'));
+        $tags = Tag::all();
+        return view('admin.articles.index', compact('articles', 'tags'));
     }
 
     public function create()
@@ -25,33 +26,33 @@ class ArticleController extends Controller
     public function store(StoreArticleRequest $request)
     {
         //
+
         $data = new Article();
         $data->title = $request->title;
-        $data->content = $request->content;
         $data->category = $request->category;
-        $data->file_type = $request->file('file')->getClientMimeType();
-        $data->file_data = file_get_contents($request->file('file'));
+        $data->content = $request->content;
 
-        dd($data);
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('public/images');
+            $data->image = $imagePath;
+        }
 
         $data->save();
-        
+
         return redirect()->route('articles.index')
-            ->with('success', 'Berhasil DiTambahkan!');
+            ->with('success', 'Article uploaded successfully');
     }
 
     public function show(Article $article)
     {
         //
+        $path = storage_path('app/' . $article->image);
 
-        $data = Article::find($article->id);
-
-        if (!$data) {
+        if (file_exists($path)) {
+            return response()->file($path);
+        } else {
             abort(404);
         }
-
-        return response($data->file_data)
-            ->header('Content-Type', $data->file_type);
     }
 
     public function edit(Article $article)
@@ -62,31 +63,35 @@ class ArticleController extends Controller
     public function update(UpdateArticleRequest $request, Article $article)
     {
         //
+        $article->title = $request->title;
+        $article->category = $request->category;
+        $article->content = $request->content;
 
-        $data = [
-            'title' => $request->input('title'),
-            'content' => $request->input('content'),
-            'category' => $request->input('category'),
-        ];
-    
-        if ($request->hasFile('file')) {
-            $file = $request->file('file');
-            $data['file_type'] = $file->getClientMimeType();
-            $data['file_data'] = file_get_contents($file);
+        if ($request->hasFile('image')) {
+            // Hapus gambar lama jika ada
+            if ($article->image) {
+                Storage::delete($article->image);
+            }
+
+            $imagePath = $request->file('image')->store('public/images');
+            $article->image = $imagePath;
         }
+        $article->save();
 
-        $article->update($data);
-        
         return redirect()->route('articles.index')
-            ->with('success', 'Berhasil DiUpdate!');
+            ->with('success', 'Article updated successfully');
     }
 
     public function destroy(Article $article)
     {
         //
+        if ($article->image) {
+            Storage::delete($article->image);
+        }
+    
         $article->delete();
-        
+
         return redirect()->route('articles.index')
-            ->with('success', 'Berhasil Dihapus!');
+            ->with('success', 'Article deleted successfully');
     }
 }
