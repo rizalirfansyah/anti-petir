@@ -4,7 +4,7 @@
            <div class="relative items-center justify-center mb-4 bg-white rounded min-h-48 dark:bg-gray-800">
               <div class="p-8">
                 <p class="mb-4 text-2xl text-center text-gray-400 dark:text-gray-500">Artikel</p>
-                <button type="button" data-modal-target="add-modal" data-modal-toggle="add-modal" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Tambah Gambar</button>
+                <button type="button" data-modal-target="add-modal" data-modal-toggle="add-modal" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Tambah Artikel</button>
                 <div class="relative overflow-x-auto sm:rounded-lg">
                    <div class="grid grid-cols-1 gap-4 md:grid-cols-6">
                       @foreach ($articles as $article)
@@ -14,7 +14,12 @@
                          </div>
                          <div class="p-5">
                             <h5 class="font-bold tracking-tight text-gray-900 text-l dark:text-white">{{ $article->title }}</h5>
-                            <p class="mb-2">{{ $article->category }}</p>
+                            <p>{{ $article->category }}</p>
+                            <div class="flex flex-wrap mb-2">
+                                @foreach ($article->tags as $tag)
+                                  <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{{ $tag->name }}</span>
+                                @endforeach
+                            </div>
                             <div>
                                <button data-modal-target="edit-modal{{ $article->id }}" data-modal-toggle="edit-modal{{ $article->id }}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover-bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark-bg-blue-600 dark-hover-bg-blue-700 dark-focus-ring-blue-800">
                                   Edit
@@ -48,7 +53,7 @@
                   <span class="sr-only">Close modal</span>
               </button>
               <div class="px-6 py-6 lg:px-8">
-                  <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Tambah Gambar</h3>
+                  <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Tambah Artikel</h3>
                   <form class="space-y-6" action="{{ route('articles.store') }}" method="POST" enctype="multipart/form-data">
                    @csrf
                    @method('POST')

@@ -30,8 +30,8 @@
             <div class="py-5">
                 <h2 class="pb-3 text-lg font-bold text-red-500">Produk</h2>
                 <ul>
-                    @foreach ($articles as $article)
-                        <li><a href="{{ route('articles.edit', $article->id) }}" class="hover:text-red-500">{{ $article->title }}</a></li>
+                    @foreach ($all_articles->take(5) as $all_article)
+                        <li><a href="{{ route('produk-detail', ['articleName' => $all_article->title]) }}" class="hover:text-red-500">{{ $all_article->title }}</a></li>
                     @endforeach
                 </ul>
             </div>
@@ -39,21 +39,18 @@
             <div class="py-5">
                 <h2 class="pb-3 text-lg font-bold text-red-500">Download Brosure</h2>
                 <ul>
-                    <li><a href="#" class="hover:text-red-500">Brosure Head Terminal Neoflash</a></li>
-                    <li><a href="#" class="hover:text-red-500">Manual Pemasangan Head Terminal Neoflash</a></li>
-                    <li><a href="#" class="hover:text-red-500">Event Counter Flashtrike</a></li>
-                    <li><a href="#" class="hover:text-red-500">Peraturan Pemerintah “Disnaker K3”</a></li>
+                    @foreach ($brochures as $brochure)
+                        <li><a href="{{ route('brochures.show', $brochure->id) }}" class="hover:text-red-500" target="_blank">{{ $brochure->name }}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <hr>
             <div class="py-5">
                 <h2 class="pb-3 text-lg font-bold text-red-500">New Flash</h2>
                 <ul>
-                    <li><a href="#" class="hover:text-red-500">Accident</a></li>
-                    <li><a href="#" class="hover:text-red-500">Gatget</a></li>
-                    <li><a href="#" class="hover:text-red-500">Info Petir</a></li>
-                    <li><a href="#" class="hover:text-red-500">Mancanegara</a></li>
-                    <li><a href="#" class="hover:text-red-500">Technology</a></li>
+                    @foreach ($tags as $tag)
+                        <li><a href="{{ route('produk-tag', $tag->name) }}" class="hover:text-red-500">{{ $tag->name }}</a></li>
+                    @endforeach
                 </ul>
             </div>
             <hr>

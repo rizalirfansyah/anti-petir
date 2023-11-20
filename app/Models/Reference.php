@@ -13,9 +13,9 @@ class Reference extends Model
 
     protected $fillable = [
         'id', 
-        'logo_name', 
-        'file_type', 
-        'file_data'
+        'name',
+        'image',
+        'created_at'
     ];
 
 }

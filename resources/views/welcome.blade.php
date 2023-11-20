@@ -116,7 +116,7 @@
                 
                 @foreach ($articles->take(4) as $article)
                     <div class="px-6">
-                        <a href="{{ route('articles.edit', $article->id) }}" class="max-w-sm overflow-hidden transition-transform duration-300 ease-in-out transform rounded shadow-lg hover:scale-105">
+                        <a href="{{ route('produk-detail', $article->id) }}" class="max-w-sm overflow-hidden transition-transform duration-300 ease-in-out transform rounded shadow-lg hover:scale-105">
                             <img class="object-cover w-full h-32" src="{{ route('articles.show', $article->id) }}" alt="{{ $article->title }}">
                             <div class="px-6 py-4">
                                 <div class="mb-2 text-xl font-bold text-slate-700">{{ $article->title }}</div>
@@ -133,6 +133,7 @@
                 @endforeach
                 
             </div>
+            
     </div>
     {{-- product end --}}
 
@@ -149,7 +150,10 @@
     <div class="container mx-auto mb-5">
          <section class="customer-logos slider">
             @foreach ($references as $reference)
-                <div class="slide"><img src="{{ route('references.show', $reference->id) }}" alt="{{ $reference->logo_name }}"></div>
+                <div class="slide">
+                    {{-- <img src="{{ route('image', ['imageName' => $reference->image]) }}" alt="{{ $reference->name }}"> --}}
+                    <img src="{{ route('references.show', $reference->id) }}" alt="{{ $reference->name }}" />
+                </div>
             @endforeach
          </section>
       </div>
@@ -164,7 +168,7 @@
             <div class="container mb-6 wow animate__fadeInLeftBig animate_slower">
                 <ol class="">
                     @foreach ($articles->take(5) as $article)
-                        <li class="mt-2 text-white">> <a href="{{ route('articles.edit', $article->id) }}" class="hover:text-gray-400">{{ $article->title }}</a></li>
+                        <li class="mt-2 text-white">> <a href="{{ route('produk-detail', ['articleName' => $article->title]) }}" class="hover:text-gray-400">{{ $article->title }}</a></li>
                     @endforeach
                 </ol>
             </div>
@@ -173,8 +177,8 @@
             <img src="https://source.unsplash.com/600x400" alt="Assets construction" class="mt-4 shadow-xl rounded-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden"/>
 
             <div class="mt-4 mb-8 sm:mt-6 wow animate__fadeInLeftBig animate_slower">
-                @foreach ($articles->take(5) as $article)
-                    <a href="{{ route('articles.edit', $article->id) }}" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">{{ $article->title }}</a>
+                @foreach ($tags->take(5) as $tag)
+                    <a href="{{ route('produk-tag', $tag->name) }}" class="inline-block px-5 py-2 mb-1 text-sm font-semibold tracking-wider text-white bg-gray-500 rounded-lg shadow-lg hover:bg-gray-600 sm:text-base">{{ $tag->name }}</a>
                 @endforeach            
             </div>
 

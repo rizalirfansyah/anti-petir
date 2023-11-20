@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Brochure;
 use App\Http\Requests\StoreBrochureRequest;
 use App\Http\Requests\UpdateBrochureRequest;
+use Illuminate\Support\Facades\Storage;
 
 class BrochureController extends Controller
 {
     public function index()
     {
-        $brochures = Brochure::all();
+        $brochures = Brochure::paginate(12);
         return view('admin.brochures.index', compact('brochures'));
     }
 
@@ -22,7 +23,15 @@ class BrochureController extends Controller
 
     public function store(StoreBrochureRequest $request)
     {
-        Brochure::create($request->validated());
+        $data = new Brochure();
+        $data->name = $request->name;
+
+        if ($request->hasFile('file')) {
+            $filePath = $request->file('file')->store('public/files');
+            $data->file = $filePath;
+        }
+
+        $data->save();
 
         return redirect()->route('brochures.index')
             ->with('success', 'Brochure created successfully');
@@ -30,19 +39,36 @@ class BrochureController extends Controller
 
     public function show(Brochure $brochure)
     {
-        // Display the specified brochure
-        return view('brochures.show', compact('brochure'));
+        $path = storage_path('app/' . $brochure->file);
+
+        if (file_exists($path)) {
+            return response()->file($path, [
+                'Content-Type' => 'application/pdf',
+                'Content-Disposition' => 'inline; filename="' . $brochure->name . '"'
+            ]);
+        } else {
+            abort(404);
+        }
     }
 
     public function edit(Brochure $brochure)
     {
-        // Return the view to edit the specified brochure
         return view('brochures.edit', compact('brochure'));
     }
 
     public function update(UpdateBrochureRequest $request, Brochure $brochure)
     {
-        $brochure->update($request->validated());
+        $brochure->name = $request->name;
+
+        if ($request->hasFile('file')) {
+            if ($brochure->file) {
+                Storage::delete($brochure->file);
+            }
+
+            $filePath = $request->file('file')->store('public/files');
+            $brochure->file = $filePath;
+        }
+        $brochure->save();
 
         return redirect()->route('brochures.index')
             ->with('success', 'Brochure updated successfully');
@@ -50,6 +76,10 @@ class BrochureController extends Controller
 
     public function destroy(Brochure $brochure)
     {
+        if ($brochure->file) {
+            Storage::delete($brochure->file);
+        }
+    
         $brochure->delete();
 
         return redirect()->route('brochures.index')

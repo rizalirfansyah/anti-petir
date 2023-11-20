@@ -7,6 +7,7 @@ use App\Http\Requests\StoreReferenceRequest;
 use App\Http\Requests\UpdateReferenceRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class ReferenceController extends Controller
 {
@@ -31,9 +32,12 @@ class ReferenceController extends Controller
     {
         //
         $data = new Reference();
-        $data->logo_name = $request->input('logo_name');
-        $data->file_type = $request->file('file')->getClientMimeType();
-        $data->file_data = file_get_contents($request->file('file'));
+        $data->name = $request->name;
+
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('public/images');
+            $data->image = $imagePath;
+        }
 
         $data->save();
         
@@ -45,14 +49,13 @@ class ReferenceController extends Controller
     public function show(Reference $reference)
     {
         //
-        $data = Reference::find($reference->id);
+        $path = storage_path('app/' . $reference->image);
 
-        if (!$data) {
+        if (file_exists($path)) {
+            return response()->file($path);
+        } else {
             abort(404);
         }
-
-        return response($data->file_data)
-            ->header('Content-Type', $data->file_type);
     }
 
     
@@ -65,17 +68,18 @@ class ReferenceController extends Controller
     public function update(UpdateReferenceRequest $request, Reference $reference)
     {
         //
-        $data = [
-            'logo_name' => $request->input('logo_name'),
-        ];
-    
-        if ($request->hasFile('file')) {
-            $file = $request->file('file');
-            $data['file_type'] = $file->getClientMimeType();
-            $data['file_data'] = file_get_contents($file);
-        }
+        $reference->name = $request->name;
 
-        $reference->update($data);
+        if ($request->hasFile('image')) {
+            // Hapus gambar lama jika ada
+            if ($reference->image) {
+                Storage::delete($reference->image);
+            }
+
+            $imagePath = $request->file('image')->store('public/images');
+            $reference->image = $imagePath;
+        }
+        $reference->save();
         
         return redirect()->route('references.index')
             ->with('success', 'Berhasil DiUpdate!');
@@ -85,6 +89,10 @@ class ReferenceController extends Controller
     public function destroy(Reference $reference)
     {
         //
+        if ($reference->image) {
+            Storage::delete($reference->image);
+        }
+    
         $reference->delete();
         
         return redirect()->route('references.index')

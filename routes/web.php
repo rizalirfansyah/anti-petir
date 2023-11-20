@@ -10,10 +10,13 @@ use App\Http\Controllers\PlanController;
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReferenceController;
+use App\Http\Controllers\TagController;
+use App\Models\Brochure;
 use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\Plan;
 use App\Models\Reference;
+use App\Models\Tag;
 use Illuminate\Support\Facades\Storage;
 
 /*
@@ -30,8 +33,11 @@ use Illuminate\Support\Facades\Storage;
 Route::get('/', function () {
     $articles = Article::all();
     $references = Reference::all();
+    $tags = Tag::select('name')
+        ->distinct()
+        ->get();
     
-    return view('welcome', ['articles' => $articles, 'references' => $references]);
+    return view('welcome', ['articles' => $articles, 'references' => $references, 'tags' => $tags]);
 
 })->name('welcome');
 
@@ -43,15 +49,54 @@ Route::get('/referensi', function () {
 
 Route::get('/produk', function () {
     $articles = Article::paginate(12);
+    $all_articles = Article::all();
+    $brochures = Brochure::all();
+    $tags = Tag::select('name')
+        ->distinct()
+        ->get();
 
-    return view('produk', ['articles' => $articles]);
+    return view('produk', ['articles' => $articles, 'all_articles'=> $all_articles, 'brochures'=> $brochures, 'tags'=> $tags]);
 })->name('produk');
 
-Route::get('/produk-detail', function () {
-    $articles = Article::all();
+Route::get('/produk-detail/{articleName}', function ($articleName) {
+    $articles = Article::where('title', $articleName)->paginate(12);
 
-    return view('produk-detail', ['articles'=> $articles]);
+    $tags = Tag::select('name')
+        ->distinct()
+        ->get();
+    
+    $brochures = Brochure::all();
+    $all_articles = Article::all();
+
+    return view('produk-detail', [
+        'articles'=> $articles,
+        'all_articles'=> $all_articles,
+        'tags'=> $tags,
+        'brochures'=> $brochures
+    ]);
 })->name('produk-detail');
+
+Route::get('/tag/{tagName}', function ($tagName) {
+    $articles = Article::whereHas('tags', function ($query) use ($tagName) {
+        $query->where('name', $tagName);
+    })->paginate(12);
+
+    $tags = Tag::select('name')
+        ->distinct()
+        ->get();
+    
+    $brochures = Brochure::all();
+    $all_articles = Article::all();
+
+    return view('produk', [
+        'articles'=> $articles,
+        'all_articles'=> $all_articles,
+        'tags'=> $tags,
+        'brochures'=> $brochures
+    ]);
+})->name('produk-tag');
+
+
 
 Route::get('/kontak', function () {
     $contacts = Contact::all();
@@ -88,13 +133,42 @@ Route::middleware([
         return view('admin.dashboard');
     })->name('dashboard');
 
-    Route::resource('articles', ArticleController::class);
-    Route::resource('offers', OfferController::class);
-    Route::resource('references', ReferenceController::class);
-    Route::resource('galleries', GalleryController::class);
-    Route::resource('plans', PlanController::class);
+    Route::resource('articles', ArticleController::class)
+        ->except(['show']);
+    Route::resource('offers', OfferController::class)
+        ->except(['store']);
+    Route::resource('references', ReferenceController::class)
+        ->except(['show']);
+    Route::resource('galleries', GalleryController::class)
+        ->except(['show']);
+    Route::resource('plans', PlanController::class)
+        ->except(['show']);
     Route::resource('contacts', ContactController::class);
-    Route::resource('images', ImageController::class);
-    Route::resource('brochures', BrochureController::class);
+    Route::resource('images', ImageController::class)
+        ->except(['show']);
+    Route::resource('brochures', BrochureController::class)
+        ->except(['show']);
+    Route::resource('tags', TagController::class);
 
 });
+
+Route::get('/articles/{article}', [ArticleController::class, 'show'])
+    ->name('articles.show');
+
+Route::get('/references/{reference}', [ReferenceController::class, 'show'])
+    ->name('references.show');
+
+Route::get('/galleries/{gallery}', [GalleryController::class, 'show'])
+    ->name('galleries.show');
+
+Route::get('/plans/{plan}', [PlanController::class, 'show'])
+    ->name('plans.show');
+
+Route::get('/images/{image}', [ImageController::class, 'show'])
+    ->name('images.show');
+
+Route::post('/offers', [OfferController::class, 'store'])
+    ->name('offers.store');
+
+Route::get('/brochures/{brochure}', [BrochureController::class, 'show'])
+    ->name('brochures.show');

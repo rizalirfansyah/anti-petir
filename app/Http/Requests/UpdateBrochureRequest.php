@@ -26,7 +26,7 @@ class UpdateBrochureRequest extends FormRequest
         return [
             //
             'name' => 'required',
-            'file' => 'required|file|mimes:pdf',
+            'file' => 'file|mimes:pdf',
         ];
     }
 }

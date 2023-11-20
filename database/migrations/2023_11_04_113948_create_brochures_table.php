@@ -16,8 +16,7 @@ return new class extends Migration
         Schema::create('brochures', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('file_type');
-            $table->binary('file_data');
+            $table->string('file')->nullable();
             $table->timestamps();
         });
     }

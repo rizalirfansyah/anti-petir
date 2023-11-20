@@ -19,8 +19,8 @@ class StoreReferenceRequest extends FormRequest
     {
         return [
             //
-            'logo_name' => 'required',
-            'file' => 'required|file|mimes:png,jpg,jpeg',
+            'name' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }
 

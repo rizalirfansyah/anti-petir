@@ -26,7 +26,6 @@ class ArticleController extends Controller
     public function store(StoreArticleRequest $request)
     {
         //
-
         $data = new Article();
         $data->title = $request->title;
         $data->category = $request->category;
@@ -38,6 +37,18 @@ class ArticleController extends Controller
         }
 
         $data->save();
+
+        if ($request->filled('tag')) {
+            $tagNames = explode(',', $request->tag[0]);
+            
+            foreach ($tagNames as $tagName) {
+                $tag = new Tag([
+                    'name' => trim($tagName),
+                    'article_id' => $data->id,
+                ]);
+                $tag->save();
+            }
+        }
 
         return redirect()->route('articles.index')
             ->with('success', 'Article uploaded successfully');
@@ -76,6 +87,23 @@ class ArticleController extends Controller
             $imagePath = $request->file('image')->store('public/images');
             $article->image = $imagePath;
         }
+
+        
+
+        if ($request->filled('tag')) {
+            
+            $article->tags()->delete();
+            $tagNames = explode(',', $request->tag[0]);
+            
+            foreach ($tagNames as $tagName) {
+                $tag = new Tag([
+                    'name' => trim($tagName),
+                    'article_id' => $article->id,
+                ]);
+                $tag->save();
+            }
+        }
+
         $article->save();
 
         return redirect()->route('articles.index')
@@ -85,6 +113,11 @@ class ArticleController extends Controller
     public function destroy(Article $article)
     {
         //
+
+        foreach ($article->tags as $tag) {
+            $tag->delete();
+        }
+
         if ($article->image) {
             Storage::delete($article->image);
         }

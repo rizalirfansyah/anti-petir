@@ -21,6 +21,6 @@ class Article extends Model
     ];
 
     public function tags(){
-    	return $this->hasMany(Tag::class, 'id', 'article_id');
+    	return $this->hasMany(Tag::class);
     }
 }

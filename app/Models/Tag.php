@@ -18,7 +18,7 @@ class Tag extends Model
         'created_at'
     ];
 
-    public function articles(){
-    	return $this->belongsTo(Article::class,'article_id', 'id');
+    public function article(){ 
+        return $this->belongsTo(Article::class);
     }
 }

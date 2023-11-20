@@ -10,7 +10,7 @@
                      @foreach ($galleries as $gallery)
                      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex items-center justify-center h-32">
-                            <img class="rounded-t-lg" src="{{ route('galleries.show', $gallery->id) }}" alt="{{ $gallery->name }}" style="width: 100%; height: 100%; object-fit: cover;" />
+                            <img class="rounded-t-lg" src="{{ route('galleries.show', $gallery->id) }}" alt="{{ $gallery->name }}" style="width: 100%; height: 100%; object-fit: cover;"/>
                         </div>
                         <div class="p-5">
                             <h5 class="mb-2 font-bold tracking-tight text-gray-900 text-l dark:text-white">{{ $gallery->name }}</h5>
