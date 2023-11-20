@@ -59,7 +59,7 @@ Route::get('/produk', function () {
 })->name('produk');
 
 Route::get('/produk-detail/{articleName}', function ($articleName) {
-    $articles = Article::where('title', $articleName)->paginate(12);
+    $article = Article::where('title', $articleName)->first();
 
     $tags = Tag::select('name')
         ->distinct()
@@ -69,7 +69,7 @@ Route::get('/produk-detail/{articleName}', function ($articleName) {
     $all_articles = Article::all();
 
     return view('produk-detail', [
-        'articles'=> $articles,
+        'article'=> $article,
         'all_articles'=> $all_articles,
         'tags'=> $tags,
         'brochures'=> $brochures
@@ -134,7 +134,7 @@ Route::middleware([
     })->name('dashboard');
 
     Route::resource('articles', ArticleController::class)
-        ->except(['show']);
+        ->except(['show','edit']);
     Route::resource('offers', OfferController::class)
         ->except(['store']);
     Route::resource('references', ReferenceController::class)
@@ -154,6 +154,9 @@ Route::middleware([
 
 Route::get('/articles/{article}', [ArticleController::class, 'show'])
     ->name('articles.show');
+
+Route::get('/articles/{article}/edit', [ArticleController::class, 'edit'])
+    ->name('articles.edit');
 
 Route::get('/references/{reference}', [ReferenceController::class, 'show'])
     ->name('references.show');

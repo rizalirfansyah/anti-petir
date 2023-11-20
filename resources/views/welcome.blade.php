@@ -117,12 +117,9 @@
                 @foreach ($articles->take(4) as $article)
                     <div class="px-6">
                         <a href="{{ route('produk-detail', $article->id) }}" class="max-w-sm overflow-hidden transition-transform duration-300 ease-in-out transform rounded shadow-lg hover:scale-105">
-                            <img class="object-cover w-full h-32" src="{{ route('articles.show', $article->id) }}" alt="{{ $article->title }}">
+                            <img class="object-cover w-full h-32" src="{{ route('articles.edit', $article->id) }}" alt="{{ $article->title }}">
                             <div class="px-6 py-4">
                                 <div class="mb-2 text-xl font-bold text-slate-700">{{ $article->title }}</div>
-                                <div class="article-content" style="max-height: 3em; overflow: hidden;">
-                                    {!! $article->content !!}
-                                </div>
                                 <div class="flex items-center w-full mt-3">
                                     <i class="fa-solid fa-clock"></i>
                                     <p class="ml-2 text-sm">{{ $article->created_at->format('d F Y') }}</p>

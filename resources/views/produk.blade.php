@@ -21,8 +21,8 @@
             <div class="grid grid-cols-3 gap-4 pt-0">
                 <!-- Baris 1 -->
                 @foreach ($articles as $article)
-                <a href="{{ route('produk-detail', ['articleName' => $article->title]) }}" class="max-w-sm overflow-hidden transition-transform duration-300 ease-in-out transform rounded shadow-lg hover:scale-105">
-                    <img class="object-cover w-full h-32" src="{{ route('articles.show', $article->id) }}" alt="{{ $article->title }}">
+                <a href="{{ route('articles.show', $article->id) }}" class="max-w-sm overflow-hidden transition-transform duration-300 ease-in-out transform rounded shadow-lg hover:scale-105">
+                    <img class="object-cover w-full h-32" src="{{ route('articles.edit', $article->id) }}" alt="{{ $article->title }}">
                     <div class="px-6 py-4">
                         <div class="mb-2 text-base font-bold">{{ $article->title }}</div>
                         <p class="flex items-center text-sm text-gray-700">

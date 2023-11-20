@@ -6,6 +6,7 @@ use App\Models\Article;
 use App\Http\Requests\StoreArticleRequest;
 use App\Http\Requests\UpdateArticleRequest;
 use App\Models\Tag;
+use App\Models\Brochure;
 use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
@@ -56,6 +57,17 @@ class ArticleController extends Controller
 
     public function show(Article $article)
     {
+        $tags = Tag::select('name')
+        ->distinct()
+        ->get();
+        $brochures = Brochure::all();
+        $all_articles = Article::all();
+
+        return view('produk-detail', compact('article', 'brochures', 'all_articles', 'tags'));
+    }
+
+    public function edit(Article $article)
+    {
         //
         $path = storage_path('app/' . $article->image);
 
@@ -66,14 +78,10 @@ class ArticleController extends Controller
         }
     }
 
-    public function edit(Article $article)
-    {
-        //
-    }
-
     public function update(UpdateArticleRequest $request, Article $article)
     {
         //
+
         $article->title = $request->title;
         $article->category = $request->category;
         $article->content = $request->content;
@@ -87,10 +95,8 @@ class ArticleController extends Controller
             $imagePath = $request->file('image')->store('public/images');
             $article->image = $imagePath;
         }
-
         
-
-        if ($request->filled('tag')) {
+        if ($request->tag[0] !== null) {
             
             $article->tags()->delete();
             $tagNames = explode(',', $request->tag[0]);

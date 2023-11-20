@@ -10,7 +10,7 @@
                       @foreach ($articles as $article)
                       <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                          <div class="flex items-center justify-center h-32">
-                             <img class="rounded-t-lg" src="{{ route('articles.show', $article->id) }}" alt="{{ $article->name }}" style="width: 100%; height: 100%; object-fit: cover;" />
+                             <img class="rounded-t-lg" src="{{ route('articles.edit', $article->id) }}" alt="{{ $article->name }}" style="width: 100%; height: 100%; object-fit: cover;" />
                          </div>
                          <div class="p-5">
                             <h5 class="font-bold tracking-tight text-gray-900 text-l dark:text-white">{{ $article->title }}</h5>
@@ -223,7 +223,7 @@
                                             </div>
                                           </template>
                                           <div x-show="selected.length == 0" class="flex-1">
-                                            <input placeholder="Pilih Tag" name="tag[]" value="{{ old('tag', $article->tag) }}" class="bg-transparent p-1 px-2 text-sm appearance-none outline-none h-full w-full text-gray-900" x-bind:value="selectedValues()">
+                                            <input placeholder="Pilih Tag" name="tag[]" class="bg-transparent p-1 px-2 text-sm appearance-none outline-none h-full w-full text-gray-900" x-bind:value="selectedValues()">
                                           </div>
                                         </div>
                                         <div class="text-gray-300 w-8 py-1 pl-2 pr-1 border-l flex items-center border-gray-200 svelte-1l8159u">
