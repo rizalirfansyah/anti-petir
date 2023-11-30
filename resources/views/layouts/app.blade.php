@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
+        {{-- <script src="assets/vendor/ckeditor5/build/ckeditor.js"></script> --}}
+
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
@@ -12,6 +14,12 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet" />
         <link href="https://fonts.cdnfonts.com/css/sf-pro-display?styles=98774,98773,98770" rel="stylesheet">
+
+        <style>
+            .ck-editor__editable_inline {
+                min-height: 300px;
+            }
+        </style>
         
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -65,5 +73,45 @@
                 $('.js-example-basic-multiple').select2();
             });
         </script>
+
+        <script src="https://cdn.ckeditor.com/ckeditor5/34.2.0/classic/ckeditor.js"></script>
+        
+        <script>
+                ClassicEditor
+                    .create( document.querySelector( '#editor1' ),{
+                    ckfinder: {
+                        uploadUrl: '{{route('ckeditor.upload').'?_token='.csrf_token()}}',
+                    },
+                    heading: {
+                        options: [
+                            { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+                            // { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+                            // { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' }
+                        ]
+                    }
+                })
+                .catch( error => {
+                    console.error( error );
+                } );
+
+                ClassicEditor
+                    .create( document.querySelector( '#editor2' ),{
+                    ckfinder: {
+                        uploadUrl: '{{route('ckeditor.upload').'?_token='.csrf_token()}}',
+                    },
+                    heading: {
+                        options: [
+                            { model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+                            // { model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+                            // { model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' }
+                        ]
+                    }
+                })
+                .catch( error => {
+                    console.error( error );
+                } );
+        </script>
+        
+        
     </body>
 </html>

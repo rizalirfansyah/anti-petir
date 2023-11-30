@@ -16,10 +16,10 @@
 {{-- Content --}}
 <section class="bg-white">
     <div class="max-w-screen-lg px-4 py-8 mx-auto lg:py-16 lg:px-6">
-        <div class="max-w-screen-lg text-gray-500 sm:text-lg dark:text-gray-400">
+        <div class="max-w-screen-lg text-gray-900">
             @foreach ($plans as $plan)
-                <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $plan->title }}</h2>
-                <p class="mb-4 font-medium">{!! $plan->content !!}</p>
+                <h1 class="mb-4 text-4xl font-bold tracking-tight">{{ $plan->title }}</h1>
+                <div>{!! $plan->content !!}</div>
             @endforeach
         </div>
     </div>

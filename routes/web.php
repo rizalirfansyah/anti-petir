@@ -11,9 +11,11 @@ use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReferenceController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\CKEditorController;
 use App\Models\Brochure;
 use App\Models\Contact;
 use App\Models\Gallery;
+use App\Models\Offer;
 use App\Models\Plan;
 use App\Models\Reference;
 use App\Models\Tag;
@@ -120,6 +122,9 @@ Route::get('/perencanaan', function () {
     return view('perencanaan', ['plans' => $plans]);
 })->name('perencanaan');
 
+Route::get('ckeditor', [CKEditorController::class, 'index']);
+Route::post('ckeditor/upload', [CKEditorController::class, 'upload'])->name('ckeditor.upload');
+
 
 Route::middleware([
     'auth:sanctum',
@@ -130,7 +135,12 @@ Route::middleware([
         return view('auth.register');
     })->name('register');
     Route::get('/dashboard', function () {
-        return view('admin.dashboard');
+        $offers = Offer::paginate(12);
+        $countArticles = Article::count();
+        $countOffers = Offer::count();
+        $countReferences = Reference::count();
+
+        return view('admin.dashboard', compact('offers', 'countArticles', 'countOffers', 'countReferences'));
     })->name('dashboard');
 
     Route::resource('articles', ArticleController::class)

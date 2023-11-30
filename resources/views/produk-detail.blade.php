@@ -19,8 +19,8 @@
     <div class="grid grid-cols-3 gap-10 py-10">
         <div class="relative items-center col-span-2 min-h-32">
             <div>
-                <h2 class="mb-4 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $article->title }}</h2>
-                <p class="mb-4 font-medium">{!! $article->content !!}</p>
+                <h1 class="mb-4 text-4xl font-bold tracking-tight text-gray-900 dark:text-white">{{ $article->title }}</h1>
+                <div>{!! $article->content !!}</div>
             </div>
         </div>
         <div class="relative items-center col-span-1 min-h-32">

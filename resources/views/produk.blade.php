@@ -55,7 +55,7 @@
                 <h2 class="pb-3 text-lg font-bold text-red-500">Download Brosure</h2>
                 <ul>
                     @foreach ($brochures as $brochure)
-                        <li><a class="text-sm hover:text-red-500" href="{{ route('brochures.show', $brochure->id) }}" target="_blank">Download PDF</a></li>
+                        <li><a class="text-sm hover:text-red-500" href="{{ route('brochures.show', $brochure->id) }}" target="_blank">{{ $brochure->name }}</a></li>
                     @endforeach
                 </ul>
             </div>

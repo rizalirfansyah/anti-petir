@@ -68,19 +68,19 @@
                     </div>
                     <div>
                         <label for="tag" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tag</label>
-                        <div x-data="dropdown()" x-init="loadOptions()" class="w-full flex flex-col mx-auto">
+                        <div x-data="dropdown()" x-init="loadOptions()" class="flex flex-col w-full mx-auto">
                             <input name="values" type="hidden" x-bind:value="selectedValues()">
-                            <div class="inline-block relative w-full">
-                              <div class="flex flex-col items-center relative">
+                            <div class="relative inline-block w-full">
+                              <div class="relative flex flex-col items-center">
                                 <div x-on:click="open" class="w-full">
-                                  <div class="my-2 p-1 flex border border-gray-300 bg-gray-50 rounded-lg">
-                                    <div class="flex flex-auto flex-wrap">
+                                  <div class="flex p-1 my-2 border border-gray-300 rounded-lg bg-gray-50">
+                                    <div class="flex flex-wrap flex-auto">
                                       <template x-for="(option,index) in selected" :key="options[option].value">
-                                        <div class="flex justify-center items-center m-1 font-medium py-1 px-1 bg-gray-50 rounded bg-gray-100 border">
+                                        <div class="flex items-center justify-center px-1 py-1 m-1 font-medium bg-gray-100 border rounded bg-gray-50">
                                           <div class="text-xs font-normal leading-none max-w-full flex-initial x-model=" options[option] x-text="options[option].text"></div>
-                                          <div class="flex flex-auto flex-row-reverse">
+                                          <div class="flex flex-row-reverse flex-auto">
                                             <div x-on:click.stop="remove(index,option)">
-                                              <svg class="fill-current h-4 w-4 " role="button" viewBox="0 0 20 20">
+                                              <svg class="w-4 h-4 fill-current " role="button" viewBox="0 0 20 20">
                                                 <path d="M14.348,14.849c-0.469,0.469-1.229,0.469-1.697,0L10,11.819l-2.651,3.029c-0.469,0.469-1.229,0.469-1.697,0
                                                                      c-0.469-0.469-0.469-1.229,0-1.697l2.758-3.15L5.651,6.849c-0.469-0.469-0.469-1.228,0-1.697s1.228-0.469,1.697,0L10,8.183
                                                                      l2.651-3.031c0.469-0.469,1.228-0.469,1.697,0s0.469,1.229,0,1.697l-2.758,3.152l2.758,3.15
@@ -92,21 +92,21 @@
                                         </div>
                                       </template>
                                       <div x-show="selected.length == 0" class="flex-1">
-                                        <input placeholder="Pilih Tag" name="tag[]" class="bg-transparent p-1 px-2 text-sm appearance-none outline-none h-full w-full text-gray-900" x-bind:value="selectedValues()">
+                                        <input placeholder="Pilih Tag" name="tag[]" class="w-full h-full p-1 px-2 text-sm text-gray-900 bg-transparent outline-none appearance-none" x-bind:value="selectedValues()">
                                       </div>
                                     </div>
-                                    <div class="text-gray-300 w-8 py-1 pl-2 pr-1 border-l flex items-center border-gray-200 svelte-1l8159u">
+                                    <div class="flex items-center w-8 py-1 pl-2 pr-1 text-gray-300 border-l border-gray-200 svelte-1l8159u">
                           
-                                      <button type="button" x-show="isOpen() === true" x-on:click="open" class="cursor-pointer w-6 h-6 text-gray-600 outline-none focus:outline-none">
-                                        <svg version="1.1" class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                                      <button type="button" x-show="isOpen() === true" x-on:click="open" class="w-6 h-6 text-gray-600 outline-none cursor-pointer focus:outline-none">
+                                        <svg version="1.1" class="w-4 h-4 fill-current" viewBox="0 0 20 20">
                                           <path d="M17.418,6.109c0.272-0.268,0.709-0.268,0.979,0s0.271,0.701,0,0.969l-7.908,7.83
                               c-0.27,0.268-0.707,0.268-0.979,0l-7.908-7.83c-0.27-0.268-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.979,0L10,13.25
                               L17.418,6.109z" />
                                         </svg>
                           
                                       </button>
-                                      <button type="button" x-show="isOpen() === false" @click="close" class="cursor-pointer w-6 h-6 text-gray-600 outline-none focus:outline-none">
-                                        <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                                      <button type="button" x-show="isOpen() === false" @click="close" class="w-6 h-6 text-gray-600 outline-none cursor-pointer focus:outline-none">
+                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
                                           <path d="M2.582,13.891c-0.272,0.268-0.709,0.268-0.979,0s-0.271-0.701,0-0.969l7.908-7.83
                               c0.27-0.268,0.707-0.268,0.979,0l7.908,7.83c0.27,0.268,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.978,0L10,6.75L2.582,13.891z
                               " />
@@ -117,12 +117,12 @@
                                   </div>
                                 </div>
                                 <div class="w-full px-4">
-                                  <div x-show.transition.origin.top="isOpen()" class="absolute shadow top-100 bg-white z-40 w-full left-0 rounded max-h-select" x-on:click.away="close">
-                                    <div class="flex flex-col w-full overflow-y-auto h-64">
+                                  <div x-show.transition.origin.top="isOpen()" class="absolute left-0 z-40 w-full bg-white rounded shadow top-100 max-h-select" x-on:click.away="close">
+                                    <div class="flex flex-col w-full h-64 overflow-y-auto">
                                       <template x-for="(option,index) in options" :key="option" class="overflow-auto">
-                                        <div class="cursor-pointer w-full border-gray-100 rounded-t border-b hover:bg-gray-100" @click="select(index,$event)">
-                                          <div class="flex w-full items-center p-2 pl-2 border-transparent border-l-2 relative">
-                                            <div class="w-full items-center flex justify-between">
+                                        <div class="w-full border-b border-gray-100 rounded-t cursor-pointer hover:bg-gray-100" @click="select(index,$event)">
+                                          <div class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">
+                                            <div class="flex items-center justify-between w-full">
                                               <div class="mx-2 leading-6" x-model="option" x-text="option.text"></div>
                                               <div x-show="option.selected">
                                                 <svg class="svg-icon" viewBox="0 0 20 20">
@@ -144,14 +144,45 @@
                     </div>
                     <div>
                         <select x-cloak id="select">
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
-                            <option value="4">Option 4</option>
-                            <option value="5">Option 5</option>
-                            <option value="6">Option 6</option>
-                            <option value="7">Option 7</option>
-                            <option value="8">Option 8</option>
+                            <option value="Antipetir">Antipetir</option>
+                            <option value="Arrester">Arrester</option>
+                            <option value="Bahaya Petir">Bahaya Petir</option>
+                            <option value="Cara Kerja Pengkal Petir">Cara Kerja Pengkal Petir</option>
+                            <option value="Cara Kerja Petir">Cara Kerja Petir</option>
+                            <option value="Cara Pasang Penangkal Petir">Cara Pasang Penangkal Petir</option>
+                            <option value="Coaxial">Coaxial</option>
+                            <option value="Coaxial Kabel">Coaxial Kabel</option>
+                            <option value="Counter">Counter</option>
+                            <option value="Depnaker">Depnaker</option>
+                            <option value="Early Streamer Emmision">Early Streamer Emmision</option>
+                            <option value="Event Counter Lightning">Event Counter Lightning</option>
+                            <option value="Grounding">Grounding</option>
+                            <option value="Gronding Sistem">Gronding Sistem</option>
+                            <option value="HVSC Cable">HVSC Cable</option>
+                            <option value="Izin Disnaker">Izin Disnaker</option>
+                            <option value="Kabel">Kabel</option>
+                            <option value="Lightning Strike Counter">Lightning Strike Counter</option>
+                            <option value="Manfaat Petir">Manfaat Petir</option>
+                            <option value="Neonflash">Neonflash</option>
+                            <option value="Non Radioaktif">Non Radioaktif</option>
+                            <option value="NYY">NYY</option>
+                            <option value="Pengkal Petir">Pengkal Petir</option>
+                            <option value="Pengkal Petir Aktif">Pengkal Petir Aktif</option>
+                            <option value="Penangkal Petir dan Cara Pasangnya">Penangkal Petir dan Cara Pasangnya</option>
+                            <option value="Penangkal Petir Download">Penangkal Petir Download</option>
+                            <option value="Penangkal Petir Gedung">Penangkal Petir Gedung</option>
+                            <option value="Penangkal Petir Modern">Penangkal Petir Modern</option>
+                            <option value="Penangkal Petir Radius">Penangkal Petir Radius</option>
+                            <option value="Penangkal Petir Rumah">Penangkal Petir Rumah</option>
+                            <option value="Petir Adalah">Petir Adalah</option>
+                            <option value="Petir Venus">Petir Venus</option>
+                            <option value="Prinsip Kerja Penangkal Petir">Prinsip Kerja Penangkal Petir</option>
+                            <option value="Proteksi Petir">Proteksi Petir</option>
+                            <option value="Sertifikasi K3">Sertifikasi K3</option>
+                            <option value="Sertifikasi Petir">Sertifikasi Petir</option>
+                            <option value="Tiang Penangkal Petir">Tiang Penangkal Petir</option>
+                            <option value="Triangle">Triangle</option>
+                            <option value="Varistor">Varistor</option>
                         </select>
                     </div>
                     <div>
@@ -164,7 +195,7 @@
                     </div>
                     <div>
                         <label for="content" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Konten</label>
-                        <textarea name="content" id="content" rows="10" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Isi Artikel" required></textarea>
+                        <textarea name="content" id="editor1"></textarea>
                     </div>
                     
                     <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Simpan</button>
@@ -185,7 +216,7 @@
                   <span class="sr-only">Close modal</span>
               </button>
               <div class="px-6 py-6 lg:px-8">
-                  <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Edit Referensi</h3>
+                  <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Edit Artikel</h3>
                   <form class="space-y-6" action="{{ route('articles.update', $article->id) }}" method="POST" enctype="multipart/form-data">
                       @csrf
                       @method('PUT')
@@ -199,19 +230,19 @@
                         </div>
                         <div>
                             <label for="tag" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tag</label>
-                            <div x-data="dropdown()" x-init="loadOptions()" class="w-full flex flex-col mx-auto">
+                            <div x-data="dropdown()" x-init="loadOptions()" class="flex flex-col w-full mx-auto">
                                 <input name="values" type="hidden" x-bind:value="selectedValues()">
-                                <div class="inline-block relative w-full">
-                                  <div class="flex flex-col items-center relative">
+                                <div class="relative inline-block w-full">
+                                  <div class="relative flex flex-col items-center">
                                     <div x-on:click="open" class="w-full">
-                                      <div class="my-2 p-1 flex border border-gray-300 bg-gray-50 rounded-lg">
-                                        <div class="flex flex-auto flex-wrap">
+                                      <div class="flex p-1 my-2 border border-gray-300 rounded-lg bg-gray-50">
+                                        <div class="flex flex-wrap flex-auto">
                                           <template x-for="(option,index) in selected" :key="options[option].value">
-                                            <div class="flex justify-center items-center m-1 font-medium py-1 px-1 bg-gray-50 rounded bg-gray-100 border">
+                                            <div class="flex items-center justify-center px-1 py-1 m-1 font-medium bg-gray-100 border rounded bg-gray-50">
                                               <div class="text-xs font-normal leading-none max-w-full flex-initial x-model=" options[option] x-text="options[option].text"></div>
-                                              <div class="flex flex-auto flex-row-reverse">
+                                              <div class="flex flex-row-reverse flex-auto">
                                                 <div x-on:click.stop="remove(index,option)">
-                                                  <svg class="fill-current h-4 w-4 " role="button" viewBox="0 0 20 20">
+                                                  <svg class="w-4 h-4 fill-current " role="button" viewBox="0 0 20 20">
                                                     <path d="M14.348,14.849c-0.469,0.469-1.229,0.469-1.697,0L10,11.819l-2.651,3.029c-0.469,0.469-1.229,0.469-1.697,0
                                                                          c-0.469-0.469-0.469-1.229,0-1.697l2.758-3.15L5.651,6.849c-0.469-0.469-0.469-1.228,0-1.697s1.228-0.469,1.697,0L10,8.183
                                                                          l2.651-3.031c0.469-0.469,1.228-0.469,1.697,0s0.469,1.229,0,1.697l-2.758,3.152l2.758,3.15
@@ -223,21 +254,21 @@
                                             </div>
                                           </template>
                                           <div x-show="selected.length == 0" class="flex-1">
-                                            <input placeholder="Pilih Tag" name="tag[]" class="bg-transparent p-1 px-2 text-sm appearance-none outline-none h-full w-full text-gray-900" x-bind:value="selectedValues()">
+                                            <input placeholder="Pilih Tag" name="tag[]" class="w-full h-full p-1 px-2 text-sm text-gray-900 bg-transparent outline-none appearance-none" x-bind:value="selectedValues()">
                                           </div>
                                         </div>
-                                        <div class="text-gray-300 w-8 py-1 pl-2 pr-1 border-l flex items-center border-gray-200 svelte-1l8159u">
+                                        <div class="flex items-center w-8 py-1 pl-2 pr-1 text-gray-300 border-l border-gray-200 svelte-1l8159u">
                               
-                                          <button type="button" x-show="isOpen() === true" x-on:click="open" class="cursor-pointer w-6 h-6 text-gray-600 outline-none focus:outline-none">
-                                            <svg version="1.1" class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                                          <button type="button" x-show="isOpen() === true" x-on:click="open" class="w-6 h-6 text-gray-600 outline-none cursor-pointer focus:outline-none">
+                                            <svg version="1.1" class="w-4 h-4 fill-current" viewBox="0 0 20 20">
                                               <path d="M17.418,6.109c0.272-0.268,0.709-0.268,0.979,0s0.271,0.701,0,0.969l-7.908,7.83
                                   c-0.27,0.268-0.707,0.268-0.979,0l-7.908-7.83c-0.27-0.268-0.27-0.701,0-0.969c0.271-0.268,0.709-0.268,0.979,0L10,13.25
                                   L17.418,6.109z" />
                                             </svg>
                               
                                           </button>
-                                          <button type="button" x-show="isOpen() === false" @click="close" class="cursor-pointer w-6 h-6 text-gray-600 outline-none focus:outline-none">
-                                            <svg class="fill-current h-4 w-4" viewBox="0 0 20 20">
+                                          <button type="button" x-show="isOpen() === false" @click="close" class="w-6 h-6 text-gray-600 outline-none cursor-pointer focus:outline-none">
+                                            <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
                                               <path d="M2.582,13.891c-0.272,0.268-0.709,0.268-0.979,0s-0.271-0.701,0-0.969l7.908-7.83
                                   c0.27-0.268,0.707-0.268,0.979,0l7.908,7.83c0.27,0.268,0.27,0.701,0,0.969c-0.271,0.268-0.709,0.268-0.978,0L10,6.75L2.582,13.891z
                                   " />
@@ -248,12 +279,12 @@
                                       </div>
                                     </div>
                                     <div class="w-full px-4">
-                                      <div x-show.transition.origin.top="isOpen()" class="absolute shadow top-100 bg-white z-40 w-full left-0 rounded max-h-select" x-on:click.away="close">
-                                        <div class="flex flex-col w-full overflow-y-auto h-64">
+                                      <div x-show.transition.origin.top="isOpen()" class="absolute left-0 z-40 w-full bg-white rounded shadow top-100 max-h-select" x-on:click.away="close">
+                                        <div class="flex flex-col w-full h-64 overflow-y-auto">
                                           <template x-for="(option,index) in options" :key="option" class="overflow-auto">
-                                            <div class="cursor-pointer w-full border-gray-100 rounded-t border-b hover:bg-gray-100" @click="select(index,$event)">
-                                              <div class="flex w-full items-center p-2 pl-2 border-transparent border-l-2 relative">
-                                                <div class="w-full items-center flex justify-between">
+                                            <div class="w-full border-b border-gray-100 rounded-t cursor-pointer hover:bg-gray-100" @click="select(index,$event)">
+                                              <div class="relative flex items-center w-full p-2 pl-2 border-l-2 border-transparent">
+                                                <div class="flex items-center justify-between w-full">
                                                   <div class="mx-2 leading-6" x-model="option" x-text="option.text"></div>
                                                   <div x-show="option.selected">
                                                     <svg class="svg-icon" viewBox="0 0 20 20">
@@ -275,14 +306,45 @@
                         </div>
                         <div>
                             <select x-cloak id="select" name="tag[]" multiple="multiple">
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                                <option value="4">Option 4</option>
-                                <option value="5">Option 5</option>
-                                <option value="6">Option 6</option>
-                                <option value="7">Option 7</option>
-                                <option value="8">Option 8</option>
+                              <option value="Antipetir">Antipetir</option>
+                              <option value="Arrester">Arrester</option>
+                              <option value="Bahaya Petir">Bahaya Petir</option>
+                              <option value="Cara Kerja Pengkal Petir">Cara Kerja Pengkal Petir</option>
+                              <option value="Cara Kerja Petir">Cara Kerja Petir</option>
+                              <option value="Cara Pasang Penangkal Petir">Cara Pasang Penangkal Petir</option>
+                              <option value="Coaxial">Coaxial</option>
+                              <option value="Coaxial Kabel">Coaxial Kabel</option>
+                              <option value="Counter">Counter</option>
+                              <option value="Depnaker">Depnaker</option>
+                              <option value="Early Streamer Emmision">Early Streamer Emmision</option>
+                              <option value="Event Counter Lightning">Event Counter Lightning</option>
+                              <option value="Grounding">Grounding</option>
+                              <option value="Gronding Sistem">Gronding Sistem</option>
+                              <option value="HVSC Cable">HVSC Cable</option>
+                              <option value="Izin Disnaker">Izin Disnaker</option>
+                              <option value="Kabel">Kabel</option>
+                              <option value="Lightning Strike Counter">Lightning Strike Counter</option>
+                              <option value="Manfaat Petir">Manfaat Petir</option>
+                              <option value="Neonflash">Neonflash</option>
+                              <option value="Non Radioaktif">Non Radioaktif</option>
+                              <option value="NYY">NYY</option>
+                              <option value="Pengkal Petir">Pengkal Petir</option>
+                              <option value="Pengkal Petir Aktif">Pengkal Petir Aktif</option>
+                              <option value="Penangkal Petir dan Cara Pasangnya">Penangkal Petir dan Cara Pasangnya</option>
+                              <option value="Penangkal Petir Download">Penangkal Petir Download</option>
+                              <option value="Penangkal Petir Gedung">Penangkal Petir Gedung</option>
+                              <option value="Penangkal Petir Modern">Penangkal Petir Modern</option>
+                              <option value="Penangkal Petir Radius">Penangkal Petir Radius</option>
+                              <option value="Penangkal Petir Rumah">Penangkal Petir Rumah</option>
+                              <option value="Petir Adalah">Petir Adalah</option>
+                              <option value="Petir Venus">Petir Venus</option>
+                              <option value="Prinsip Kerja Penangkal Petir">Prinsip Kerja Penangkal Petir</option>
+                              <option value="Proteksi Petir">Proteksi Petir</option>
+                              <option value="Sertifikasi K3">Sertifikasi K3</option>
+                              <option value="Sertifikasi Petir">Sertifikasi Petir</option>
+                              <option value="Tiang Penangkal Petir">Tiang Penangkal Petir</option>
+                              <option value="Triangle">Triangle</option>
+                              <option value="Varistor">Varistor</option>
                             </select>
                         </div>
                         
@@ -295,7 +357,7 @@
                         </div>
                         <div>
                             <label for="content" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Konten</label>
-                            <textarea name="content" id="content" rows="10" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Isi Artikel" required>{{ old('content', $article->content) }}</textarea>
+                            <textarea name="content" id="editor2">{{ old('content', $article->content) }}</textarea>
                         </div>
                      <button type="submit" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Simpan</button>
                   </form>

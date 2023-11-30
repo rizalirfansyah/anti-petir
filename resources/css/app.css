@@ -165,3 +165,30 @@ body {
     stroke-width: 1;
   }
   
+  /* CKEDITOR */
+  .table {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .table table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table table, .table td, .table th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
