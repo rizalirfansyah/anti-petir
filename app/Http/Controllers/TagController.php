@@ -54,6 +54,8 @@ class TagController extends Controller
     public function destroy(Tag $tag)
     {
         //
+        $tag->article_tag()->delete();
+
         $tag->delete();
 
         return redirect()->route('tags.index')->with('success', 'Tag berhasil dihapus.');

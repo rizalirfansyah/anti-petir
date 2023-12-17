@@ -119,14 +119,11 @@ class ArticleController extends Controller
     public function destroy(Article $article)
     {
         //
-
-        foreach ($article->tags as $tag) {
-            $tag->delete();
-        }
-
         if ($article->image) {
             Storage::delete($article->image);
         }
+
+        $article->article_tags()->delete();
     
         $article->delete();
 
