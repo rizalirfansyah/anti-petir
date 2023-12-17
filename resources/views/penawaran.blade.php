@@ -6,7 +6,7 @@
 {{-- header --}}
 <div class="container max-w-full max-h-screen mx-auto overflow-hidden bg-gray-100 bg-no-repeat bg-cover 2xl:w-full lg:w-full md:w-full sm:max-w-full bg-gradient-to-t" style="background-image: url('/img/bg/bg-petir2.jpg')">
     <div class="relative w-full h-40">
-        <div class="relative mt-28">
+        <div class="relative mt-36">
             <h2 class="pt-6 text-2xl text-center text-white wow animate__fadeInDown">Penawaran</h2>
         </div>
     </div>
@@ -30,17 +30,22 @@
         <div class="flex flex-wrap -m-2">
   
           <!-- form -->
-          
-            <div class="w-1/2 p-2">
+            <div class="w-1/3 p-2">
               <div class="relative">
                 <input type="text" id="name" name="name" class="w-full px-3 py-2 text-base leading-8 text-gray-100 placeholder-transparent transition-colors duration-200 ease-in-out bg-gray-800 border border-gray-700 rounded outline-none peer bg-opacity-40 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900" placeholder="Name" />
                 <label for="name" class="absolute text-sm leading-7 text-indigo-500 transition-all bg-transparent left-3 -top-6 peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-indigo-500">Nama Instansi</label>
               </div>
             </div>
-            <div class="w-1/2 p-2">
+            <div class="w-1/3 p-2">
               <div class="relative">
                 <input type="number" id="phone_number" name="phone_number" class="w-full px-3 py-2 text-base leading-8 text-gray-100 placeholder-transparent transition-colors duration-200 ease-in-out bg-gray-800 border border-gray-700 rounded outline-none peer bg-opacity-40 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900" placeholder="Whatsapp" />
                 <label for="phone_number" class="absolute text-sm leading-7 text-indigo-500 transition-all bg-transparent left-3 -top-6 peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-indigo-500">Nomor Whatsapp</label>
+              </div>
+            </div>
+            <div class="w-1/3 p-2">
+              <div class="relative">
+                <input type="email" id="email" name="email" class="w-full px-3 py-2 text-base leading-8 text-gray-100 placeholder-transparent transition-colors duration-200 ease-in-out bg-gray-800 border border-gray-700 rounded outline-none peer bg-opacity-40 focus:border-indigo-500 focus:bg-gray-900 focus:ring-2 focus:ring-indigo-900" placeholder="Whatsapp" />
+                <label for="email" class="absolute text-sm leading-7 text-indigo-500 transition-all bg-transparent left-3 -top-6 peer-placeholder-shown:left-3 peer-placeholder-shown:top-2 peer-placeholder-shown:bg-gray-900 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:left-3 peer-focus:-top-6 peer-focus:text-sm peer-focus:text-indigo-500">Email</label>
               </div>
             </div>
             <div class="w-full p-2 mt-4">
