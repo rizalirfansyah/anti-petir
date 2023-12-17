@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Gallery;
 use App\Http\Requests\StoreGalleryRequest;
 use App\Http\Requests\UpdateGalleryRequest;
+use App\Models\GalleryImage;
 use Illuminate\Support\Facades\Storage;
 
 class GalleryController extends Controller
@@ -23,15 +24,7 @@ class GalleryController extends Controller
 
     public function store(StoreGalleryRequest $request)
     {
-        $data = new Gallery();
-        $data->name = $request->name;
-
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('public/images');
-            $data->image = $imagePath;
-        }
-
-        $data->save();
+        Gallery::create($request->validated());
 
         return redirect()->route('galleries.index')
             ->with('success', 'Gallery created successfully');
@@ -39,34 +32,18 @@ class GalleryController extends Controller
 
     public function show(Gallery $gallery)
     {
-        $path = storage_path('app/' . $gallery->image);
-
-        if (file_exists($path)) {
-            return response()->file($path);
-        } else {
-            abort(404);
-        }
+        //
     }
 
     public function edit(Gallery $gallery)
     {
-        return view('galleries.edit', compact('gallery'));
+        $gallery_image = GalleryImage::paginate(12);
+        return view('admin.galleries.edit', compact('gallery', 'gallery_image'));
     }
 
     public function update(UpdateGalleryRequest $request, Gallery $gallery)
     {
-        $gallery->name = $request->name;
-
-        if ($request->hasFile('image')) {
-            // Hapus gambar lama jika ada
-            if ($gallery->image) {
-                Storage::delete($gallery->image);
-            }
-
-            $imagePath = $request->file('image')->store('public/images');
-            $gallery->image = $imagePath;
-        }
-        $gallery->save();
+        $gallery->update($request->validated());
 
         return redirect()->route('galleries.index')
             ->with('success', 'Gallery updated successfully');
@@ -74,8 +51,12 @@ class GalleryController extends Controller
 
     public function destroy(Gallery $gallery)
     {
-        if ($gallery->image) {
-            Storage::delete($gallery->image);
+        if ($gallery->gallery_images()->exists()) {
+            foreach ($gallery->gallery_images as $image) {
+                Storage::delete($image->image);
+            }
+            
+            $gallery->gallery_images()->delete();
         }
     
         $gallery->delete();

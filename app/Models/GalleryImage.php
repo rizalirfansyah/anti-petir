@@ -5,19 +5,20 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Gallery extends Model
+class GalleryImage extends Model
 {
     use HasFactory;
 
-    protected $table = 'galleries';
+    protected $table = 'gallery_images';
 
     protected $fillable = [
         'id',
-        'name',
+        'gallery_id',
+        'image',
         'created_at'
     ];
 
-    public function gallery_images(){
-    	return $this->hasMany(GalleryImage::class);
+    public function gallery(){ 
+        return $this->belongsTo(Gallery::class);
     }
 }

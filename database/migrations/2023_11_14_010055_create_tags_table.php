@@ -15,10 +15,8 @@ return new class extends Migration
     {
         Schema::create('tags', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('article_id')->unsigned();
-            $table->string('name')->nullable();
+            $table->string('name');
             $table->timestamps();
-            $table->foreign('article_id')->references('id')->on('articles');
         });
     }
 

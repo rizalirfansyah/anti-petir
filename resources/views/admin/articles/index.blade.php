@@ -16,8 +16,8 @@
                             <h5 class="font-bold tracking-tight text-gray-900 text-l dark:text-white">{{ $article->title }}</h5>
                             <p>{{ $article->category }}</p>
                             <div class="flex flex-wrap mb-2">
-                                @foreach ($article->tags as $tag)
-                                  <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{{ $tag->name }}</span>
+                                @foreach ($article->article_tags as $article_tag)
+                                  <span class="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">{{ $article_tag->tag->name }}</span>
                                 @endforeach
                             </div>
                             <div>
@@ -144,45 +144,9 @@
                     </div>
                     <div>
                         <select x-cloak id="select">
-                            <option value="Antipetir">Antipetir</option>
-                            <option value="Arrester">Arrester</option>
-                            <option value="Bahaya Petir">Bahaya Petir</option>
-                            <option value="Cara Kerja Pengkal Petir">Cara Kerja Pengkal Petir</option>
-                            <option value="Cara Kerja Petir">Cara Kerja Petir</option>
-                            <option value="Cara Pasang Penangkal Petir">Cara Pasang Penangkal Petir</option>
-                            <option value="Coaxial">Coaxial</option>
-                            <option value="Coaxial Kabel">Coaxial Kabel</option>
-                            <option value="Counter">Counter</option>
-                            <option value="Depnaker">Depnaker</option>
-                            <option value="Early Streamer Emmision">Early Streamer Emmision</option>
-                            <option value="Event Counter Lightning">Event Counter Lightning</option>
-                            <option value="Grounding">Grounding</option>
-                            <option value="Gronding Sistem">Gronding Sistem</option>
-                            <option value="HVSC Cable">HVSC Cable</option>
-                            <option value="Izin Disnaker">Izin Disnaker</option>
-                            <option value="Kabel">Kabel</option>
-                            <option value="Lightning Strike Counter">Lightning Strike Counter</option>
-                            <option value="Manfaat Petir">Manfaat Petir</option>
-                            <option value="Neonflash">Neonflash</option>
-                            <option value="Non Radioaktif">Non Radioaktif</option>
-                            <option value="NYY">NYY</option>
-                            <option value="Pengkal Petir">Pengkal Petir</option>
-                            <option value="Pengkal Petir Aktif">Pengkal Petir Aktif</option>
-                            <option value="Penangkal Petir dan Cara Pasangnya">Penangkal Petir dan Cara Pasangnya</option>
-                            <option value="Penangkal Petir Download">Penangkal Petir Download</option>
-                            <option value="Penangkal Petir Gedung">Penangkal Petir Gedung</option>
-                            <option value="Penangkal Petir Modern">Penangkal Petir Modern</option>
-                            <option value="Penangkal Petir Radius">Penangkal Petir Radius</option>
-                            <option value="Penangkal Petir Rumah">Penangkal Petir Rumah</option>
-                            <option value="Petir Adalah">Petir Adalah</option>
-                            <option value="Petir Venus">Petir Venus</option>
-                            <option value="Prinsip Kerja Penangkal Petir">Prinsip Kerja Penangkal Petir</option>
-                            <option value="Proteksi Petir">Proteksi Petir</option>
-                            <option value="Sertifikasi K3">Sertifikasi K3</option>
-                            <option value="Sertifikasi Petir">Sertifikasi Petir</option>
-                            <option value="Tiang Penangkal Petir">Tiang Penangkal Petir</option>
-                            <option value="Triangle">Triangle</option>
-                            <option value="Varistor">Varistor</option>
+                          @foreach ($tags as $tag)
+                            <option value={{ $tag->id }}>{{ $tag->name }}</option>
+                          @endforeach
                         </select>
                     </div>
                     <div>
@@ -203,7 +167,7 @@
               </div>
           </div>
       </div>
-     </div> 
+     </div>
  
      @foreach($articles as $article)
      {{-- Modal Edit --}}
@@ -306,45 +270,9 @@
                         </div>
                         <div>
                             <select x-cloak id="select" name="tag[]" multiple="multiple">
-                              <option value="Antipetir">Antipetir</option>
-                              <option value="Arrester">Arrester</option>
-                              <option value="Bahaya Petir">Bahaya Petir</option>
-                              <option value="Cara Kerja Pengkal Petir">Cara Kerja Pengkal Petir</option>
-                              <option value="Cara Kerja Petir">Cara Kerja Petir</option>
-                              <option value="Cara Pasang Penangkal Petir">Cara Pasang Penangkal Petir</option>
-                              <option value="Coaxial">Coaxial</option>
-                              <option value="Coaxial Kabel">Coaxial Kabel</option>
-                              <option value="Counter">Counter</option>
-                              <option value="Depnaker">Depnaker</option>
-                              <option value="Early Streamer Emmision">Early Streamer Emmision</option>
-                              <option value="Event Counter Lightning">Event Counter Lightning</option>
-                              <option value="Grounding">Grounding</option>
-                              <option value="Gronding Sistem">Gronding Sistem</option>
-                              <option value="HVSC Cable">HVSC Cable</option>
-                              <option value="Izin Disnaker">Izin Disnaker</option>
-                              <option value="Kabel">Kabel</option>
-                              <option value="Lightning Strike Counter">Lightning Strike Counter</option>
-                              <option value="Manfaat Petir">Manfaat Petir</option>
-                              <option value="Neonflash">Neonflash</option>
-                              <option value="Non Radioaktif">Non Radioaktif</option>
-                              <option value="NYY">NYY</option>
-                              <option value="Pengkal Petir">Pengkal Petir</option>
-                              <option value="Pengkal Petir Aktif">Pengkal Petir Aktif</option>
-                              <option value="Penangkal Petir dan Cara Pasangnya">Penangkal Petir dan Cara Pasangnya</option>
-                              <option value="Penangkal Petir Download">Penangkal Petir Download</option>
-                              <option value="Penangkal Petir Gedung">Penangkal Petir Gedung</option>
-                              <option value="Penangkal Petir Modern">Penangkal Petir Modern</option>
-                              <option value="Penangkal Petir Radius">Penangkal Petir Radius</option>
-                              <option value="Penangkal Petir Rumah">Penangkal Petir Rumah</option>
-                              <option value="Petir Adalah">Petir Adalah</option>
-                              <option value="Petir Venus">Petir Venus</option>
-                              <option value="Prinsip Kerja Penangkal Petir">Prinsip Kerja Penangkal Petir</option>
-                              <option value="Proteksi Petir">Proteksi Petir</option>
-                              <option value="Sertifikasi K3">Sertifikasi K3</option>
-                              <option value="Sertifikasi Petir">Sertifikasi Petir</option>
-                              <option value="Tiang Penangkal Petir">Tiang Penangkal Petir</option>
-                              <option value="Triangle">Triangle</option>
-                              <option value="Varistor">Varistor</option>
+                              @foreach ($tags as $tag)
+                                <option value={{ $tag->id }}>{{ $tag->name }}</option>
+                              @endforeach
                             </select>
                         </div>
                         

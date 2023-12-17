@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReferenceController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\CKEditorController;
+use App\Http\Controllers\GalleryImageController;
 use App\Models\Brochure;
 use App\Models\Contact;
 use App\Models\Gallery;
@@ -160,6 +161,7 @@ Route::middleware([
         ->except(['show']);
     Route::resource('tags', TagController::class);
 
+    Route::resource('gallery-image', GalleryImageController::class);
 });
 
 Route::get('/articles/{article}', [ArticleController::class, 'show'])

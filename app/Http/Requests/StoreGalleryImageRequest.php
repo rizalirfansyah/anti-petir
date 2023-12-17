@@ -6,7 +6,7 @@ use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
-class UpdateGalleryRequest extends FormRequest
+class StoreGalleryImageRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -27,7 +27,6 @@ class UpdateGalleryRequest extends FormRequest
     {
         return [
             //
-            'name' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
         ];
     }

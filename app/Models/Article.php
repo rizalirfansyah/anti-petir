@@ -20,7 +20,7 @@ class Article extends Model
         'created_at'
     ];
 
-    public function tags(){
-    	return $this->hasMany(Tag::class);
+    public function article_tags(){
+    	return $this->hasMany(ArticleTag::class);
     }
 }

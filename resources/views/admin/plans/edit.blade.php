@@ -14,7 +14,7 @@
                   </div>
                   <div class="mb-6">
                      <label for="content" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Konten</label>
-                     <textarea name="content" id="editor2" required>{{ old('content', $plan->content) }}</textarea>
+                     <textarea name="content" id="editor2">{{ old('content', $plan->content) }}</textarea>
                   </div>
                   <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Simpan</button>
                </form>

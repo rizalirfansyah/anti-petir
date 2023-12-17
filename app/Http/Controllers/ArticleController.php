@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Http\Requests\StoreArticleRequest;
 use App\Http\Requests\UpdateArticleRequest;
+use App\Models\ArticleTag;
 use App\Models\Tag;
 use App\Models\Brochure;
 use Illuminate\Support\Facades\Storage;
@@ -40,12 +41,12 @@ class ArticleController extends Controller
         $data->save();
 
         if ($request->filled('tag')) {
-            $tagNames = explode(',', $request->tag[0]);
+            $tags = explode(',', $request->tag[0]);
             
-            foreach ($tagNames as $tagName) {
-                $tag = new Tag([
-                    'name' => trim($tagName),
+            foreach ($tags as $tagId) {
+                $tag = new ArticleTag([
                     'article_id' => $data->id,
+                    'tag_id' => trim($tagId),
                 ]);
                 $tag->save();
             }
@@ -95,16 +96,15 @@ class ArticleController extends Controller
             $imagePath = $request->file('image')->store('public/images');
             $article->image = $imagePath;
         }
-        
-        if ($request->tag[0] !== null) {
+
+        if ($request->filled('tag')) {
+            $article->article_tags()->delete();
+            $tags = explode(',', $request->tag[0]);
             
-            $article->tags()->delete();
-            $tagNames = explode(',', $request->tag[0]);
-            
-            foreach ($tagNames as $tagName) {
-                $tag = new Tag([
-                    'name' => trim($tagName),
+            foreach ($tags as $tagId) {
+                $tag = new ArticleTag([
                     'article_id' => $article->id,
+                    'tag_id' => trim($tagId),
                 ]);
                 $tag->save();
             }

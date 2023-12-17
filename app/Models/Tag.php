@@ -13,12 +13,11 @@ class Tag extends Model
 
     protected $fillable = [
         'id',
-        'article_id',
         'name',
         'created_at'
     ];
 
-    public function article(){ 
-        return $this->belongsTo(Article::class);
+    public function article_tag(){ 
+        return $this->hasOne(ArticleTag::class);
     }
 }

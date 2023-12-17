@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class StoreArticleRequest extends FormRequest
 {
@@ -31,5 +33,12 @@ class StoreArticleRequest extends FormRequest
             'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'tag' => 'required|array',
         ];
+    }
+
+    protected function failedValidation(Validator $validator)
+    {
+        throw new HttpResponseException(
+            redirect()->back()->withInput()->withErrors($validator->errors())->with('error', 'Gagal menyimpan data.')
+        );
     }
 }

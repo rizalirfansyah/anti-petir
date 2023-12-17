@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Tag;
+use App\Http\Requests\StoreTagRequest;
+use App\Http\Requests\UpdateTagRequest;
+use Illuminate\Http\Request;
 
 class TagController extends Controller
 {
     public function index()
     {
         //
-        $tags = Tag::all();
-        return view('tags.index', compact('tags'));
+        $tags = Tag::paginate(12);
+        return view('admin.tags.index', compact('tags'));
     }
 
     public function create()
@@ -20,13 +22,10 @@ class TagController extends Controller
         return view('tags.create');
     }
 
-    public function store(Request $request)
+    public function store(StoreTagRequest $request)
     {
         //
-        $tag = new Tag();
-        $tag->name = $request->name;
-        $tag->save();
-
+        Tag::create($request->validated());
         return redirect()->route('tags.index')->with('success', 'Tag berhasil ditambahkan.');
     }
 
@@ -44,20 +43,17 @@ class TagController extends Controller
         return view('tags.edit', compact('tag'));
     }
 
-    public function update(Request $request, $id)
+    public function update(UpdateTagRequest $request, Tag $tag)
     {
         //
-        $tag = Tag::find($id);
-        $tag->name = $request->name;
-        $tag->save();
+        $tag->update($request->validated());
 
         return redirect()->route('tags.index')->with('success', 'Tag berhasil diperbarui.');
     }
 
-    public function destroy($id)
+    public function destroy(Tag $tag)
     {
         //
-        $tag = Tag::find($id);
         $tag->delete();
 
         return redirect()->route('tags.index')->with('success', 'Tag berhasil dihapus.');
