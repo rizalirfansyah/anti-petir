@@ -35,6 +35,9 @@
                                    No. Telepon
                                </th>
                                <th scope="col" class="px-6 py-3">
+                                 Email
+                               </th>
+                               <th scope="col" class="px-6 py-3">
                                    Pesan
                                </th>
                          </tr>
@@ -43,13 +46,16 @@
                        @foreach ($offers as $offer)
                          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                   {{ $offer->name }}
+                                 {{ $offer->name }}
                                </th>
                                <td class="px-6 py-4">
-                                   {!! $offer->phone_number !!}
+                                 {{ $offer->phone_number }}
                                </td>
                                <td class="px-6 py-4">
-                                   {{ $offer->message }}
+                                 {{ $offer->email }}
+                               </td>
+                               <td class="px-6 py-4">
+                                 {{ $offer->message }}
                                </td>
                          </tr>
                        @endforeach

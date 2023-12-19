@@ -15,6 +15,9 @@
                                  No. Telepon
                              </th>
                              <th scope="col" class="px-6 py-3">
+                                Email
+                            </th>
+                             <th scope="col" class="px-6 py-3">
                                  Pesan
                              </th>
                              <th scope="col" class="px-6 py-3">
@@ -29,8 +32,11 @@
                                  {{ $offer->name }}
                              </th>
                              <td class="px-6 py-4">
-                                 {!! $offer->phone_number !!}
+                                 {{ $offer->phone_number }}
                              </td>
+                             <td class="px-6 py-4">
+                                {{ $offer->email }}
+                            </td>
                              <td class="px-6 py-4">
                                  {{ $offer->message }}
                              </td>

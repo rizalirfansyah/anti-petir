@@ -15,6 +15,7 @@ class Offer extends Model
         'id',
         'name',
         'phone_number',
+        'email',
         'message',
         'created_at'
     ];

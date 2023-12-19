@@ -7,7 +7,7 @@
                <button type="button" data-modal-target="add-modal" data-modal-toggle="add-modal" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Tambah Gambar</button>
                <div class="relative overflow-x-auto sm:rounded-lg">
                   <div class="grid grid-cols-1 gap-4 md:grid-cols-6">
-                     @foreach ($gallery_image as $image)
+                     @foreach ($gallery->gallery_images as $image)
                      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                         <div class="flex items-center justify-center h-32">
                             <img class="rounded-t-lg" src="{{ route('gallery-image.show', $image->id) }}" alt="{{ $gallery->name }}" style="width: 100%; height: 100%; object-fit: cover;"/>

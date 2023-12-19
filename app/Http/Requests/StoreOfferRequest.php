@@ -29,6 +29,7 @@ class StoreOfferRequest extends FormRequest
             //
             'name' => 'required',
             'phone_number' => 'required',
+            'email' => 'required',
             'message' => 'required',
         ];
     }

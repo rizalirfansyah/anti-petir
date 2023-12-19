@@ -13,9 +13,11 @@ use App\Http\Controllers\ReferenceController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\CKEditorController;
 use App\Http\Controllers\GalleryImageController;
+use App\Models\ArticleTag;
 use App\Models\Brochure;
 use App\Models\Contact;
 use App\Models\Gallery;
+use App\Models\GalleryImage;
 use App\Models\Offer;
 use App\Models\Plan;
 use App\Models\Reference;
@@ -80,23 +82,29 @@ Route::get('/produk-detail/{articleName}', function ($articleName) {
 })->name('produk-detail');
 
 Route::get('/tag/{tagName}', function ($tagName) {
-    $articles = Article::whereHas('tags', function ($query) use ($tagName) {
-        $query->where('name', $tagName);
-    })->paginate(12);
+    $tag = Tag::where('name', $tagName)->first();
 
-    $tags = Tag::select('name')
-        ->distinct()
-        ->get();
-    
-    $brochures = Brochure::all();
-    $all_articles = Article::all();
+    $tag = Tag::where('name', $tagName)->first();
 
-    return view('produk', [
-        'articles'=> $articles,
-        'all_articles'=> $all_articles,
-        'tags'=> $tags,
-        'brochures'=> $brochures
-    ]);
+    if ($tag) {
+        $article_tags = ArticleTag::where('tag_id', $tag->id)->get();
+        $articleIds = $article_tags->pluck('article_id')->toArray();
+
+        $articles = Article::whereIn('id', $articleIds)->paginate(12);
+
+        $tags = Tag::select('name')->distinct()->get();
+        $brochures = Brochure::all();
+        $all_articles = Article::all();
+
+        return view('produk', [
+            'articles' => $articles,
+            'all_articles' => $all_articles,
+            'tags' => $tags,
+            'brochures' => $brochures
+        ]);
+    } else {
+        return "Tag '$tagName' tidak ditemukan";
+    }
 })->name('produk-tag');
 
 
@@ -109,8 +117,9 @@ Route::get('/kontak', function () {
 
 Route::get('/galeri', function () {
     $galleries = Gallery::all();
+    $gallery_images = GalleryImage::all();
 
-    return view('galeri', ['galleries' => $galleries]);
+    return view('galeri', ['galleries' => $galleries, 'gallery_images' => $gallery_images]);
 })->name('galeri');
 
 Route::get('/penawaran', function () {
